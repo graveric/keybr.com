@@ -7,6 +7,7 @@ WORKDIR /usr/src/app
 COPY . .
 
 # Install dependencies
+ENV HUSKY=0
 RUN npm ci
 
 # Compile monorepo and build bundle

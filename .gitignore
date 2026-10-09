@@ -16,6 +16,10 @@ root/lib/
 
 # Other
 node_modules/
+.tools/
+.npm-cache/
+.tmp/
+data/
 build/
 out/
 tmp/

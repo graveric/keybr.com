@@ -4,6 +4,7 @@ export * from "./dist/index.ts";
 export * from "./geometry.ts";
 export * from "./graph.ts";
 export * from "./KeyDetailsChart.tsx";
+export * from "./keyeffort.ts";
 export * from "./KeyFrequencyHeatmap.tsx";
 export * from "./KeyFrequencyHistogram.tsx";
 export * from "./KeySpeedChart.tsx";
