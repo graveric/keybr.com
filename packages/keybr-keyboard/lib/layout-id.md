@@ -100,7 +100,7 @@
 - `0x6f`:
 - `0x70`: Russian/Russia
 - `0x71`: Russian/Statica 3x5 (Matrix)
-- `0x72`:
+- `0x72`: Russian/Shamanka 3x5 (Matrix)
 - `0x73`:
 - `0x74`: Belarusian/Belarus
 - `0x75`:
@@ -243,7 +243,7 @@
 - `0xfe`:
 - `0xff`:
 
-98 allocated identifiers
+99 allocated identifiers
 
-142 free identifiers
+141 free identifiers
 
