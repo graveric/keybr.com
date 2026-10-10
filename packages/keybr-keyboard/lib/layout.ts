@@ -827,6 +827,15 @@ export class Layout implements XEnumItem {
     /* emulate= */ true,
     /* geometries= */ new Enum(Geometry.MATRIX),
   );
+  static readonly EN_NORDRASSIL_3X5 = new Layout(
+    /* id= */ "en-nordrassil-3x5",
+    /* xid= */ 0xbf,
+    /* name= */ "Nordrassil 3x5 (Matrix)",
+    /* family= */ "ergo",
+    /* language= */ Language.EN,
+    /* emulate= */ true,
+    /* geometries= */ new Enum(Geometry.MATRIX),
+  );
   static readonly EN_NORMAN = new Layout(
     /* id= */ "en-norman",
     /* xid= */ 0x8b,
@@ -1434,6 +1443,7 @@ export class Layout implements XEnumItem {
     Layout.EN_NERPS,
     Layout.EN_NERPS_MATRIX,
     Layout.EN_NIGHT_MATRIX,
+    Layout.EN_NORDRASSIL_3X5,
     Layout.EN_HANDS_DOWN_NEU,
     Layout.EN_HANDS_DOWN_PROMETHIUM,
     Layout.EN_HANDS_DOWN_PROMETHIUM_INVERTED,

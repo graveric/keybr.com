@@ -177,7 +177,7 @@
 - `0xbc`: Armenian/Armenian Phonetic
 - `0xbd`: Armenian/Armenian Typewriter
 - `0xbe`: Armenian/Armenian Eastern
-- `0xbf`:
+- `0xbf`: English/Nordrassil 3x5 (Matrix)
 - `0xc0`:
 - `0xc1`:
 - `0xc2`:
@@ -243,7 +243,7 @@
 - `0xfe`:
 - `0xff`:
 
-99 allocated identifiers
+100 allocated identifiers
 
-141 free identifiers
+140 free identifiers
 
