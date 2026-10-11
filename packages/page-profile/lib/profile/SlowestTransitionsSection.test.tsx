@@ -9,8 +9,9 @@ import {
 } from "@keybr/result";
 import { FakeSettingsContext } from "@keybr/settings";
 import { Histogram } from "@keybr/textinput";
-import { render } from "@testing-library/react";
-import { isNotNull } from "rich-assert";
+import { render, within } from "@testing-library/react";
+import { userEvent } from "@testing-library/user-event";
+import { isNotNull, isNull } from "rich-assert";
 import { ResultGrouper } from "./ResultGrouper.tsx";
 import { SlowestTransitionsSection } from "./SlowestTransitionsSection.tsx";
 
@@ -55,12 +56,31 @@ function makeResult() {
           ],
         ]),
       },
+      {
+        // 'j' is on the right hand, so a -> j is a cross-hand transition.
+        codePoint: 0x006a,
+        hitCount: 10,
+        missCount: 1,
+        timeToType: 150,
+        bigrams: new Map([
+          [
+            0x0061,
+            {
+              hitCount: 10,
+              missCount: 1,
+              timeToType: 150,
+              prevKeyId: "KeyA",
+              currentKeyId: "KeyJ",
+            },
+          ],
+        ]),
+      },
       { codePoint: 0x0063, hitCount: 10, missCount: 1, timeToType: 300 },
     ]),
   });
 }
 
-test("render transitions table", async () => {
+function renderSection() {
   PhoneticModelLoader.loader = FakePhoneticModel.loader;
 
   const r = render(
@@ -76,10 +96,39 @@ test("render transitions table", async () => {
       </FakeSettingsContext>
     </FakeIntlProvider>,
   );
+  return r;
+}
+
+test("render transitions table", async () => {
+  const r = renderSection();
 
   isNotNull(await r.findByText("Slowest Transitions"));
   isNotNull(await r.findByText("KeyA \u2192 KeyB"));
   isNotNull(await r.findByText("KeyB \u2192 KeyA"));
+  isNotNull(await r.findByText("KeyA \u2192 KeyJ"));
+
+  r.unmount();
+});
+
+test("filter transitions by pair type", async () => {
+  const user = userEvent.setup();
+  const r = renderSection();
+
+  isNotNull(await r.findByText("KeyA \u2192 KeyJ"));
+
+  // Same hand: both left-hand transitions, the cross-hand one is hidden.
+  await user.click(within(r.getByTitle("Pairs:")).getByText("\u25BA"));
+  await user.click(within(r.getByRole("menu")).getByText("Same hand"));
+  isNotNull(await r.findByText("KeyA \u2192 KeyB"));
+  isNotNull(await r.findByText("KeyB \u2192 KeyA"));
+  isNull(r.queryByText("KeyA \u2192 KeyJ"));
+
+  // Cross hand: only the left-to-right transition is shown.
+  await user.click(within(r.getByTitle("Pairs:")).getByText("\u25BA"));
+  await user.click(within(r.getByRole("menu")).getByText("Cross hand"));
+  isNull(r.queryByText("KeyA \u2192 KeyB"));
+  isNull(r.queryByText("KeyB \u2192 KeyA"));
+  isNotNull(await r.findByText("KeyA \u2192 KeyJ"));
 
   r.unmount();
 });

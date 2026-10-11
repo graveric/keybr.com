@@ -1,10 +1,12 @@
 import { test } from "node:test";
 import { Application } from "@fastr/core";
+import { Layout } from "@keybr/keyboard";
 import { PublicId } from "@keybr/publicid";
-import { ResultFaker } from "@keybr/result";
-import { formatMessage } from "@keybr/result-io";
+import { Result, ResultFaker, TextType } from "@keybr/result";
+import { formatMessage, parseFile } from "@keybr/result-io";
 import { UserDataFactory } from "@keybr/result-userdata";
-import { equal, isFalse, isTrue, match } from "rich-assert";
+import { Histogram } from "@keybr/textinput";
+import { deepEqual, equal, isFalse, isTrue, match } from "rich-assert";
 import { kMain } from "../module.ts";
 import { TestContext } from "../test/context.ts";
 import { startApp } from "../test/request.ts";
@@ -206,6 +208,61 @@ test("post to user data", async (ctx) => {
   equal(response.status, 204);
 
   isTrue(await userData.exists());
+});
+
+test("preserve bigrams on post", async (ctx) => {
+  // Arrange.
+
+  ctx.mock.timers.enable({ apis: ["Date"], now });
+
+  const factory = context.get(UserDataFactory);
+  const user = await findUser("user1@keybr.com");
+  const id = new PublicId(user.id!);
+  const userData = factory.load(id);
+  await userData.delete();
+
+  const bigrams = new Map([
+    [
+      0x0061,
+      {
+        hitCount: 11,
+        missCount: 1,
+        timeToType: 111,
+        prevKeyId: "KeyA" as const,
+        currentKeyId: "KeyB" as const,
+      },
+    ],
+  ]);
+  const result = new Result(
+    Layout.EN_US,
+    TextType.GENERATED,
+    now.getTime(),
+    100,
+    10000,
+    0,
+    new Histogram([
+      { codePoint: 0x0062, hitCount: 22, missCount: 2, timeToType: 222, bigrams },
+      { codePoint: 0x0063, hitCount: 33, missCount: 3, timeToType: 333 },
+      { codePoint: 0x0064, hitCount: 44, missCount: 4, timeToType: 444 },
+    ]),
+  );
+  const body = formatMessage([result]);
+
+  const request = startApp(context.get(Application, kMain));
+
+  await request.become(user.id!);
+
+  // Act.
+
+  equal((await request.POST("/_/sync/data").send(body)).status, 204);
+
+  const response = await request.GET("/_/sync/data").send();
+
+  // Assert.
+
+  equal(response.status, 200);
+  const [stored] = [...parseFile(await response.body.buffer())];
+  deepEqual(stored.histogram.get(0x0062)!.bigrams, bigrams);
 });
 
 test("delete empty user data", async (ctx) => {

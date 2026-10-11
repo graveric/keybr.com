@@ -6,7 +6,7 @@ import { PhoneticModelLoader } from "@keybr/phonetic-model-loader";
 import { FakeResultContext, ResultFaker } from "@keybr/result";
 import { FakeSettingsContext } from "@keybr/settings";
 import { render } from "@testing-library/react";
-import { isNotNull } from "rich-assert";
+import { isNotNull, isNull } from "rich-assert";
 import { PublicProfilePage } from "./PublicProfilePage.tsx";
 
 const faker = new ResultFaker();
@@ -38,6 +38,8 @@ test("render", async () => {
   isNotNull(await r.findByText("Typing Speed"));
   isNotNull(await r.findByText("Key Typing Speed"));
   isNotNull(await r.findByText("Slowest Transitions"));
+  // The export section is only available on the private profile.
+  isNull(r.queryByText("Export Transition Statistics"));
 
   r.unmount();
 });

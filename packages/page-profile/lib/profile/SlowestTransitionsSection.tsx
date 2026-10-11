@@ -86,6 +86,10 @@ export function SlowestTransitionsSection({
         </Field>
         <Field>
           <OptionList
+            title={formatMessage({
+              id: "profile.transitions.filter",
+              defaultMessage: "Pairs:",
+            })}
             options={filterOptions}
             value={pairType}
             onSelect={(value) => {
