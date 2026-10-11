@@ -78,7 +78,7 @@ export function LessonSettings(): ReactNode {
           <>
             {tabBody(settings, lesson)}
             <LessonPreview lesson={lesson} />
-            <DailyGoalSettings />
+            <DailyGoalSettings layout={lesson.keyboard.layout} />
           </>
         )}
       </LessonLoader>

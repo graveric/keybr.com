@@ -1,6 +1,7 @@
+import { type Layout } from "@keybr/keyboard";
 import { type Result, Today } from "@keybr/result";
 import { type Settings } from "@keybr/settings";
-import { lessonProps } from "./settings.ts";
+import { getDailyGoal } from "./settings.ts";
 
 export type DailyGoal = {
   /** Daily goal in minutes. */
@@ -11,12 +12,14 @@ export type DailyGoal = {
 
 export class MutableDailyGoal implements DailyGoal {
   readonly #goal: number;
+  readonly #layout: Layout;
   readonly #today: Today;
   #time: number;
   #value: number;
 
-  constructor(settings: Settings, today: Today = new Today()) {
-    this.#goal = settings.get(lessonProps.dailyGoal);
+  constructor(settings: Settings, layout: Layout, today: Today = new Today()) {
+    this.#goal = getDailyGoal(settings, layout);
+    this.#layout = layout;
     this.#today = today;
     this.#time = 0;
     this.#value = 0;
@@ -31,7 +34,10 @@ export class MutableDailyGoal implements DailyGoal {
   }
 
   append(result: Result) {
-    if (this.#today.includes(result.timeStamp)) {
+    if (
+      result.layout.id === this.#layout.id &&
+      this.#today.includes(result.timeStamp)
+    ) {
       this.#time += result.time;
       this.#value = this.measure(this.#time);
     }

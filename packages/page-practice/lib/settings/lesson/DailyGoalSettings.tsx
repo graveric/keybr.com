@@ -1,5 +1,6 @@
 import { useIntlDurations } from "@keybr/intl";
-import { lessonProps } from "@keybr/lesson";
+import { type Layout } from "@keybr/keyboard";
+import { getDailyGoal, setDailyGoal } from "@keybr/lesson";
 import { useSettings } from "@keybr/settings";
 import {
   Description,
@@ -13,10 +14,15 @@ import {
 import { type ReactNode } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 
-export function DailyGoalSettings(): ReactNode {
+export function DailyGoalSettings({
+  layout,
+}: {
+  readonly layout: Layout;
+}): ReactNode {
   const { formatMessage } = useIntl();
   const { formatDuration } = useIntlDurations();
   const { settings, updateSettings } = useSettings();
+  const dailyGoal = getDailyGoal(settings, layout);
   return (
     <FieldSet>
       <FieldList>
@@ -29,24 +35,20 @@ export function DailyGoalSettings(): ReactNode {
             min={0}
             max={24}
             step={1}
-            value={Math.round(settings.get(lessonProps.dailyGoal) / 5)}
+            value={Math.round(dailyGoal / 5)}
             onChange={(value) => {
-              updateSettings(settings.set(lessonProps.dailyGoal, value * 5));
+              updateSettings(setDailyGoal(settings, layout, value * 5));
             }}
           />
         </Field>
         <Field>
-          {settings.get(lessonProps.dailyGoal) === 0 ? (
+          {dailyGoal === 0 ? (
             formatMessage({
               id: "t_Not_set",
               defaultMessage: "Not set",
             })
           ) : (
-            <Value
-              value={formatDuration({
-                minutes: settings.get(lessonProps.dailyGoal),
-              })}
-            />
+            <Value value={formatDuration({ minutes: dailyGoal })} />
           )}
         </Field>
       </FieldList>

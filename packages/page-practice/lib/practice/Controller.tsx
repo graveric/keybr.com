@@ -27,6 +27,7 @@ export const Controller = memo(function Controller({
 }): ReactNode {
   const {
     state,
+    lastResult,
     handleResetLesson,
     handleSkipLesson,
     handleKeyDown,
@@ -46,6 +47,7 @@ export const Controller = memo(function Controller({
       state={state}
       lines={state.lines}
       depressedKeys={state.depressedKeys}
+      lastResult={lastResult}
       onResetLesson={handleResetLesson}
       onSkipLesson={handleSkipLesson}
       onKeyDown={handleKeyDown}
@@ -64,6 +66,7 @@ function useLessonState(
   const [key, setKey] = useState(0); // Creates new LessonState instances.
   const [, setLines] = useState<LineList>({ text: "", lines: [] }); // Forces UI update.
   const [, setDepressedKeys] = useState<readonly KeyId[]>([]); // Forces UI update.
+  const [lastResult, setLastResult] = useState<Result | null>(null);
   const lastLessonRef = useRef<LastLesson | null>(null);
 
   const onResultRef = useRef(onResult);
@@ -74,6 +77,7 @@ function useLessonState(
     const state = new LessonState(progress, (result, textInput) => {
       setKey(key + 1);
       lastLessonRef.current = makeLastLesson(result, textInput.steps);
+      setLastResult(result);
       onResultRef.current(result);
     });
     state.lastLesson = lastLessonRef.current;
@@ -117,11 +121,12 @@ function useLessonState(
     );
     return {
       state,
+      lastResult,
       handleResetLesson,
       handleSkipLesson,
       handleKeyDown: onKeyDown,
       handleKeyUp: onKeyUp,
       handleInput: onInput,
     };
-  }, [progress, keyboard, timeout, key]);
+  }, [progress, keyboard, timeout, key, lastResult]);
 }

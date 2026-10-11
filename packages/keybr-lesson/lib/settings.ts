@@ -1,10 +1,13 @@
 import { Syntax } from "@keybr/code";
 import { Book } from "@keybr/content";
+import { type Layout } from "@keybr/keyboard";
 import {
   booleanProp,
   flagsProp,
   itemProp,
+  type NumberProp,
   numberProp,
+  type Settings,
   stringProp,
 } from "@keybr/settings";
 import { LessonType } from "./lessontype.ts";
@@ -60,3 +63,33 @@ export const lessonProps = {
   targetSpeed: numberProp("lesson.targetSpeed", 175, { min: 75, max: 750 }),
   dailyGoal: numberProp("lesson.dailyGoal", 30, { min: 0, max: 120 }),
 } as const;
+
+export const dailyGoalDefault = 30;
+export const dailyGoalMin = 0;
+export const dailyGoalMax = 120;
+
+/**
+ * The daily goal is stored per-layout. Layouts that have no explicit value
+ * fall back to the legacy global `lesson.dailyGoal` value.
+ */
+export function dailyGoalProp(layout: Layout): NumberProp {
+  return numberProp(`lesson.dailyGoal.${layout.id}`, dailyGoalDefault, {
+    min: dailyGoalMin,
+    max: dailyGoalMax,
+  });
+}
+
+export function getDailyGoal(settings: Settings, layout: Layout): number {
+  return settings.get(
+    dailyGoalProp(layout),
+    settings.get(lessonProps.dailyGoal),
+  );
+}
+
+export function setDailyGoal(
+  settings: Settings,
+  layout: Layout,
+  value: number,
+): Settings {
+  return settings.set(dailyGoalProp(layout), value);
+}

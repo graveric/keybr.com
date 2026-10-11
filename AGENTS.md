@@ -6,7 +6,8 @@ This file provides guidance to coding agents (Claude, Codex, etc) when working w
 
 keybr.com is a NodeJS/React web app that teaches touch typing by generating lessons targeting a
 user's weakest keys. It's an npm workspaces monorepo built with `lage` as the
-task runner across ~75 packages under `packages/*`.
+task runner across ~75 packages under `packages/*`. **NodeJS v26 is required** (CI uses
+`node-version: "26.x"`; see `docs/getting_started.md`).
 
 ## Common commands
 
@@ -38,8 +39,9 @@ is to point them at an in-memory sqlite database instead:
 env DATABASE_CLIENT=sqlite npm test
 ```
 
-Some of these packages also expose a `fast-test` script that already sets `DATABASE_CLIENT=sqlite`
-for you — check `packages/<name>/package.json` first.
+`@keybr/database` and `@keybr/server` expose a `fast-test` script that already sets
+`DATABASE_CLIENT=sqlite` for you (see their `package.json`). `@keybr/server`'s tests also run
+serially (`--test-concurrency=1`).
 
 ### Running a single package or test
 
@@ -105,10 +107,10 @@ lage's scoping, e.g. `npx lage test --scope @keybr/lesson`.
 
 ### Build/task pipeline
 
-`lage.config.js` defines the pipeline: `compile` depends on `^compile` (upstream packages compile
+`.lagerc.cjs` defines the lage pipeline: `compile` depends on `^compile` (upstream packages compile
 first) and `test` depends on `^test`. `npm run compile`/`npm test` at the root fan out through this
 graph with caching; use `--no-cache` (already default in the root scripts) when you need a clean
-run.
+run. CI runs `compile → lint → stylelint → build → test` in that order.
 
 Webpack (`webpack.config.js`) bundles the browser entry from `keybr-pages-browser` for `npm run
 build`/`build-dev`/`watch`; `webpack-manifest.js` wires the resulting asset manifest into the
@@ -125,7 +127,7 @@ similar content packages — see `docs/custom_language.md` for adding a new lang
 
 - ESLint (`eslint.config.js`) enforces `simple-import-sort`, a custom `@keybr/scripts` eslint
   plugin, and `formatjs` message lint, on top of `typescript-eslint` + `react`/`react-hooks`
-  recommended configs. `packages/server/**` and `*.test.{ts,tsx}` are exempted from the
-  `react-hooks` ruleset.
+  recommended configs. `packages/server/**`, `packages/server-cli/**` and `*.test.{ts,tsx}` are
+  exempted from the `react-hooks` ruleset.
 - Pre-commit (`husky` + `lint-staged`) runs `prettier --write` + `eslint --fix` on staged
   `js/ts/tsx`, and `prettier --write` + `stylelint --fix` on staged `less/css`.

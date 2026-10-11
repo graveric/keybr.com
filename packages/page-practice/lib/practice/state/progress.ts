@@ -33,7 +33,10 @@ export class Progress {
     this.#keyStatsMap = new MutableKeyStatsMap(this.#lesson.letters);
     this.#summaryStats = new MutableSummaryStats();
     this.#streakList = new MutableStreakList();
-    this.#dailyGoal = new MutableDailyGoal(this.#settings);
+    this.#dailyGoal = new MutableDailyGoal(
+      this.#settings,
+      this.#lesson.keyboard.layout,
+    );
 
     const letter = new LetterEvents(this.#lesson, this.#keyStatsMap);
     const topSpeed = new TopSpeedEvents();

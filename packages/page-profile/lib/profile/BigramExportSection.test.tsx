@@ -80,7 +80,7 @@ function renderSection() {
   return r;
 }
 
-test("export transitions as CSV and JSON", async () => {
+test("export transitions as CSV, JSON and SVG", async () => {
   const user = userEvent.setup();
   const r = renderSection();
 
@@ -105,6 +105,14 @@ test("export transitions as CSV and JSON", async () => {
     isNotNull(downloads[1]);
     isTrue(downloads[1].href.startsWith("data:application/json"));
     isTrue(downloads[1].download.endsWith(".json"));
+
+    await user.click(within(figure).getByText("\u25BA"));
+    await user.click(within(r.getByRole("menu")).getByText("SVG"));
+    await user.click(within(figure).getByText("Download"));
+
+    isNotNull(downloads[2]);
+    isTrue(downloads[2].href.startsWith("data:image/svg+xml"));
+    isTrue(downloads[2].download.endsWith(".svg"));
   } finally {
     HTMLAnchorElement.prototype.click = originalClick;
   }

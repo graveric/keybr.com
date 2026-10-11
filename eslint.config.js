@@ -41,7 +41,15 @@ export default [
       "**/*.test.tsx",
     ],
     plugins: { "react-hooks": reactHooks },
-    rules: reactHooks.configs.recommended.rules,
+    rules: {
+      ...reactHooks.configs.recommended.rules,
+      // The codebase predates these React Compiler rules and does not conform to them.
+      "react-hooks/refs": "off",
+      "react-hooks/set-state-in-render": "off",
+      "react-hooks/set-state-in-effect": "off",
+      "react-hooks/preserve-manual-memoization": "off",
+      "react-hooks/immutability": "off",
+    },
   },
   {
     plugins: {

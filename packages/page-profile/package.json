@@ -18,6 +18,7 @@
     "@keybr/result": "*",
     "@keybr/settings": "*",
     "@keybr/textinput": "*",
+    "@keybr/unicode": "*",
     "@keybr/widget": "*"
   },
   "devDependencies": {},

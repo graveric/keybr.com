@@ -1,13 +1,19 @@
 import { test } from "node:test";
 import { Geometry, Layout, loadKeyboard } from "@keybr/keyboard";
 import { Letter } from "@keybr/phonetic-model";
-import { MutableKeyStatsMap } from "@keybr/result";
+import { MutableKeyStatsMap, Result, TextType } from "@keybr/result";
 import { Histogram } from "@keybr/textinput";
 import { equal, ok } from "rich-assert";
 import {
+  barWidth,
   buildBigramTransitions,
+  buildBigramTransitionsFromResult,
+  transitionColor,
+  transitionColorMax,
+  transitionColorMin,
   transitionsToCsv,
   transitionsToJson,
+  transitionsToSvg,
 } from "./transitions.tsx";
 
 const keyboard = loadKeyboard(Layout.EN_US, Geometry.ANSI_101);
@@ -152,4 +158,74 @@ test("export to JSON", () => {
   equal(json.transitions.length, 2);
   equal(json.transitions[0].pairType, "same-hand");
   equal(json.transitions[0].prevPosition.hand, "left");
+});
+
+test("build transitions from a result", () => {
+  const result = new Result(
+    Layout.EN_US,
+    TextType.GENERATED,
+    Date.now(),
+    10,
+    1000,
+    0,
+    new Histogram([
+      {
+        codePoint: 0x0073,
+        hitCount: 10,
+        missCount: 1,
+        timeToType: 300,
+        bigrams: new Map([
+          [
+            0x0061,
+            {
+              hitCount: 10,
+              missCount: 1,
+              timeToType: 300,
+              prevKeyId: "KeyA",
+              currentKeyId: "KeyS",
+            },
+          ],
+        ]),
+      },
+    ]),
+  );
+
+  const transitions = buildBigramTransitionsFromResult(result, keyboard);
+  equal(transitions.length, 1);
+  equal(transitions[0].prevKeyId, "KeyA");
+  equal(transitions[0].currentKeyId, "KeyS");
+  equal(transitions[0].pairType, "same-hand");
+  equal(transitions[0].hitCount, 10);
+  equal(transitions[0].missCount, 1);
+  equal(transitions[0].timeToType, 300);
+});
+
+test("transition color", () => {
+  equal(transitionColor(transitionColorMin), "#2e8b57");
+  equal(transitionColor(transitionColorMax), "#d32f2f");
+  equal(transitionColor(0), "#808080");
+  equal(transitionColor(1), "#2e8b57");
+  equal(transitionColor(1000000), "#d32f2f");
+});
+
+test("bar width", () => {
+  equal(barWidth(0, 0, 300), 0);
+  equal(barWidth(300, 0, 300), 100);
+  equal(barWidth(150, 0, 300), 50);
+  equal(barWidth(200, 0, 0), 100);
+});
+
+test("export to SVG", () => {
+  const transitions = buildBigramTransitions(makeKeyStatsMap(), keyboard);
+  const svg = transitionsToSvg(transitions, keyboard);
+  ok(svg.startsWith("<svg"));
+  ok(svg.endsWith("</svg>"));
+  ok(svg.includes('viewBox="0 0'));
+  ok(!svg.includes("KeyA"));
+  ok(svg.includes('marker-end="url(#arrow)"'));
+  // The marker itself also contains a `path` element, so count the arrows.
+  equal((svg.match(/marker-end="url\(#arrow\)"/g) ?? []).length, 2);
+  // Slow (300ms) transitions are warmer, fast (200ms) transitions are greener.
+  ok(svg.includes('stroke="hsl(35 70% 45%)"'));
+  ok(svg.includes('stroke="hsl(106 70% 45%)"'));
 });

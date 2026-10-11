@@ -1,4 +1,5 @@
 import { type Color, parseColor } from "@keybr/color";
+import { useKeyboard } from "@keybr/keyboard";
 import { MutableDailyGoal } from "@keybr/lesson";
 import { useSettings } from "@keybr/settings";
 import { useComputedStyles } from "@keybr/themes";
@@ -11,10 +12,11 @@ export type Effort = {
 
 export function useEffort(): Effort {
   const { settings } = useSettings();
+  const { layout } = useKeyboard();
   const { getPropertyValue } = useComputedStyles();
   const color = getPropertyValue("--effort-color") || "#000000";
   return useMemo(() => {
-    const dailyGoal = new MutableDailyGoal(settings);
+    const dailyGoal = new MutableDailyGoal(settings, layout);
     const effort = (time: number) => {
       return dailyGoal.goal > 0 ? dailyGoal.measure(time) : 1.0;
     };
@@ -22,5 +24,5 @@ export function useEffort(): Effort {
       return parseColor(color).fade(effort);
     };
     return { effort, shade };
-  }, [settings, color]);
+  }, [settings, layout, color]);
 }

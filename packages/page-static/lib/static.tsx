@@ -1,4 +1,3 @@
-import { CookieDeclaration } from "@keybr/thirdparties";
 import { Article } from "@keybr/widget";
 import privacyPolicyHtml from "./privacy-policy.html.ts";
 import * as styles from "./static.module.less";
@@ -12,8 +11,6 @@ export function PrivacyPolicyPage() {
           __html: privacyPolicyHtml,
         }}
       />
-      <h1>Cookie Declaration</h1>
-      <CookieDeclaration />
     </Article>
   );
 }

@@ -1,6 +1,7 @@
 import { type KeyId } from "@keybr/keyboard";
 import { names } from "@keybr/lesson-ui";
 import { Screen } from "@keybr/pages-shared";
+import { type Result } from "@keybr/result";
 import { enumProp, Preferences } from "@keybr/settings";
 import { type LineList } from "@keybr/textinput";
 import {
@@ -14,6 +15,7 @@ import { createRef, PureComponent, type ReactNode } from "react";
 import { Controls } from "./Controls.tsx";
 import { Indicators } from "./Indicators.tsx";
 import { DeferredKeyboardPresenter } from "./KeyboardPresenter.tsx";
+import { LastSessionTransitionsPanel } from "./LastSessionTransitionsPanel.tsx";
 import { PracticeTour } from "./PracticeTour.tsx";
 import * as styles from "./Presenter.module.less";
 import { type LessonState } from "./state/index.ts";
@@ -22,6 +24,7 @@ type Props = {
   readonly state: LessonState;
   readonly lines: LineList;
   readonly depressedKeys: readonly KeyId[];
+  readonly lastResult: Result | null;
   readonly onResetLesson: () => void;
   readonly onSkipLesson: () => void;
   readonly onKeyDown: (ev: IKeyboardEvent) => void;
@@ -74,7 +77,7 @@ export class Presenter extends PureComponent<Props, State> {
 
   override render() {
     const {
-      props: { state, lines, depressedKeys },
+      props: { state, lines, depressedKeys, lastResult },
       state: { view, tour, focus },
       handleResetLesson,
       handleSkipLesson,
@@ -87,6 +90,10 @@ export class Presenter extends PureComponent<Props, State> {
       handleHelp,
       handleTourClose,
     } = this;
+    const lastSession =
+      lastResult != null ? (
+        <LastSessionTransitionsPanel result={lastResult} />
+      ) : null;
     switch (view) {
       case View.Normal:
         return (
@@ -94,6 +101,7 @@ export class Presenter extends PureComponent<Props, State> {
             state={state}
             focus={tour || focus}
             depressedKeys={depressedKeys}
+            lastSession={lastSession}
             toggledKeys={ModifierState.modifiers}
             controls={
               <Controls
@@ -126,8 +134,7 @@ export class Presenter extends PureComponent<Props, State> {
         return (
           <CompactLayout
             state={state}
-            focus={tour || focus}
-            depressedKeys={depressedKeys}
+            lastSession={lastSession}
             controls={
               <Controls
                 onChangeView={handleChangeView}
@@ -158,8 +165,7 @@ export class Presenter extends PureComponent<Props, State> {
         return (
           <BareLayout
             state={state}
-            focus={tour || focus}
-            depressedKeys={depressedKeys}
+            lastSession={lastSession}
             controls={
               <Controls
                 onChangeView={handleChangeView}
@@ -284,6 +290,7 @@ function NormalLayout({
   state,
   focus,
   depressedKeys,
+  lastSession,
   toggledKeys,
   controls,
   textInput,
@@ -292,6 +299,7 @@ function NormalLayout({
   readonly state: LessonState;
   readonly focus: boolean;
   readonly depressedKeys: readonly string[];
+  readonly lastSession: ReactNode;
   readonly toggledKeys: readonly string[];
   readonly controls: ReactNode;
   readonly textInput: ReactNode;
@@ -302,6 +310,7 @@ function NormalLayout({
       <Indicators state={state} />
       <div id={names.textInput} className={styles.textInput_normal}>
         {textInput}
+        {lastSession}
       </div>
       <div id={names.keyboard} className={styles.keyboard}>
         <Zoomer id="Keyboard/Normal">
@@ -322,12 +331,12 @@ function NormalLayout({
 
 function CompactLayout({
   state,
+  lastSession,
   controls,
   textInput,
 }: {
   readonly state: LessonState;
-  readonly focus: boolean;
-  readonly depressedKeys: readonly string[];
+  readonly lastSession: ReactNode;
   readonly controls: ReactNode;
   readonly textInput: ReactNode;
 }) {
@@ -336,6 +345,7 @@ function CompactLayout({
       <Indicators state={state} />
       <div id={names.textInput} className={styles.textInput_compact}>
         {textInput}
+        {lastSession}
       </div>
       {controls}
     </Screen>
@@ -344,12 +354,12 @@ function CompactLayout({
 
 function BareLayout({
   state,
+  lastSession,
   controls,
   textInput,
 }: {
   readonly state: LessonState;
-  readonly focus: boolean;
-  readonly depressedKeys: readonly string[];
+  readonly lastSession: ReactNode;
   readonly controls: ReactNode;
   readonly textInput: ReactNode;
 }) {
@@ -357,6 +367,7 @@ function BareLayout({
     <Screen>
       <div id={names.textInput} className={styles.textInput_bare}>
         {textInput}
+        {lastSession}
       </div>
       {controls}
     </Screen>

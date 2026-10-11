@@ -8,6 +8,7 @@
   "dependencies": {
     "@keybr/color": "*",
     "@keybr/intl": "*",
+    "@keybr/keyboard": "*",
     "@keybr/lang": "*",
     "@keybr/lesson": "*",
     "@keybr/phonetic-model": "*",

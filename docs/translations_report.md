@@ -1,6 +1,6 @@
 # English
 
-Translated: 366 messages, 4883 words
+Translated: 376 messages, 4945 words
 
 Untranslated: 0 messages, 0 words
 
@@ -8,7 +8,7 @@ Untranslated: 0 messages, 0 words
 
 Translated: 339 messages, 4744 words
 
-Untranslated: 27 messages, 139 words
+Untranslated: 34 messages, 193 words
 
 * *All*
 * *Keys*
@@ -18,6 +18,7 @@ Untranslated: 27 messages, 139 words
 * *Presses*
 * *Volume:*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -27,16 +28,15 @@ Untranslated: 27 messages, 139 words
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Close the details.*
 * *Slowest Transitions*
-* *Export Transition Statistics*
-* *Download the key effort matrix.*
 * ...
 
 # Arabic
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 25 messages, 137 words
+Untranslated: 32 messages, 191 words
 
 * *All*
 * *Keys*
@@ -44,6 +44,7 @@ Untranslated: 25 messages, 137 words
 * *Pairs:*
 * *Presses*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -53,18 +54,17 @@ Untranslated: 25 messages, 137 words
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Close the details.*
 * *Slowest Transitions*
+* *Last session transitions*
 * *Export Transition Statistics*
-* *Download the key effort matrix.*
-* *Download the transition statistics.*
-* *Not enough data yet. Keep practicing to collect transition s...*
 * ...
 
 # Bulgarian
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 25 messages, 137 words
+Untranslated: 32 messages, 191 words
 
 * *All*
 * *Keys*
@@ -72,6 +72,7 @@ Untranslated: 25 messages, 137 words
 * *Pairs:*
 * *Presses*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -81,18 +82,17 @@ Untranslated: 25 messages, 137 words
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Close the details.*
 * *Slowest Transitions*
+* *Last session transitions*
 * *Export Transition Statistics*
-* *Download the key effort matrix.*
-* *Download the transition statistics.*
-* *Not enough data yet. Keep practicing to collect transition s...*
 * ...
 
 # Bangla
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 25 messages, 137 words
+Untranslated: 32 messages, 191 words
 
 * *All*
 * *Keys*
@@ -100,6 +100,7 @@ Untranslated: 25 messages, 137 words
 * *Pairs:*
 * *Presses*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -109,18 +110,17 @@ Untranslated: 25 messages, 137 words
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Close the details.*
 * *Slowest Transitions*
+* *Last session transitions*
 * *Export Transition Statistics*
-* *Download the key effort matrix.*
-* *Download the transition statistics.*
-* *Not enough data yet. Keep practicing to collect transition s...*
 * ...
 
 # Catalan
 
 Translated: 310 messages, 3556 words
 
-Untranslated: 54 messages, 1305 words
+Untranslated: 61 messages, 1359 words
 
 * *All*
 * *Keys*
@@ -130,6 +130,7 @@ Untranslated: 54 messages, 1305 words
 * *Zones:*
 * *Presses*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -141,14 +142,13 @@ Untranslated: 54 messages, 1305 words
 * *Explain charts*
 * *Key sounds only*
 * *Key Effort Matrix*
-* *Relative Accuracy*
 * ...
 
 # Czech
 
 Translated: 338 messages, 4742 words
 
-Untranslated: 28 messages, 141 words
+Untranslated: 35 messages, 195 words
 
 * *All*
 * *Keys*
@@ -158,6 +158,7 @@ Untranslated: 28 messages, 141 words
 * *Presses*
 * *Syntax:*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -168,15 +169,14 @@ Untranslated: 28 messages, 141 words
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
-* *Slowest Transitions*
-* *Export Transition Statistics*
+* *Close the details.*
 * ...
 
 # Danish
 
 Translated: 331 messages, 4689 words
 
-Untranslated: 33 messages, 172 words
+Untranslated: 40 messages, 226 words
 
 * *All*
 * *Keys*
@@ -188,6 +188,7 @@ Untranslated: 33 messages, 172 words
 * *Layouts*
 * *Presses*
 * *Download*
+* *No data.*
 * *Position*
 * *Mean time*
 * *Same hand*
@@ -197,14 +198,13 @@ Untranslated: 33 messages, 172 words
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
-* *Download data*
 * ...
 
 # German
 
 Translated: 339 messages, 4744 words
 
-Untranslated: 27 messages, 139 words
+Untranslated: 34 messages, 193 words
 
 * *All*
 * *Keys*
@@ -212,6 +212,7 @@ Untranslated: 27 messages, 139 words
 * *Pairs:*
 * *Presses*
 * *Download*
+* *No data.*
 * *Position*
 * *Alphabet:*
 * *Mean time*
@@ -223,16 +224,15 @@ Untranslated: 27 messages, 139 words
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Close the details.*
 * *Slowest Transitions*
-* *Export Transition Statistics*
-* *Download the key effort matrix.*
 * ...
 
 # Greek
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 25 messages, 137 words
+Untranslated: 32 messages, 191 words
 
 * *All*
 * *Keys*
@@ -240,6 +240,7 @@ Untranslated: 25 messages, 137 words
 * *Pairs:*
 * *Presses*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -249,18 +250,17 @@ Untranslated: 25 messages, 137 words
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Close the details.*
 * *Slowest Transitions*
+* *Last session transitions*
 * *Export Transition Statistics*
-* *Download the key effort matrix.*
-* *Download the transition statistics.*
-* *Not enough data yet. Keep practicing to collect transition s...*
 * ...
 
 # Esperanto
 
 Translated: 77 messages, 1126 words
 
-Untranslated: 282 messages, 3699 words
+Untranslated: 289 messages, 3753 words
 
 * *All*
 * *GO!*
@@ -288,7 +288,7 @@ Untranslated: 282 messages, 3699 words
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 25 messages, 137 words
+Untranslated: 32 messages, 191 words
 
 * *All*
 * *Keys*
@@ -296,6 +296,7 @@ Untranslated: 25 messages, 137 words
 * *Pairs:*
 * *Presses*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -305,18 +306,17 @@ Untranslated: 25 messages, 137 words
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Close the details.*
 * *Slowest Transitions*
+* *Last session transitions*
 * *Export Transition Statistics*
-* *Download the key effort matrix.*
-* *Download the transition statistics.*
-* *Not enough data yet. Keep practicing to collect transition s...*
 * ...
 
 # Estonian
 
 Translated: 338 messages, 4743 words
 
-Untranslated: 28 messages, 140 words
+Untranslated: 35 messages, 194 words
 
 * *All*
 * *GO!*
@@ -326,6 +326,7 @@ Untranslated: 28 messages, 140 words
 * *Pairs:*
 * *Presses*
 * *Download*
+* *No data.*
 * *Progress*
 * *Mean time*
 * *Same hand*
@@ -336,15 +337,14 @@ Untranslated: 28 messages, 140 words
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
-* *Slowest Transitions*
-* *Export Transition Statistics*
+* *Close the details.*
 * ...
 
 # Persian
 
 Translated: 295 messages, 2959 words
 
-Untranslated: 69 messages, 1902 words
+Untranslated: 76 messages, 1956 words
 
 * *All*
 * *Keys*
@@ -355,6 +355,7 @@ Untranslated: 69 messages, 1902 words
 * *Presses*
 * *Syntax:*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -365,14 +366,13 @@ Untranslated: 69 messages, 1902 words
 * *Time weight:*
 * *Top accuracy*
 * *Explain charts*
-* *Key sounds only*
 * ...
 
 # Finnish
 
 Translated: 208 messages, 2284 words
 
-Untranslated: 152 messages, 2543 words
+Untranslated: 159 messages, 2597 words
 
 * *All*
 * *GO!*
@@ -386,6 +386,7 @@ Untranslated: 152 messages, 2543 words
 * *Presses*
 * *Syntax:*
 * *Download*
+* *No data.*
 * *Position*
 * *Practice*
 * *Settings*
@@ -393,14 +394,13 @@ Untranslated: 152 messages, 2543 words
 * *Same hand*
 * *Top speed*
 * *Uncertain*
-* *Characters*
 * ...
 
 # Faroese
 
 Translated: 44 messages, 583 words
 
-Untranslated: 314 messages, 4231 words
+Untranslated: 321 messages, 4285 words
 
 * *All*
 * *GO!*
@@ -428,7 +428,7 @@ Untranslated: 314 messages, 4231 words
 
 Translated: 333 messages, 4544 words
 
-Untranslated: 33 messages, 339 words
+Untranslated: 40 messages, 393 words
 
 * *All*
 * *Keys*
@@ -439,6 +439,7 @@ Untranslated: 33 messages, 339 words
 * *Presses*
 * *Volume:*
 * *Download*
+* *No data.*
 * *Position*
 * *Alphabet:*
 * *Mean time*
@@ -449,14 +450,13 @@ Untranslated: 33 messages, 339 words
 * *Miss weight:*
 * *Time weight:*
 * *Key sounds only*
-* *Key Effort Matrix*
 * ...
 
 # Irish
 
 Translated: 337 messages, 4735 words
 
-Untranslated: 29 messages, 148 words
+Untranslated: 36 messages, 202 words
 
 * *All*
 * *Keys*
@@ -465,6 +465,7 @@ Untranslated: 29 messages, 148 words
 * *Zones:*
 * *Presses*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -477,14 +478,13 @@ Untranslated: 29 messages, 148 words
 * *M|T|W|T|F|S|S*
 * *Key sounds only*
 * *Key Effort Matrix*
-* *Slowest Transitions*
 * ...
 
 # Hebrew
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 25 messages, 137 words
+Untranslated: 32 messages, 191 words
 
 * *All*
 * *Keys*
@@ -492,6 +492,7 @@ Untranslated: 25 messages, 137 words
 * *Pairs:*
 * *Presses*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -501,18 +502,17 @@ Untranslated: 25 messages, 137 words
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Close the details.*
 * *Slowest Transitions*
+* *Last session transitions*
 * *Export Transition Statistics*
-* *Download the key effort matrix.*
-* *Download the transition statistics.*
-* *Not enough data yet. Keep practicing to collect transition s...*
 * ...
 
 # Croatian
 
 Translated: 337 messages, 4740 words
 
-Untranslated: 29 messages, 143 words
+Untranslated: 36 messages, 197 words
 
 * *All*
 * *Keys*
@@ -522,6 +522,7 @@ Untranslated: 29 messages, 143 words
 * *Pairs:*
 * *Presses*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -532,15 +533,14 @@ Untranslated: 29 messages, 143 words
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
-* *Slowest Transitions*
-* *Premium account price:*
+* *Close the details.*
 * ...
 
 # Hungarian
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 25 messages, 137 words
+Untranslated: 32 messages, 191 words
 
 * *All*
 * *Keys*
@@ -548,6 +548,7 @@ Untranslated: 25 messages, 137 words
 * *Pairs:*
 * *Presses*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -557,18 +558,17 @@ Untranslated: 25 messages, 137 words
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Close the details.*
 * *Slowest Transitions*
+* *Last session transitions*
 * *Export Transition Statistics*
-* *Download the key effort matrix.*
-* *Download the transition statistics.*
-* *Not enough data yet. Keep practicing to collect transition s...*
 * ...
 
 # Indonesian
 
 Translated: 339 messages, 4744 words
 
-Untranslated: 27 messages, 139 words
+Untranslated: 34 messages, 193 words
 
 * *All*
 * *GO!*
@@ -578,6 +578,7 @@ Untranslated: 27 messages, 139 words
 * *Presses*
 * *Volume:*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -587,16 +588,15 @@ Untranslated: 27 messages, 139 words
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Close the details.*
 * *Slowest Transitions*
-* *Export Transition Statistics*
-* *Download the key effort matrix.*
 * ...
 
 # Icelandic
 
 Translated: 95 messages, 1742 words
 
-Untranslated: 264 messages, 3083 words
+Untranslated: 271 messages, 3137 words
 
 * *All*
 * *GO!*
@@ -624,7 +624,7 @@ Untranslated: 264 messages, 3083 words
 
 Translated: 334 messages, 4738 words
 
-Untranslated: 31 messages, 143 words
+Untranslated: 38 messages, 197 words
 
 * *All*
 * *Keys*
@@ -638,6 +638,7 @@ Untranslated: 31 messages, 143 words
 * *Presses*
 * *Volume:*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -645,14 +646,13 @@ Untranslated: 31 messages, 143 words
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
-* *Key sounds only*
 * ...
 
 # Japanese
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 25 messages, 137 words
+Untranslated: 32 messages, 191 words
 
 * *All*
 * *Keys*
@@ -660,6 +660,7 @@ Untranslated: 25 messages, 137 words
 * *Pairs:*
 * *Presses*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -669,18 +670,17 @@ Untranslated: 25 messages, 137 words
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Close the details.*
 * *Slowest Transitions*
+* *Last session transitions*
 * *Export Transition Statistics*
-* *Download the key effort matrix.*
-* *Download the transition statistics.*
-* *Not enough data yet. Keep practicing to collect transition s...*
 * ...
 
 # Korean
 
 Translated: 145 messages, 1297 words
 
-Untranslated: 219 messages, 3564 words
+Untranslated: 226 messages, 3618 words
 
 * *All*
 * *Copy*
@@ -708,7 +708,7 @@ Untranslated: 219 messages, 3564 words
 
 Translated: 305 messages, 3388 words
 
-Untranslated: 58 messages, 1464 words
+Untranslated: 65 messages, 1518 words
 
 * *All*
 * *Keys*
@@ -716,6 +716,7 @@ Untranslated: 58 messages, 1464 words
 * *Pairs:*
 * *Presses*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -727,16 +728,15 @@ Untranslated: 58 messages, 1464 words
 * *Accuracy Streaks*
 * *Key Effort Matrix*
 * *Relative Accuracy*
+* *Close the details.*
 * *Slowest Transitions*
-* *No accuracy streaks.*
-* *Practice numbers only.*
 * ...
 
 # Mongolian
 
 Translated: 16 messages, 378 words
 
-Untranslated: 340 messages, 4407 words
+Untranslated: 347 messages, 4461 words
 
 * *All*
 * *GO!*
@@ -764,7 +764,7 @@ Untranslated: 340 messages, 4407 words
 
 Translated: 211 messages, 2446 words
 
-Untranslated: 150 messages, 2384 words
+Untranslated: 157 messages, 2438 words
 
 * *All*
 * *Done*
@@ -779,20 +779,20 @@ Untranslated: 150 messages, 2384 words
 * *Presses*
 * *Accuracy*
 * *Download*
+* *No data.*
 * *Settings*
 * *Alphabet:*
 * *Examples:*
 * *Mean time*
 * *Same hand*
 * *All sounds*
-* *Cross hand*
 * ...
 
 # Nepali
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 25 messages, 137 words
+Untranslated: 32 messages, 191 words
 
 * *All*
 * *Keys*
@@ -800,6 +800,7 @@ Untranslated: 25 messages, 137 words
 * *Pairs:*
 * *Presses*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -809,18 +810,17 @@ Untranslated: 25 messages, 137 words
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Close the details.*
 * *Slowest Transitions*
+* *Last session transitions*
 * *Export Transition Statistics*
-* *Download the key effort matrix.*
-* *Download the transition statistics.*
-* *Not enough data yet. Keep practicing to collect transition s...*
 * ...
 
 # Dutch
 
 Translated: 333 messages, 4736 words
 
-Untranslated: 32 messages, 145 words
+Untranslated: 39 messages, 199 words
 
 * *All*
 * *Keys*
@@ -833,6 +833,7 @@ Untranslated: 32 messages, 145 words
 * *Presses*
 * *Volume:*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -841,14 +842,13 @@ Untranslated: 32 messages, 145 words
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
-* *Key sounds only*
 * ...
 
 # Polish
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 25 messages, 137 words
+Untranslated: 32 messages, 191 words
 
 * *All*
 * *Keys*
@@ -856,6 +856,7 @@ Untranslated: 25 messages, 137 words
 * *Pairs:*
 * *Presses*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -865,18 +866,17 @@ Untranslated: 25 messages, 137 words
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Close the details.*
 * *Slowest Transitions*
+* *Last session transitions*
 * *Export Transition Statistics*
-* *Download the key effort matrix.*
-* *Download the transition statistics.*
-* *Not enough data yet. Keep practicing to collect transition s...*
 * ...
 
 # Brazilian Portuguese
 
 Translated: 338 messages, 4743 words
 
-Untranslated: 28 messages, 140 words
+Untranslated: 35 messages, 194 words
 
 * *All*
 * *Keys*
@@ -887,6 +887,7 @@ Untranslated: 28 messages, 140 words
 * *Layouts*
 * *Presses*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -896,15 +897,14 @@ Untranslated: 28 messages, 140 words
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
-* *Slowest Transitions*
-* *Export Transition Statistics*
+* *Close the details.*
 * ...
 
 # European Portuguese
 
 Translated: 319 messages, 4618 words
 
-Untranslated: 45 messages, 243 words
+Untranslated: 52 messages, 297 words
 
 * *All*
 * *Keys*
@@ -918,6 +918,7 @@ Untranslated: 45 messages, 243 words
 * *Presses*
 * *Volume:*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -925,14 +926,13 @@ Untranslated: 45 messages, 243 words
 * *Top speed!*
 * *Transition*
 * *Min presses:*
-* *Miss weight:*
 * ...
 
 # Romanian
 
 Translated: 298 messages, 3587 words
 
-Untranslated: 61 messages, 1252 words
+Untranslated: 68 messages, 1306 words
 
 * *All*
 * *Keys*
@@ -946,6 +946,7 @@ Untranslated: 61 messages, 1252 words
 * *Layouts*
 * *Presses*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Translate*
@@ -953,14 +954,13 @@ Untranslated: 61 messages, 1252 words
 * *Transition*
 * *Multiplayer*
 * *Min presses:*
-* *Miss weight:*
 * ...
 
 # Russian
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 25 messages, 137 words
+Untranslated: 32 messages, 191 words
 
 * *All*
 * *Keys*
@@ -968,6 +968,7 @@ Untranslated: 25 messages, 137 words
 * *Pairs:*
 * *Presses*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -977,18 +978,17 @@ Untranslated: 25 messages, 137 words
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Close the details.*
 * *Slowest Transitions*
+* *Last session transitions*
 * *Export Transition Statistics*
-* *Download the key effort matrix.*
-* *Download the transition statistics.*
-* *Not enough data yet. Keep practicing to collect transition s...*
 * ...
 
 # Slovak
 
 Translated: 340 messages, 4745 words
 
-Untranslated: 26 messages, 138 words
+Untranslated: 33 messages, 192 words
 
 * *All*
 * *Keys*
@@ -997,6 +997,7 @@ Untranslated: 26 messages, 138 words
 * *Presses*
 * *Syntax:*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -1006,17 +1007,16 @@ Untranslated: 26 messages, 138 words
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Close the details.*
 * *Slowest Transitions*
-* *Export Transition Statistics*
-* *Download the key effort matrix.*
-* *Download the transition statistics.*
+* *Last session transitions*
 * ...
 
 # Slovenian
 
 Translated: 340 messages, 4745 words
 
-Untranslated: 26 messages, 138 words
+Untranslated: 33 messages, 192 words
 
 * *All*
 * *Keys*
@@ -1025,6 +1025,7 @@ Untranslated: 26 messages, 138 words
 * *Pairs:*
 * *Presses*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -1034,17 +1035,16 @@ Untranslated: 26 messages, 138 words
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Close the details.*
 * *Slowest Transitions*
-* *Export Transition Statistics*
-* *Download the key effort matrix.*
-* *Download the transition statistics.*
+* *Last session transitions*
 * ...
 
 # Albanian
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 25 messages, 137 words
+Untranslated: 32 messages, 191 words
 
 * *All*
 * *Keys*
@@ -1052,6 +1052,7 @@ Untranslated: 25 messages, 137 words
 * *Pairs:*
 * *Presses*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -1061,18 +1062,17 @@ Untranslated: 25 messages, 137 words
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Close the details.*
 * *Slowest Transitions*
+* *Last session transitions*
 * *Export Transition Statistics*
-* *Download the key effort matrix.*
-* *Download the transition statistics.*
-* *Not enough data yet. Keep practicing to collect transition s...*
 * ...
 
 # Swedish
 
 Translated: 338 messages, 4743 words
 
-Untranslated: 28 messages, 140 words
+Untranslated: 35 messages, 194 words
 
 * *All*
 * *Keys*
@@ -1083,6 +1083,7 @@ Untranslated: 28 messages, 140 words
 * *Presses*
 * *Syntax:*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -1092,15 +1093,14 @@ Untranslated: 28 messages, 140 words
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
-* *Slowest Transitions*
-* *Export Transition Statistics*
+* *Close the details.*
 * ...
 
 # Thai
 
 Translated: 329 messages, 4635 words
 
-Untranslated: 35 messages, 226 words
+Untranslated: 42 messages, 280 words
 
 * *All*
 * *Keys*
@@ -1109,6 +1109,7 @@ Untranslated: 35 messages, 226 words
 * *Zones:*
 * *Presses*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -1121,14 +1122,13 @@ Untranslated: 35 messages, 226 words
 * *Key sounds only*
 * *Average accuracy*
 * *Key Effort Matrix*
-* *Relative Accuracy*
 * ...
 
 # Turkish
 
 Translated: 227 messages, 2126 words
 
-Untranslated: 134 messages, 2702 words
+Untranslated: 141 messages, 2756 words
 
 * *All*
 * *Keys*
@@ -1143,20 +1143,20 @@ Untranslated: 134 messages, 2702 words
 * *Sign-In*
 * *Syntax:*
 * *Download*
+* *No data.*
 * *Alphabet:*
 * *Mean time*
 * *Same hand*
 * *Box cursor*
 * *Cross hand*
 * *Transition*
-* *Line cursor*
 * ...
 
 # Ukrainian
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 25 messages, 137 words
+Untranslated: 32 messages, 191 words
 
 * *All*
 * *Keys*
@@ -1164,6 +1164,7 @@ Untranslated: 25 messages, 137 words
 * *Pairs:*
 * *Presses*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -1173,18 +1174,17 @@ Untranslated: 25 messages, 137 words
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Close the details.*
 * *Slowest Transitions*
+* *Last session transitions*
 * *Export Transition Statistics*
-* *Download the key effort matrix.*
-* *Download the transition statistics.*
-* *Not enough data yet. Keep practicing to collect transition s...*
 * ...
 
 # Vietnamese
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 25 messages, 137 words
+Untranslated: 32 messages, 191 words
 
 * *All*
 * *Keys*
@@ -1192,6 +1192,7 @@ Untranslated: 25 messages, 137 words
 * *Pairs:*
 * *Presses*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -1201,18 +1202,17 @@ Untranslated: 25 messages, 137 words
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Close the details.*
 * *Slowest Transitions*
+* *Last session transitions*
 * *Export Transition Statistics*
-* *Download the key effort matrix.*
-* *Download the transition statistics.*
-* *Not enough data yet. Keep practicing to collect transition s...*
 * ...
 
 # Simplified Chinese
 
 Translated: 340 messages, 4739 words
 
-Untranslated: 26 messages, 144 words
+Untranslated: 33 messages, 198 words
 
 * *All*
 * *Keys*
@@ -1220,6 +1220,7 @@ Untranslated: 26 messages, 144 words
 * *Pairs:*
 * *Presses*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -1230,17 +1231,16 @@ Untranslated: 26 messages, 144 words
 * *M|T|W|T|F|S|S*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Close the details.*
 * *Slowest Transitions*
-* *Export Transition Statistics*
-* *Download the key effort matrix.*
-* *Download the transition statistics.*
+* *Last session transitions*
 * ...
 
 # Traditional Chinese
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 25 messages, 137 words
+Untranslated: 32 messages, 191 words
 
 * *All*
 * *Keys*
@@ -1248,6 +1248,7 @@ Untranslated: 25 messages, 137 words
 * *Pairs:*
 * *Presses*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -1257,18 +1258,17 @@ Untranslated: 25 messages, 137 words
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Close the details.*
 * *Slowest Transitions*
+* *Last session transitions*
 * *Export Transition Statistics*
-* *Download the key effort matrix.*
-* *Download the transition statistics.*
-* *Not enough data yet. Keep practicing to collect transition s...*
 * ...
 
 # Chinese (Taiwan)
 
 Translated: 340 messages, 4745 words
 
-Untranslated: 26 messages, 138 words
+Untranslated: 33 messages, 192 words
 
 * *All*
 * *GO!*
@@ -1277,6 +1277,7 @@ Untranslated: 26 messages, 138 words
 * *Pairs:*
 * *Presses*
 * *Download*
+* *No data.*
 * *Mean time*
 * *Same hand*
 * *Cross hand*
@@ -1286,8 +1287,7 @@ Untranslated: 26 messages, 138 words
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Close the details.*
 * *Slowest Transitions*
-* *Export Transition Statistics*
-* *Download the key effort matrix.*
-* *Download the transition statistics.*
+* *Last session transitions*
 * ...

@@ -22,7 +22,6 @@
     "@keybr/settings-loader": "*",
     "@keybr/theme-designer": "*",
     "@keybr/themes": "*",
-    "@keybr/thirdparties": "*",
     "@keybr/widget": "*"
   },
   "devDependencies": {},

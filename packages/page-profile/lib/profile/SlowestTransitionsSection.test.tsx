@@ -11,11 +11,26 @@ import { FakeSettingsContext } from "@keybr/settings";
 import { Histogram } from "@keybr/textinput";
 import { render, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
-import { isNotNull, isNull } from "rich-assert";
+import { equal, isNotNull, isNull } from "rich-assert";
 import { ResultGrouper } from "./ResultGrouper.tsx";
-import { SlowestTransitionsSection } from "./SlowestTransitionsSection.tsx";
+import {
+  formatChar,
+  SlowestTransitionsSection,
+} from "./SlowestTransitionsSection.tsx";
 
 const faker = new ResultFaker();
+
+test("format characters", () => {
+  // ASCII letters and symbols are shown as-is.
+  equal(formatChar("a".codePointAt(0)!), "a");
+  equal(formatChar(" ".codePointAt(0)!), " ");
+  // Cyrillic letters are shown literally, not as U+XXXX.
+  equal(formatChar("а".codePointAt(0)!), "а");
+  equal(formatChar("ё".codePointAt(0)!), "ё");
+  // Control characters fall back to U+XXXX.
+  equal(formatChar("\u0000".codePointAt(0)!), "U+0");
+  equal(formatChar("\u000a".codePointAt(0)!), "U+A");
+});
 
 function makeResult() {
   return faker.nextResult({
@@ -99,13 +114,30 @@ function renderSection() {
   return r;
 }
 
-test("render transitions table", async () => {
+test("collapsed by default", async () => {
   const r = renderSection();
 
   isNotNull(await r.findByText("Slowest Transitions"));
+  isNull(r.queryByText("KeyA \u2192 KeyB"));
+  isNull(r.queryByText("KeyB \u2192 KeyA"));
+  isNull(r.queryByText("KeyA \u2192 KeyJ"));
+
+  r.unmount();
+});
+
+test("expands on toggle", async () => {
+  const user = userEvent.setup();
+  const r = renderSection();
+
+  isNotNull(await r.findByText("Slowest Transitions"));
+  await user.click(r.getByTitle("Expand the transition statistics."));
   isNotNull(await r.findByText("KeyA \u2192 KeyB"));
   isNotNull(await r.findByText("KeyB \u2192 KeyA"));
   isNotNull(await r.findByText("KeyA \u2192 KeyJ"));
+  isNotNull(r.getByTitle("Collapse the transition statistics."));
+
+  await user.click(r.getByTitle("Collapse the transition statistics."));
+  isNull(r.queryByText("KeyA \u2192 KeyB"));
 
   r.unmount();
 });
@@ -114,6 +146,8 @@ test("filter transitions by pair type", async () => {
   const user = userEvent.setup();
   const r = renderSection();
 
+  isNotNull(await r.findByText("Slowest Transitions"));
+  await user.click(r.getByTitle("Expand the transition statistics."));
   isNotNull(await r.findByText("KeyA \u2192 KeyJ"));
 
   // Same hand: both left-hand transitions, the cross-hand one is hidden.
@@ -129,6 +163,28 @@ test("filter transitions by pair type", async () => {
   isNull(r.queryByText("KeyA \u2192 KeyB"));
   isNull(r.queryByText("KeyB \u2192 KeyA"));
   isNotNull(await r.findByText("KeyA \u2192 KeyJ"));
+
+  r.unmount();
+});
+
+test("shows incoming and outgoing transitions for a selected letter", async () => {
+  const user = userEvent.setup();
+  const r = renderSection();
+
+  isNotNull(await r.findByText("Slowest Transitions"));
+  await user.click(r.getByTitle("Expand the transition statistics."));
+  isNotNull(await r.findByText("KeyA \u2192 KeyJ"));
+
+  isNull(r.queryByText("Transitions for a"));
+
+  await user.click(r.getAllByRole("button", { name: "a" })[0]);
+  isNotNull(await r.findByText("Transitions for a"));
+  isNotNull(await r.findByText("Into a"));
+  isNotNull(await r.findByText("Out of a"));
+
+  // Selecting the same letter again hides the details.
+  await user.click(r.getAllByRole("button", { name: "a" })[0]);
+  isNull(r.queryByText("Transitions for a"));
 
   r.unmount();
 });

@@ -1,4 +1,5 @@
 import { test } from "node:test";
+import { Layout } from "@keybr/keyboard";
 import { lessonProps, MutableDailyGoal } from "@keybr/lesson";
 import { LocalDate, ResultFaker, Today } from "@keybr/result";
 import { Settings } from "@keybr/settings";
@@ -13,6 +14,7 @@ test("generate events", () => {
   const faker = new ResultFaker({ timeStamp: today.timeStamp });
   const dailyGoal = new MutableDailyGoal(
     new Settings().set(lessonProps.dailyGoal, 1),
+    Layout.EN_US,
     new Today(today),
   );
   const source = new DailyGoalEvents(dailyGoal);

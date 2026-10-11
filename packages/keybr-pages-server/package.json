@@ -10,7 +10,6 @@
     "@keybr/intl": "*",
     "@keybr/pages-shared": "*",
     "@keybr/themes": "*",
-    "@keybr/thirdparties": "*",
     "@keybr/widget": "*"
   },
   "devDependencies": {},
