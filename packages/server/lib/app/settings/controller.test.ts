@@ -1,5 +1,6 @@
 import { test } from "node:test";
 import { Application } from "@fastr/core";
+import { UserSpace } from "@keybr/database";
 import { Settings, stringProp } from "@keybr/settings";
 import { SettingsDatabase } from "@keybr/settings-database";
 import { deepEqual, equal, like } from "rich-assert";
@@ -48,12 +49,14 @@ test("get existing settings", async () => {
   // Arrange.
 
   const user = await findUser("user1@keybr.com");
+  const space = await UserSpace.ensureDefaultFor(user.id!);
   const request = startApp(context.get(Application, kMain));
   await request.become(user.id!);
 
   const database = context.get(SettingsDatabase);
   await database.set(
     user.id!,
+    space.id!,
     new Settings().set(stringProp("prop", "abc"), "abc"),
   );
 
@@ -114,11 +117,12 @@ test("handle put settings", async () => {
   // Arrange.
 
   const user = await findUser("user1@keybr.com");
+  const space = await UserSpace.ensureDefaultFor(user.id!);
   const request = startApp(context.get(Application, kMain));
   await request.become(user.id!);
 
   const database = context.get(SettingsDatabase);
-  await database.set(user.id!, null);
+  await database.set(user.id!, space.id!, null);
 
   // Act.
 
@@ -129,7 +133,7 @@ test("handle put settings", async () => {
   // Assert.
 
   equal(response.status, 204);
-  like((await database.get(user.id!))?.toJSON(), {
+  like((await database.get(user.id!, space.id!))?.toJSON(), {
     prop: "abc",
   });
 });
@@ -138,12 +142,14 @@ test("handle delete settings", async () => {
   // Arrange.
 
   const user = await findUser("user1@keybr.com");
+  const space = await UserSpace.ensureDefaultFor(user.id!);
   const request = startApp(context.get(Application, kMain));
   await request.become(user.id!);
 
   const database = context.get(SettingsDatabase);
   await database.set(
     user.id!,
+    space.id!,
     new Settings().set(stringProp("prop", "abc"), "abc"),
   );
 
@@ -154,5 +160,5 @@ test("handle delete settings", async () => {
   // Assert.
 
   equal(response.status, 204);
-  equal(await database.get(user.id!), null);
+  equal(await database.get(user.id!, space.id!), null);
 });

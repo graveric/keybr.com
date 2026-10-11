@@ -187,14 +187,19 @@ export class Controller {
     ctx: Context<RouterState & AuthState>,
     { locale }: IntlShape,
   ): Promise<PageData> {
-    const { user, publicUser } = ctx.state;
-    const settings = user != null ? await this.database.get(user.id!) : null;
+    const { user, publicUser, spaces, space } = ctx.state;
+    const settings =
+      user != null && space != null
+        ? await this.database.get(user.id!, space.id!)
+        : null;
     return {
       base: this.canonicalUrl,
       locale,
       user: user?.toDetails() ?? null,
       publicUser,
       settings: settings?.toJSON() ?? null,
+      spaces: spaces.map((space) => space.toDetails()),
+      activeSpaceId: space?.id ?? null,
     };
   }
 

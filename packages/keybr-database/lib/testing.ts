@@ -1,7 +1,13 @@
 import { after, before, beforeEach } from "node:test";
 import { makeKnex } from "@keybr/config";
 import { Model } from "objection";
-import { Order, User, UserExternalId, UserLoginRequest } from "./model.ts";
+import {
+  Order,
+  User,
+  UserExternalId,
+  UserLoginRequest,
+  UserSpace,
+} from "./model.ts";
 import { createSchema } from "./schema.ts";
 
 export function useDatabase() {
@@ -76,6 +82,7 @@ export async function clearTables() {
   await clearTable(UserLoginRequest.tableName);
   await clearTable(Order.tableName);
   await clearTable(UserExternalId.tableName);
+  await clearTable(UserSpace.tableName);
   await clearTable(User.tableName);
 }
 

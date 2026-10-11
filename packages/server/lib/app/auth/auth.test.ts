@@ -1,7 +1,6 @@
 import { test } from "node:test";
 import { Application } from "@fastr/core";
-import { User } from "@keybr/database";
-import { PublicId } from "@keybr/publicid";
+import { User, UserSpace } from "@keybr/database";
 import { ResultFaker } from "@keybr/result";
 import { UserDataFactory } from "@keybr/result-userdata";
 import { equal, isNull, isTrue, like } from "rich-assert";
@@ -99,7 +98,8 @@ test("delete account", async () => {
 
   const factory = context.get(UserDataFactory);
   const user = await findUser("user1@keybr.com");
-  const userData = factory.load(new PublicId(user.id!));
+  const space = await UserSpace.ensureDefaultFor(user.id!);
+  const userData = factory.load(user.id!, space.id!);
   const faker = new ResultFaker();
   await userData.append([faker.nextResult()]);
 

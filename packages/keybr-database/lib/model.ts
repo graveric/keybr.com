@@ -4,6 +4,7 @@ import {
   type AnyUser,
   type NamedUser,
   type OrderDetails,
+  type SpaceDetails,
   type UserDetails,
   type UserExternalIdDetails,
 } from "@keybr/pages-shared";
@@ -275,6 +276,109 @@ export class User extends TimestampMixin(Model) {
   }
 }
 
+export class UserSpace extends TimestampMixin(Model) {
+  static override readonly tableName = "user_space";
+  static override readonly columnNameMappers = snakeCaseMappers();
+  static override jsonSchema = {
+    type: "object",
+    required: ["name"],
+    properties: {
+      id: { type: "integer" },
+      userId: { type: "integer" },
+      name: { type: "string", minLength: 1, maxLength: 50 },
+      isDefault: { type: ["null", "boolean"] },
+    },
+  } satisfies JSONSchema;
+
+  static createTable(knex: Knex, table: Knex.CreateTableBuilder) {
+    const { name } = UserSpace.jsonSchema.properties;
+    table.increments("id").primary();
+    table
+      .integer("user_id")
+      .unsigned()
+      .notNullable()
+      .references("id")
+      .inTable("user")
+      .onDelete("CASCADE")
+      .onUpdate("CASCADE");
+    table.string("name", name.maxLength).notNullable();
+    table.boolean("is_default").nullable();
+    table.timestamp("created_at").notNullable().defaultTo(knex.fn.now());
+    table.unique(["user_id", "is_default"]);
+  }
+
+  static readonly defaultName = "Default";
+
+  readonly id?: number;
+  userId?: number;
+  name?: string;
+  isDefault?: boolean | null;
+  createdAt?: Date;
+  user?: User;
+
+  static async loadAllFor(userId: number): Promise<UserSpace[]> {
+    return await UserSpace.query().where({ userId }).orderBy("id");
+  }
+
+  static async loadDefaultFor(userId: number): Promise<UserSpace | null> {
+    return (
+      (await UserSpace.query()
+        .where({ userId })
+        .whereNotNull("is_default") //
+        .first()) ?? null
+    );
+  }
+
+  static async ensureDefaultFor(userId: number): Promise<UserSpace> {
+    const existingSpace = await UserSpace.loadDefaultFor(userId);
+    if (existingSpace != null) {
+      return existingSpace;
+    }
+    try {
+      return await UserSpace.query().insertAndFetch({
+        userId,
+        name: UserSpace.defaultName,
+        isDefault: true,
+      });
+    } catch {
+      const concurrentSpace = await UserSpace.loadDefaultFor(userId);
+      if (concurrentSpace != null) {
+        return concurrentSpace;
+      }
+      throw new Error(); // Unreachable.
+    }
+  }
+
+  static async findOwned(
+    userId: number,
+    id: number,
+  ): Promise<UserSpace | null> {
+    return (
+      (await UserSpace.query() //
+        .where({ userId })
+        .findById(id)) ?? null
+    );
+  }
+
+  static async setDefault(userId: number, id: number): Promise<void> {
+    await UserSpace.transaction(async (trx) => {
+      await UserSpace.query(trx).where({ userId }).patch({ isDefault: null });
+      await UserSpace.query(trx)
+        .where({ userId })
+        .findById(id)
+        .patch({ isDefault: true });
+    });
+  }
+
+  toDetails(): SpaceDetails {
+    return {
+      id: this.id!,
+      name: this.name!,
+      isDefault: this.isDefault != null,
+    };
+  }
+}
+
 export class UserExternalId extends TimestampMixin(Model) {
   static override readonly tableName = "user_external_id";
   static override readonly columnNameMappers = snakeCaseMappers();
@@ -497,6 +601,17 @@ UserExternalId.relationMappings = {
     modelClass: User,
     join: {
       from: "user_external_id.user_id",
+      to: "user.id",
+    },
+  },
+};
+
+UserSpace.relationMappings = {
+  user: {
+    relation: Model.BelongsToOneRelation,
+    modelClass: User,
+    join: {
+      from: "user_space.user_id",
       to: "user.id",
     },
   },

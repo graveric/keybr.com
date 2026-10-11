@@ -1,5 +1,6 @@
 import { test } from "node:test";
 import { Application } from "@fastr/core";
+import { UserSpace } from "@keybr/database";
 import { Layout } from "@keybr/keyboard";
 import { PublicId } from "@keybr/publicid";
 import { Result, ResultFaker, TextType } from "@keybr/result";
@@ -42,8 +43,9 @@ test("get public user data", async (ctx) => {
 
   const factory = context.get(UserDataFactory);
   const user = await findUser("user1@keybr.com");
+  const space = await UserSpace.ensureDefaultFor(user.id!);
   const id = new PublicId(user.id!);
-  const userData = factory.load(id);
+  const userData = factory.load(user.id!, space.id!);
   await userData.append([faker.nextResult()]);
 
   const request = startApp(context.get(Application, kMain));
@@ -70,7 +72,10 @@ test("get empty user data", async (ctx) => {
 
   const factory = context.get(UserDataFactory);
   const user = await findUser("user1@keybr.com");
-  const userData = factory.load(new PublicId(user.id!));
+  const userData = factory.load(
+    user.id!,
+    (await UserSpace.ensureDefaultFor(user.id!)).id!,
+  );
   await userData.delete();
 
   const request = startApp(context.get(Application, kMain));
@@ -99,7 +104,10 @@ test("get existing user data", async (ctx) => {
 
   const factory = context.get(UserDataFactory);
   const user = await findUser("user1@keybr.com");
-  const userData = factory.load(new PublicId(user.id!));
+  const userData = factory.load(
+    user.id!,
+    (await UserSpace.ensureDefaultFor(user.id!)).id!,
+  );
   await userData.append([faker.nextResult()]);
 
   const request = startApp(context.get(Application, kMain));
@@ -167,7 +175,10 @@ test("validate data on post", async (ctx) => {
 
   const factory = context.get(UserDataFactory);
   const user = await findUser("user1@keybr.com");
-  const userData = factory.load(new PublicId(user.id!));
+  const userData = factory.load(
+    user.id!,
+    (await UserSpace.ensureDefaultFor(user.id!)).id!,
+  );
   await userData.delete();
 
   const request = startApp(context.get(Application, kMain));
@@ -192,7 +203,10 @@ test("post to user data", async (ctx) => {
 
   const factory = context.get(UserDataFactory);
   const user = await findUser("user1@keybr.com");
-  const userData = factory.load(new PublicId(user.id!));
+  const userData = factory.load(
+    user.id!,
+    (await UserSpace.ensureDefaultFor(user.id!)).id!,
+  );
   await userData.delete();
 
   const request = startApp(context.get(Application, kMain));
@@ -217,8 +231,8 @@ test("preserve bigrams on post", async (ctx) => {
 
   const factory = context.get(UserDataFactory);
   const user = await findUser("user1@keybr.com");
-  const id = new PublicId(user.id!);
-  const userData = factory.load(id);
+  const space = await UserSpace.ensureDefaultFor(user.id!);
+  const userData = factory.load(user.id!, space.id!);
   await userData.delete();
 
   const bigrams = new Map([
@@ -241,7 +255,13 @@ test("preserve bigrams on post", async (ctx) => {
     10000,
     0,
     new Histogram([
-      { codePoint: 0x0062, hitCount: 22, missCount: 2, timeToType: 222, bigrams },
+      {
+        codePoint: 0x0062,
+        hitCount: 22,
+        missCount: 2,
+        timeToType: 222,
+        bigrams,
+      },
       { codePoint: 0x0063, hitCount: 33, missCount: 3, timeToType: 333 },
       { codePoint: 0x0064, hitCount: 44, missCount: 4, timeToType: 444 },
     ]),
@@ -272,7 +292,10 @@ test("delete empty user data", async (ctx) => {
 
   const factory = context.get(UserDataFactory);
   const user = await findUser("user1@keybr.com");
-  const userData = factory.load(new PublicId(user.id!));
+  const userData = factory.load(
+    user.id!,
+    (await UserSpace.ensureDefaultFor(user.id!)).id!,
+  );
   await userData.delete();
 
   const request = startApp(context.get(Application, kMain));
@@ -302,7 +325,10 @@ test("delete existing user data", async (ctx) => {
 
   const factory = context.get(UserDataFactory);
   const user = await findUser("user1@keybr.com");
-  const userData = factory.load(new PublicId(user.id!));
+  const userData = factory.load(
+    user.id!,
+    (await UserSpace.ensureDefaultFor(user.id!)).id!,
+  );
   await userData.append([faker.nextResult()]);
 
   const request = startApp(context.get(Application, kMain));

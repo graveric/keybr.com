@@ -9,6 +9,7 @@ import { Controller as PageController } from "./page/index.ts";
 import { Controller as ProfileController } from "./profile/index.ts";
 import { Controller as SettingsController } from "./settings/index.ts";
 import { Controller as SitemapController } from "./sitemap/index.ts";
+import { Controller as SpaceController } from "./space/index.ts";
 import { Controller as SyncController } from "./sync/index.ts";
 
 export function mainRoutes(): Middleware<any> {
@@ -22,6 +23,7 @@ export function mainRoutes(): Middleware<any> {
         ProfileController,
         SettingsController,
         SitemapController,
+        SpaceController,
         SyncController,
       ),
     )

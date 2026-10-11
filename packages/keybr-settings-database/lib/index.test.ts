@@ -21,12 +21,12 @@ test("delete settings", async () => {
 
   const dataDir = new DataDir(tmp);
   const database = new SettingsDatabase(dataDir);
-  const file = new File(dataDir.userSettingsFile(123));
+  const file = new File(dataDir.spaceSettingsFile(123, 456));
   await file.write("something");
 
   // Act.
 
-  await database.set(123, null);
+  await database.set(123, 456, null);
 
   // Assert.
 
@@ -38,11 +38,15 @@ test("save new settings", async () => {
 
   const dataDir = new DataDir(tmp);
   const database = new SettingsDatabase(dataDir);
-  const file = new File(dataDir.userSettingsFile(123));
+  const file = new File(dataDir.spaceSettingsFile(123, 456));
   await file.delete();
   // Act.
 
-  await database.set(123, new Settings().set(stringProp("prop", "abc"), "xyz"));
+  await database.set(
+    123,
+    456,
+    new Settings().set(stringProp("prop", "abc"), "xyz"),
+  );
 
   // Assert.
 
@@ -54,11 +58,15 @@ test("update existing settings", async () => {
 
   const dataDir = new DataDir(tmp);
   const database = new SettingsDatabase(dataDir);
-  const file = new File(dataDir.userSettingsFile(123));
+  const file = new File(dataDir.spaceSettingsFile(123, 456));
   await file.write("something");
   // Act.
 
-  await database.set(123, new Settings().set(stringProp("prop", "abc"), "xyz"));
+  await database.set(
+    123,
+    456,
+    new Settings().set(stringProp("prop", "abc"), "xyz"),
+  );
 
   // Assert.
 
@@ -70,12 +78,12 @@ test("read missing settings", async () => {
 
   const dataDir = new DataDir(tmp);
   const database = new SettingsDatabase(dataDir);
-  const file = new File(dataDir.userSettingsFile(123));
+  const file = new File(dataDir.spaceSettingsFile(123, 456));
   await file.delete();
 
   // Act.
 
-  const settings = await database.get(123);
+  const settings = await database.get(123, 456);
 
   // Assert.
 
@@ -87,14 +95,14 @@ test("read existing settings", async () => {
 
   const dataDir = new DataDir(tmp);
   const database = new SettingsDatabase(dataDir);
-  const file = new File(dataDir.userSettingsFile(123));
+  const file = new File(dataDir.spaceSettingsFile(123, 456));
   await file.writeJson(
     new Settings().set(stringProp("prop", "abc"), "xyz").toJSON(),
   );
 
   // Act.
 
-  const settings = await database.get(123);
+  const settings = await database.get(123, 456);
 
   // Assert.
 

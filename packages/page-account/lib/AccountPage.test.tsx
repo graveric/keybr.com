@@ -19,6 +19,8 @@ test("render sign-in fragment", () => {
           premium: false,
         },
         settings: null,
+        spaces: [],
+        activeSpaceId: null,
       }}
     >
       <FakeIntlProvider>
@@ -64,6 +66,8 @@ test("render account fragment", () => {
           premium: false,
         },
         settings: null,
+        spaces: [],
+        activeSpaceId: null,
       }}
     >
       <FakeIntlProvider>

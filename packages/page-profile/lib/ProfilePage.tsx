@@ -23,12 +23,14 @@ import { ShareProfileLink } from "./profile/ShareProfileLink.tsx";
 import { SlowestTransitionsSection } from "./profile/SlowestTransitionsSection.tsx";
 import { SpeedChartSection } from "./profile/SpeedChartSection.tsx";
 import { AllTimeSummary, TodaySummary } from "./profile/Summary.tsx";
+import { SpacesSection } from "./spaces/SpacesSection.tsx";
 
 export function ProfilePage() {
   return (
     <Screen>
       <ExplainerBoundary>
         <ExplainProfile />
+        <SpacesSection />
         <ResultGrouper>
           {(keyStatsMap) => <Content keyStatsMap={keyStatsMap} />}
         </ResultGrouper>

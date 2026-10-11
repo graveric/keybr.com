@@ -34,4 +34,31 @@ export class DataDir {
       s,
     );
   }
+
+  /**
+   * Returns the full path to a profile space settings file
+   * for the given user and space ids.
+   */
+  spaceSettingsFile(userId: number, spaceId: number): string {
+    return this.#spaceFile("space_settings", userId, spaceId);
+  }
+
+  /**
+   * Returns the full path to a profile space stats file
+   * for the given user and space ids.
+   */
+  spaceStatsFile(userId: number, spaceId: number): string {
+    return this.#spaceFile("space_stats", userId, spaceId);
+  }
+
+  #spaceFile(kind: string, userId: number, spaceId: number): string {
+    const s = String(userId).padStart(9, "0");
+    return this.dataPath(
+      kind, //
+      s.substring(0, 3),
+      s.substring(3, 6),
+      s,
+      String(spaceId),
+    );
+  }
 }

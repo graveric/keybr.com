@@ -14,7 +14,9 @@ export class Controller {
   @http.GET("/_/sync/settings")
   async getSettings(ctx: Context<RouterState & AuthState>) {
     const user = ctx.state.requireUser();
-    ctx.response.body = (await this.database.get(user.id!))?.toJSON() ?? {};
+    const space = ctx.state.requireSpace();
+    ctx.response.body =
+      (await this.database.get(user.id!, space.id!))?.toJSON() ?? {};
     ctx.response.headers.set("Cache-Control", "private, no-cache");
   }
 
@@ -24,14 +26,16 @@ export class Controller {
     @body.json(null, { maxLength: 65536 }) value: unknown,
   ) {
     const user = ctx.state.requireUser();
-    await this.database.set(user.id!, new Settings(value as any));
+    const space = ctx.state.requireSpace();
+    await this.database.set(user.id!, space.id!, new Settings(value as any));
     ctx.response.status = 204;
   }
 
   @http.DELETE("/_/sync/settings")
   async deleteSettings(ctx: Context<RouterState & AuthState>) {
     const user = ctx.state.requireUser();
-    await this.database.set(user.id!, null);
+    const space = ctx.state.requireSpace();
+    await this.database.set(user.id!, space.id!, null);
     ctx.response.status = 204;
   }
 }

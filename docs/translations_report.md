@@ -1,6 +1,6 @@
 # English
 
-Translated: 376 messages, 4945 words
+Translated: 391 messages, 5050 words
 
 Untranslated: 0 messages, 0 words
 
@@ -8,182 +8,188 @@ Untranslated: 0 messages, 0 words
 
 Translated: 339 messages, 4744 words
 
-Untranslated: 34 messages, 193 words
+Untranslated: 47 messages, 266 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Letters*
 * *Presses*
 * *Volume:*
 * *Download*
 * *No data.*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
 * *Transition*
-* *Min presses:*
-* *Miss weight:*
-* *Time weight:*
-* *Key sounds only*
-* *Key Effort Matrix*
-* *Close the details.*
-* *Slowest Transitions*
 * ...
 
 # Arabic
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 32 messages, 191 words
+Untranslated: 45 messages, 264 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Presses*
 * *Download*
 * *No data.*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
 * *Transition*
+* *Make default*
 * *Min presses:*
-* *Miss weight:*
-* *Time weight:*
-* *Key sounds only*
-* *Key Effort Matrix*
-* *Close the details.*
-* *Slowest Transitions*
-* *Last session transitions*
-* *Export Transition Statistics*
 * ...
 
 # Bulgarian
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 32 messages, 191 words
+Untranslated: 45 messages, 264 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Presses*
 * *Download*
 * *No data.*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
 * *Transition*
+* *Make default*
 * *Min presses:*
-* *Miss weight:*
-* *Time weight:*
-* *Key sounds only*
-* *Key Effort Matrix*
-* *Close the details.*
-* *Slowest Transitions*
-* *Last session transitions*
-* *Export Transition Statistics*
 * ...
 
 # Bangla
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 32 messages, 191 words
+Untranslated: 45 messages, 264 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Presses*
 * *Download*
 * *No data.*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
 * *Transition*
+* *Make default*
 * *Min presses:*
-* *Miss weight:*
-* *Time weight:*
-* *Key sounds only*
-* *Key Effort Matrix*
-* *Close the details.*
-* *Slowest Transitions*
-* *Last session transitions*
-* *Export Transition Statistics*
 * ...
 
 # Catalan
 
 Translated: 310 messages, 3556 words
 
-Untranslated: 61 messages, 1359 words
+Untranslated: 74 messages, 1432 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
+* *Cancel*
+* *Delete*
 * *Errors*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Zones:*
 * *Presses*
 * *Download*
 * *No data.*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
 * *Transition*
-* *Min presses:*
-* *Miss weight:*
-* *Sound theme:*
-* *Time weight:*
-* *Explain charts*
-* *Key sounds only*
-* *Key Effort Matrix*
 * ...
 
 # Czech
 
 Translated: 338 messages, 4742 words
 
-Untranslated: 35 messages, 195 words
+Untranslated: 48 messages, 268 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
 * *Font:*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Presses*
 * *Syntax:*
 * *Download*
 * *No data.*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
 * *Transition*
-* *Min presses:*
-* *Miss weight:*
-* *Sound theme:*
-* *Time weight:*
-* *Key sounds only*
-* *Key Effort Matrix*
-* *Close the details.*
 * ...
 
 # Danish
 
 Translated: 331 messages, 4689 words
 
-Untranslated: 40 messages, 226 words
+Untranslated: 53 messages, 299 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
 * *Score*
+* *Cancel*
+* *Delete*
 * *Layout*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Layout:*
 * *Layouts*
 * *Presses*
@@ -191,84 +197,80 @@ Untranslated: 40 messages, 226 words
 * *No data.*
 * *Position*
 * *Mean time*
-* *Same hand*
-* *Cross hand*
-* *Transition*
-* *Multiplayer*
-* *Min presses:*
-* *Miss weight:*
-* *Time weight:*
+* *New space*
 * ...
 
 # German
 
 Translated: 339 messages, 4744 words
 
-Untranslated: 34 messages, 193 words
+Untranslated: 47 messages, 266 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Presses*
 * *Download*
 * *No data.*
 * *Position*
 * *Alphabet:*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
 * *Transition*
-* *Min presses:*
-* *Miss weight:*
-* *Time weight:*
-* *Key sounds only*
-* *Key Effort Matrix*
-* *Close the details.*
-* *Slowest Transitions*
 * ...
 
 # Greek
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 32 messages, 191 words
+Untranslated: 45 messages, 264 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Presses*
 * *Download*
 * *No data.*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
 * *Transition*
+* *Make default*
 * *Min presses:*
-* *Miss weight:*
-* *Time weight:*
-* *Key sounds only*
-* *Key Effort Matrix*
-* *Close the details.*
-* *Slowest Transitions*
-* *Last session transitions*
-* *Export Transition Statistics*
 * ...
 
 # Esperanto
 
 Translated: 77 messages, 1126 words
 
-Untranslated: 289 messages, 3753 words
+Untranslated: 302 messages, 3826 words
 
 * *All*
 * *GO!*
+* *New*
 * *Copy*
 * *Done*
 * *Help*
 * *Keys*
 * *Next*
+* *Save*
 * *Time*
 * *Type*
 * *Books*
@@ -277,109 +279,113 @@ Untranslated: 289 messages, 3753 words
 * *Reset*
 * *Speed*
 * *Visit*
+* *Cancel*
+* *Delete*
 * *Errors*
-* *Pairs:*
-* *Typing*
-* *Zones:*
-* *Layouts*
 * ...
 
 # Spanish
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 32 messages, 191 words
+Untranslated: 45 messages, 264 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Presses*
 * *Download*
 * *No data.*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
 * *Transition*
+* *Make default*
 * *Min presses:*
-* *Miss weight:*
-* *Time weight:*
-* *Key sounds only*
-* *Key Effort Matrix*
-* *Close the details.*
-* *Slowest Transitions*
-* *Last session transitions*
-* *Export Transition Statistics*
 * ...
 
 # Estonian
 
 Translated: 338 messages, 4743 words
 
-Untranslated: 35 messages, 194 words
+Untranslated: 48 messages, 267 words
 
 * *All*
 * *GO!*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
 * *Font:*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Presses*
 * *Download*
 * *No data.*
 * *Progress*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
-* *Transition*
-* *Min presses:*
-* *Miss weight:*
-* *Time weight:*
-* *Key sounds only*
-* *Key Effort Matrix*
-* *Close the details.*
 * ...
 
 # Persian
 
 Translated: 295 messages, 2959 words
 
-Untranslated: 76 messages, 1956 words
+Untranslated: 89 messages, 2029 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
 * *Books*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Zones:*
 * *Presses*
 * *Syntax:*
 * *Download*
 * *No data.*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
-* *Transition*
-* *Min presses:*
-* *Miss weight:*
-* *Sound theme:*
-* *Time weight:*
-* *Top accuracy*
-* *Explain charts*
 * ...
 
 # Finnish
 
 Translated: 208 messages, 2284 words
 
-Untranslated: 159 messages, 2597 words
+Untranslated: 172 messages, 2670 words
 
 * *All*
 * *GO!*
+* *New*
 * *Keys*
+* *Save*
 * *Time*
 * *Type*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Layouts*
 * *Metrics*
 * *Not set*
@@ -388,27 +394,23 @@ Untranslated: 159 messages, 2597 words
 * *Download*
 * *No data.*
 * *Position*
-* *Practice*
-* *Settings*
-* *Mean time*
-* *Same hand*
-* *Top speed*
-* *Uncertain*
 * ...
 
 # Faroese
 
 Translated: 44 messages, 583 words
 
-Untranslated: 321 messages, 4285 words
+Untranslated: 334 messages, 4358 words
 
 * *All*
 * *GO!*
+* *New*
 * *Copy*
 * *Done*
 * *Help*
 * *Keys*
 * *Next*
+* *Save*
 * *Time*
 * *Type*
 * *Books*
@@ -418,22 +420,26 @@ Untranslated: 321 messages, 4285 words
 * *Speed*
 * *Speed*
 * *Visit*
-* *Errors*
-* *Layout*
-* *Pairs:*
-* *Typing*
+* *Cancel*
+* *Delete*
 * ...
 
 # French
 
 Translated: 333 messages, 4544 words
 
-Untranslated: 40 messages, 393 words
+Untranslated: 53 messages, 466 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Zones:*
 * *Options*
 * *Presses*
@@ -443,168 +449,164 @@ Untranslated: 40 messages, 393 words
 * *Position*
 * *Alphabet:*
 * *Mean time*
-* *Same hand*
-* *Cross hand*
-* *Transition*
-* *Min presses:*
-* *Miss weight:*
-* *Time weight:*
-* *Key sounds only*
+* *New space*
 * ...
 
 # Irish
 
 Translated: 337 messages, 4735 words
 
-Untranslated: 36 messages, 202 words
+Untranslated: 49 messages, 275 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Zones:*
 * *Presses*
 * *Download*
 * *No data.*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
 * *Transition*
 * *Smoothness:*
-* *Min presses:*
-* *Miss weight:*
-* *Sound theme:*
-* *Time weight:*
-* *M|T|W|T|F|S|S*
-* *Key sounds only*
-* *Key Effort Matrix*
 * ...
 
 # Hebrew
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 32 messages, 191 words
+Untranslated: 45 messages, 264 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Presses*
 * *Download*
 * *No data.*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
 * *Transition*
+* *Make default*
 * *Min presses:*
-* *Miss weight:*
-* *Time weight:*
-* *Key sounds only*
-* *Key Effort Matrix*
-* *Close the details.*
-* *Slowest Transitions*
-* *Last session transitions*
-* *Export Transition Statistics*
 * ...
 
 # Croatian
 
 Translated: 337 messages, 4740 words
 
-Untranslated: 36 messages, 197 words
+Untranslated: 49 messages, 270 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
 * *Font:*
 * *Reset*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Presses*
 * *Download*
 * *No data.*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
 * *Transition*
-* *Multiplayer*
-* *Min presses:*
-* *Miss weight:*
-* *Time weight:*
-* *Key sounds only*
-* *Key Effort Matrix*
-* *Close the details.*
 * ...
 
 # Hungarian
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 32 messages, 191 words
+Untranslated: 45 messages, 264 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Presses*
 * *Download*
 * *No data.*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
 * *Transition*
+* *Make default*
 * *Min presses:*
-* *Miss weight:*
-* *Time weight:*
-* *Key sounds only*
-* *Key Effort Matrix*
-* *Close the details.*
-* *Slowest Transitions*
-* *Last session transitions*
-* *Export Transition Statistics*
 * ...
 
 # Indonesian
 
 Translated: 339 messages, 4744 words
 
-Untranslated: 34 messages, 193 words
+Untranslated: 47 messages, 266 words
 
 * *All*
 * *GO!*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Presses*
 * *Volume:*
 * *Download*
 * *No data.*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
 * *Transition*
-* *Min presses:*
-* *Miss weight:*
-* *Time weight:*
-* *Key sounds only*
-* *Key Effort Matrix*
-* *Close the details.*
-* *Slowest Transitions*
 * ...
 
 # Icelandic
 
 Translated: 95 messages, 1742 words
 
-Untranslated: 271 messages, 3137 words
+Untranslated: 284 messages, 3210 words
 
 * *All*
 * *GO!*
+* *New*
 * *Copy*
 * *Done*
 * *Help*
 * *Keys*
 * *Next*
+* *Save*
 * *Time*
 * *Type*
 * *Books*
@@ -614,24 +616,28 @@ Untranslated: 271 messages, 3137 words
 * *Retry*
 * *Speed*
 * *Visit*
-* *Errors*
-* *Pairs:*
-* *Typing*
-* *Zones:*
+* *Cancel*
+* *Delete*
 * ...
 
 # Italian
 
 Translated: 334 messages, 4738 words
 
-Untranslated: 38 messages, 197 words
+Untranslated: 51 messages, 270 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
 * *Font:*
+* *Cancel*
+* *Delete*
 * *Layout*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Account*
 * *Layout:*
 * *Layouts*
@@ -640,111 +646,107 @@ Untranslated: 38 messages, 197 words
 * *Download*
 * *No data.*
 * *Mean time*
-* *Same hand*
-* *Cross hand*
-* *Transition*
-* *Min presses:*
-* *Miss weight:*
-* *Time weight:*
 * ...
 
 # Japanese
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 32 messages, 191 words
+Untranslated: 45 messages, 264 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Presses*
 * *Download*
 * *No data.*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
 * *Transition*
+* *Make default*
 * *Min presses:*
-* *Miss weight:*
-* *Time weight:*
-* *Key sounds only*
-* *Key Effort Matrix*
-* *Close the details.*
-* *Slowest Transitions*
-* *Last session transitions*
-* *Export Transition Statistics*
 * ...
 
 # Korean
 
 Translated: 145 messages, 1297 words
 
-Untranslated: 226 messages, 3618 words
+Untranslated: 239 messages, 3691 words
 
 * *All*
+* *New*
 * *Copy*
 * *Done*
 * *Keys*
 * *Next*
+* *Save*
 * *Type*
 * *Books*
 * *Close*
 * *Font:*
 * *Reset*
 * *Visit*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Typing*
 * *Zones:*
-* *Lessons*
-* *Not set*
-* *Options*
-* *Presses*
-* *Preview*
-* *Syntax:*
 * ...
 
 # Lithuanian
 
 Translated: 305 messages, 3388 words
 
-Untranslated: 65 messages, 1518 words
+Untranslated: 78 messages, 1591 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Presses*
 * *Download*
 * *No data.*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
 * *Transition*
+* *Make default*
 * *Min presses:*
-* *Miss weight:*
-* *Time weight:*
-* *Key sounds only*
-* *Accuracy Streaks*
-* *Key Effort Matrix*
-* *Relative Accuracy*
-* *Close the details.*
-* *Slowest Transitions*
 * ...
 
 # Mongolian
 
 Translated: 16 messages, 378 words
 
-Untranslated: 347 messages, 4461 words
+Untranslated: 360 messages, 4534 words
 
 * *All*
 * *GO!*
+* *New*
 * *Copy*
 * *Done*
 * *Help*
 * *Keys*
 * *Next*
+* *Save*
 * *Time*
 * *Type*
 * *User*
@@ -756,77 +758,81 @@ Untranslated: 347 messages, 4461 words
 * *Score*
 * *Speed*
 * *Speed*
-* *Visit*
-* *Digits*
 * ...
 
 # Norwegian Bokmål
 
 Translated: 211 messages, 2446 words
 
-Untranslated: 157 messages, 2438 words
+Untranslated: 170 messages, 2511 words
 
 * *All*
+* *New*
 * *Done*
 * *Help*
 * *Keys*
+* *Save*
 * *Type*
 * *Books*
 * *Font:*
 * *Speed*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Account*
 * *Presses*
 * *Accuracy*
 * *Download*
 * *No data.*
-* *Settings*
-* *Alphabet:*
-* *Examples:*
-* *Mean time*
-* *Same hand*
-* *All sounds*
 * ...
 
 # Nepali
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 32 messages, 191 words
+Untranslated: 45 messages, 264 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Presses*
 * *Download*
 * *No data.*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
 * *Transition*
+* *Make default*
 * *Min presses:*
-* *Miss weight:*
-* *Time weight:*
-* *Key sounds only*
-* *Key Effort Matrix*
-* *Close the details.*
-* *Slowest Transitions*
-* *Last session transitions*
-* *Export Transition Statistics*
 * ...
 
 # Dutch
 
 Translated: 333 messages, 4736 words
 
-Untranslated: 39 messages, 199 words
+Untranslated: 52 messages, 272 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
 * *Score*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Zones:*
 * *Account*
 * *Letters*
@@ -835,83 +841,83 @@ Untranslated: 39 messages, 199 words
 * *Download*
 * *No data.*
 * *Mean time*
-* *Same hand*
-* *Cross hand*
-* *Transition*
-* *Multiplayer*
-* *Min presses:*
-* *Miss weight:*
-* *Time weight:*
+* *New space*
 * ...
 
 # Polish
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 32 messages, 191 words
+Untranslated: 45 messages, 264 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Presses*
 * *Download*
 * *No data.*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
 * *Transition*
+* *Make default*
 * *Min presses:*
-* *Miss weight:*
-* *Time weight:*
-* *Key sounds only*
-* *Key Effort Matrix*
-* *Close the details.*
-* *Slowest Transitions*
-* *Last session transitions*
-* *Export Transition Statistics*
 * ...
 
 # Brazilian Portuguese
 
 Translated: 338 messages, 4743 words
 
-Untranslated: 35 messages, 194 words
+Untranslated: 48 messages, 267 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
+* *Cancel*
+* *Delete*
 * *Layout*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Layout:*
 * *Layouts*
 * *Presses*
 * *Download*
 * *No data.*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
-* *Transition*
-* *Min presses:*
-* *Miss weight:*
-* *Time weight:*
-* *Key sounds only*
-* *Key Effort Matrix*
-* *Close the details.*
 * ...
 
 # European Portuguese
 
 Translated: 319 messages, 4618 words
 
-Untranslated: 52 messages, 297 words
+Untranslated: 65 messages, 370 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
 * *Books*
+* *Cancel*
+* *Delete*
 * *Layout*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Zones:*
 * *Layout:*
 * *Layouts*
@@ -920,26 +926,26 @@ Untranslated: 52 messages, 297 words
 * *Download*
 * *No data.*
 * *Mean time*
-* *Same hand*
-* *Cross hand*
-* *Top score!*
-* *Top speed!*
-* *Transition*
-* *Min presses:*
 * ...
 
 # Romanian
 
 Translated: 298 messages, 3587 words
 
-Untranslated: 68 messages, 1306 words
+Untranslated: 81 messages, 1379 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
 * *Font:*
+* *Cancel*
+* *Delete*
 * *Layout*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Zones:*
 * *Account*
 * *Layout:*
@@ -948,194 +954,194 @@ Untranslated: 68 messages, 1306 words
 * *Download*
 * *No data.*
 * *Mean time*
-* *Same hand*
-* *Translate*
-* *Cross hand*
-* *Transition*
-* *Multiplayer*
-* *Min presses:*
 * ...
 
 # Russian
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 32 messages, 191 words
+Untranslated: 45 messages, 264 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Presses*
 * *Download*
 * *No data.*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
 * *Transition*
+* *Make default*
 * *Min presses:*
-* *Miss weight:*
-* *Time weight:*
-* *Key sounds only*
-* *Key Effort Matrix*
-* *Close the details.*
-* *Slowest Transitions*
-* *Last session transitions*
-* *Export Transition Statistics*
 * ...
 
 # Slovak
 
 Translated: 340 messages, 4745 words
 
-Untranslated: 33 messages, 192 words
+Untranslated: 46 messages, 265 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Presses*
 * *Syntax:*
 * *Download*
 * *No data.*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
 * *Transition*
-* *Min presses:*
-* *Miss weight:*
-* *Time weight:*
-* *Key sounds only*
-* *Key Effort Matrix*
-* *Close the details.*
-* *Slowest Transitions*
-* *Last session transitions*
+* *Make default*
 * ...
 
 # Slovenian
 
 Translated: 340 messages, 4745 words
 
-Untranslated: 33 messages, 192 words
+Untranslated: 46 messages, 265 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
 * *Font:*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Presses*
 * *Download*
 * *No data.*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
 * *Transition*
-* *Min presses:*
-* *Miss weight:*
-* *Time weight:*
-* *Key sounds only*
-* *Key Effort Matrix*
-* *Close the details.*
-* *Slowest Transitions*
-* *Last session transitions*
+* *Make default*
 * ...
 
 # Albanian
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 32 messages, 191 words
+Untranslated: 45 messages, 264 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Presses*
 * *Download*
 * *No data.*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
 * *Transition*
+* *Make default*
 * *Min presses:*
-* *Miss weight:*
-* *Time weight:*
-* *Key sounds only*
-* *Key Effort Matrix*
-* *Close the details.*
-* *Slowest Transitions*
-* *Last session transitions*
-* *Export Transition Statistics*
 * ...
 
 # Swedish
 
 Translated: 338 messages, 4743 words
 
-Untranslated: 35 messages, 194 words
+Untranslated: 48 messages, 267 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
+* *Cancel*
+* *Delete*
 * *Layout*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Layout:*
 * *Presses*
 * *Syntax:*
 * *Download*
 * *No data.*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
-* *Transition*
-* *Min presses:*
-* *Miss weight:*
-* *Time weight:*
-* *Key sounds only*
-* *Key Effort Matrix*
-* *Close the details.*
 * ...
 
 # Thai
 
 Translated: 329 messages, 4635 words
 
-Untranslated: 42 messages, 280 words
+Untranslated: 55 messages, 353 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Zones:*
 * *Presses*
 * *Download*
 * *No data.*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
 * *Transition*
-* *Min presses:*
-* *Miss weight:*
-* *Sound theme:*
-* *Time weight:*
-* *Top accuracy*
-* *Key sounds only*
-* *Average accuracy*
-* *Key Effort Matrix*
+* *Make default*
 * ...
 
 # Turkish
 
 Translated: 227 messages, 2126 words
 
-Untranslated: 141 messages, 2756 words
+Untranslated: 154 messages, 2829 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
 * *Books*
 * *Font:*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Zones:*
 * *Metrics*
 * *Presses*
@@ -1144,150 +1150,144 @@ Untranslated: 141 messages, 2756 words
 * *Syntax:*
 * *Download*
 * *No data.*
-* *Alphabet:*
-* *Mean time*
-* *Same hand*
-* *Box cursor*
-* *Cross hand*
-* *Transition*
 * ...
 
 # Ukrainian
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 32 messages, 191 words
+Untranslated: 45 messages, 264 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Presses*
 * *Download*
 * *No data.*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
 * *Transition*
+* *Make default*
 * *Min presses:*
-* *Miss weight:*
-* *Time weight:*
-* *Key sounds only*
-* *Key Effort Matrix*
-* *Close the details.*
-* *Slowest Transitions*
-* *Last session transitions*
-* *Export Transition Statistics*
 * ...
 
 # Vietnamese
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 32 messages, 191 words
+Untranslated: 45 messages, 264 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Presses*
 * *Download*
 * *No data.*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
 * *Transition*
+* *Make default*
 * *Min presses:*
-* *Miss weight:*
-* *Time weight:*
-* *Key sounds only*
-* *Key Effort Matrix*
-* *Close the details.*
-* *Slowest Transitions*
-* *Last session transitions*
-* *Export Transition Statistics*
 * ...
 
 # Simplified Chinese
 
 Translated: 340 messages, 4739 words
 
-Untranslated: 33 messages, 198 words
+Untranslated: 46 messages, 271 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Presses*
 * *Download*
 * *No data.*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
 * *Transition*
+* *Make default*
 * *Min presses:*
-* *Miss weight:*
-* *Time weight:*
-* *M|T|W|T|F|S|S*
-* *Key sounds only*
-* *Key Effort Matrix*
-* *Close the details.*
-* *Slowest Transitions*
-* *Last session transitions*
 * ...
 
 # Traditional Chinese
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 32 messages, 191 words
+Untranslated: 45 messages, 264 words
 
 * *All*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Presses*
 * *Download*
 * *No data.*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
 * *Transition*
+* *Make default*
 * *Min presses:*
-* *Miss weight:*
-* *Time weight:*
-* *Key sounds only*
-* *Key Effort Matrix*
-* *Close the details.*
-* *Slowest Transitions*
-* *Last session transitions*
-* *Export Transition Statistics*
 * ...
 
 # Chinese (Taiwan)
 
 Translated: 340 messages, 4745 words
 
-Untranslated: 33 messages, 192 words
+Untranslated: 46 messages, 265 words
 
 * *All*
 * *GO!*
+* *New*
 * *Keys*
+* *Save*
 * *Type*
+* *Cancel*
+* *Delete*
 * *Pairs:*
+* *Reload*
+* *Rename*
 * *Presses*
 * *Download*
 * *No data.*
 * *Mean time*
+* *New space*
 * *Same hand*
 * *Cross hand*
 * *Transition*
-* *Min presses:*
-* *Miss weight:*
-* *Time weight:*
-* *Key sounds only*
-* *Key Effort Matrix*
-* *Close the details.*
-* *Slowest Transitions*
-* *Last session transitions*
+* *Make default*
 * ...

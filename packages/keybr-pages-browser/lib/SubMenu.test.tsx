@@ -20,6 +20,8 @@ test("render", () => {
           premium: false,
         },
         settings: null,
+        spaces: [],
+        activeSpaceId: null,
       }}
     >
       <PreferredLocaleContext.Provider value="pl">

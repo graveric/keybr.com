@@ -34,7 +34,7 @@ test("handle missing data file", async () => {
 
   const id = new PublicId(1);
   const factory = new UserDataFactory(new DataDir(tmp));
-  const userData = factory.load(id);
+  const userData = factory.loadLegacy(id);
 
   // Assert.
 
@@ -47,7 +47,7 @@ test("append new results", async () => {
 
   const id = new PublicId(1);
   const factory = new UserDataFactory(new DataDir(tmp));
-  const userData = factory.load(id);
+  const userData = factory.loadLegacy(id);
   const faker = new ResultFaker();
   const results = [faker.nextResult(), faker.nextResult(), faker.nextResult()];
 
@@ -75,8 +75,8 @@ test("delete missing file", async () => {
 
   const id = new PublicId(1);
   const factory = new UserDataFactory(new DataDir(tmp));
-  const path = factory.getFile(id).path;
-  const userData = factory.load(id);
+  const path = factory.getFileLegacy(id).path;
+  const userData = factory.loadLegacy(id);
 
   // Assert.
 
@@ -100,8 +100,8 @@ test("delete existing file", async () => {
 
   const id = new PublicId(1);
   const factory = new UserDataFactory(new DataDir(tmp));
-  const path = factory.getFile(id).path;
-  const userData = factory.load(id);
+  const path = factory.getFileLegacy(id).path;
+  const userData = factory.loadLegacy(id);
   const faker = new ResultFaker();
   const results = [faker.nextResult(), faker.nextResult(), faker.nextResult()];
 
@@ -131,8 +131,8 @@ test("delete existing file second time", async () => {
 
   const id = new PublicId(1);
   const factory = new UserDataFactory(new DataDir(tmp));
-  const path = factory.getFile(id).path;
-  const userData = factory.load(id);
+  const path = factory.getFileLegacy(id).path;
+  const userData = factory.loadLegacy(id);
   const faker = new ResultFaker();
   const results = [faker.nextResult(), faker.nextResult(), faker.nextResult()];
   await touch(path + "~1");
@@ -164,7 +164,7 @@ test("serve", async () => {
 
   const id = new PublicId(1);
   const factory = new UserDataFactory(new DataDir(tmp));
-  const userData = factory.load(id);
+  const userData = factory.loadLegacy(id);
   const app = new Application();
   app.use(async (ctx) => {
     await userData.serve(ctx);
@@ -229,8 +229,8 @@ test("append to an existing v2 file upgrades it to v3", async () => {
 
   const id = new PublicId(1);
   const factory = new UserDataFactory(new DataDir(tmp));
-  const file = factory.getFile(id);
-  const userData = factory.load(id);
+  const file = factory.getFileLegacy(id);
+  const userData = factory.loadLegacy(id);
   const faker = new ResultFaker();
   const oldResults = [faker.nextResult(), faker.nextResult()];
   await file.write(formatV2File(oldResults));

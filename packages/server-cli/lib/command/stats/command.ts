@@ -68,7 +68,7 @@ export class StatsCommand {
     }
 
     for (const userId of range) {
-      const file = this.userDataFactory.getFile(new PublicId(userId));
+      const file = this.userDataFactory.getFileLegacy(new PublicId(userId));
       const stat = await fstat(file);
 
       if (stat == null || !stat.isFile()) {

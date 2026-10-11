@@ -1,8 +1,9 @@
 import { body, controller, http, pathParam } from "@fastr/controller";
 import { Context } from "@fastr/core";
-import { BadRequestError } from "@fastr/errors";
+import { BadRequestError, NotFoundError } from "@fastr/errors";
 import { injectable } from "@fastr/invert";
 import { type RouterState } from "@fastr/middleware-router";
+import { User, UserSpace } from "@keybr/database";
 import { HighScoresFactory } from "@keybr/highscores";
 import { type NamedUser } from "@keybr/pages-shared";
 import { PublicId } from "@keybr/publicid";
@@ -24,14 +25,19 @@ export class Controller {
     ctx: Context<RouterState & AuthState>,
     @pathParam("id", pProfileOwner) profileOwner: NamedUser,
   ) {
-    const { id } = profileOwner;
-    await this.userData.load(PublicId.of(id)).serve(ctx);
+    const user = await User.findById(PublicId.of(profileOwner.id).id);
+    if (user == null) {
+      throw new NotFoundError(); // Includes example users.
+    }
+    const space = await UserSpace.ensureDefaultFor(user.id!);
+    await this.userData.load(user.id!, space.id!).serve(ctx);
   }
 
   @http.GET("/_/sync/data")
   async getData(ctx: Context<RouterState & AuthState>) {
-    const { id } = ctx.state.requireUser();
-    await this.userData.load(new PublicId(id!)).serve(ctx);
+    const { id: userId } = ctx.state.requireUser();
+    const { id: spaceId } = ctx.state.requireSpace();
+    await this.userData.load(userId!, spaceId!).serve(ctx);
   }
 
   @http.POST("/_/sync/data")
@@ -39,17 +45,23 @@ export class Controller {
     ctx: Context<RouterState & AuthState>,
     @body.binary(null, { maxLength: 1048576 }) value: Buffer,
   ) {
-    const { id } = ctx.state.requireUser();
+    const { id: userId } = ctx.state.requireUser();
+    const space = ctx.state.requireSpace();
     const results = await parseResults(value);
-    await this.userData.load(new PublicId(id!)).append(results);
-    await this.highScores.append(id!, results);
+    await this.userData.load(userId!, space.id!).append(results);
+    if (space.isDefault != null) {
+      // Only the default space of the user is visible to the public,
+      // so only its results are eligible for the high scores table.
+      await this.highScores.append(userId!, results);
+    }
     ctx.response.status = 204;
   }
 
   @http.DELETE("/_/sync/data")
   async deleteData(ctx: Context<RouterState & AuthState>) {
-    const { id } = ctx.state.requireUser();
-    await this.userData.load(new PublicId(id!)).delete();
+    const { id: userId } = ctx.state.requireUser();
+    const { id: spaceId } = ctx.state.requireSpace();
+    await this.userData.load(userId!, spaceId!).delete();
     ctx.response.status = 204;
   }
 }

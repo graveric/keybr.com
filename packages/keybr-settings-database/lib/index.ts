@@ -9,8 +9,12 @@ import { exponentialDelay } from "@sosimple/retry";
 export class SettingsDatabase {
   constructor(readonly dataDir: DataDir) {}
 
-  async set(userId: number, settings: Settings | null): Promise<void> {
-    const file = this.#getFile(userId);
+  async set(
+    userId: number,
+    spaceId: number,
+    settings: Settings | null,
+  ): Promise<void> {
+    const file = this.#getFile(userId, spaceId);
     await LockFile.withLock(
       file,
       { retryLimit: 5, delayer: exponentialDelay(10) },
@@ -26,8 +30,8 @@ export class SettingsDatabase {
     );
   }
 
-  async get(userId: number): Promise<Settings | null> {
-    const file = this.#getFile(userId);
+  async get(userId: number, spaceId: number): Promise<Settings | null> {
+    const file = this.#getFile(userId, spaceId);
     return await LockFile.withLock(
       file,
       {
@@ -54,7 +58,7 @@ export class SettingsDatabase {
     );
   }
 
-  #getFile(userId: number) {
-    return new File(this.dataDir.userSettingsFile(userId));
+  #getFile(userId: number, spaceId: number) {
+    return new File(this.dataDir.spaceSettingsFile(userId, spaceId));
   }
 }

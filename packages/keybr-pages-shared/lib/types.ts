@@ -32,6 +32,16 @@ export type PageData = {
    * Serialized user settings.
    */
   readonly settings: unknown | null;
+  /**
+   * The list of profile spaces of the authenticated user,
+   * or an empty list if the user is anonymous.
+   */
+  readonly spaces: readonly SpaceDetails[];
+  /**
+   * The id of the currently active profile space of the authenticated user,
+   * or null if the user is anonymous.
+   */
+  readonly activeSpaceId: number | null;
 };
 
 export type UserDetails = {
@@ -113,6 +123,22 @@ export type OrderDetails = {
    * Timestamp.
    */
   readonly createdAt: string | Date;
+};
+
+export type SpaceDetails = {
+  /**
+   * Unique space id.
+   */
+  readonly id: number;
+  /**
+   * User-defined space name.
+   */
+  readonly name: string;
+  /**
+   * Whether this space is the default space of the user.
+   * The default space is the one which is visible to the public.
+   */
+  readonly isDefault: boolean;
 };
 
 export type AnonymousUser = {

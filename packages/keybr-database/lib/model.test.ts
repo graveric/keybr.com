@@ -7,10 +7,11 @@ import {
   equal,
   isNotNull,
   isNull,
+  isTrue,
   like,
   throws,
 } from "rich-assert";
-import { User, UserExternalId, UserLoginRequest } from "./model.ts";
+import { User, UserExternalId, UserLoginRequest, UserSpace } from "./model.ts";
 import { useDatabase } from "./testing.ts";
 import { Random } from "./util.ts";
 
@@ -1073,4 +1074,67 @@ test("parse resource owner", (ctx) => {
       imageUrl: null,
     },
   );
+});
+
+test("user space model", async () => {
+  const user1 = (await User.query().findOne({ email: "user1@keybr.com" }))!;
+  const user2 = (await User.query().findOne({ email: "user2@keybr.com" }))!;
+
+  throws(() => {
+    UserSpace.fromJson({});
+  }, ValidationError);
+
+  throws(() => {
+    UserSpace.fromJson({ userId: 1, name: "" });
+  }, ValidationError);
+
+  throws(() => {
+    UserSpace.fromJson({ userId: 1, name: "x".repeat(51) });
+  }, ValidationError);
+
+  doesNotThrow(() => {
+    UserSpace.fromJson({ userId: 1, name: "Work" });
+  });
+
+  // The default space is created once and reused.
+  const space1 = await UserSpace.ensureDefaultFor(user1.id!);
+  equal(space1.name, "Default");
+  isNotNull(space1.isDefault);
+  const space2 = await UserSpace.ensureDefaultFor(user1.id!);
+  equal(space1.id, space2.id);
+
+  // Non-default spaces have no default flag.
+  const space3 = await UserSpace.query().insertAndFetch({
+    userId: user1.id!,
+    name: "Work",
+  });
+  isNull(space3.isDefault);
+
+  // Only one default space at a time.
+  await UserSpace.setDefault(user1.id!, space3.id!);
+  equal((await UserSpace.loadDefaultFor(user1.id!))?.id, space3.id);
+  equal(
+    (await UserSpace.query().findById(space1.id!))!.isDefault as unknown,
+    null,
+  );
+
+  // Ownership is enforced on queries.
+  deepEqual(
+    (await UserSpace.loadAllFor(user1.id!)).map((space) => space.name),
+    ["Default", "Work"],
+  );
+  isNull(await UserSpace.findOwned(user2.id!, space1.id!));
+  isNotNull(await UserSpace.findOwned(user1.id!, space1.id!));
+
+  // Spaces are isolated between users.
+  const otherSpace = await UserSpace.ensureDefaultFor(user2.id!);
+  isNotNull(otherSpace.id);
+  isTrue(otherSpace.id! !== space1.id!);
+  isNull(await UserSpace.findOwned(user1.id!, otherSpace.id!));
+
+  deepEqual((await UserSpace.query().findById(space3.id!))!.toDetails(), {
+    id: space3.id,
+    name: "Work",
+    isDefault: true,
+  });
 });
