@@ -17,6 +17,7 @@
     "@keybr/settings": "*",
     "@keybr/textinput": "*",
     "@keybr/themes": "*",
+    "@keybr/unicode": "*",
     "@keybr/widget": "*"
   },
   "devDependencies": {},

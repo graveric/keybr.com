@@ -57,3 +57,55 @@ test("fail to recover results", () => {
   deepEqual(recoverResults([r2]), []);
   deepEqual(recoverResults([r1, r2, r3]), [r3]);
 });
+
+test("recover keeps bigrams", () => {
+  const faker = new ResultFaker();
+
+  const bigrams = new Map([
+    [
+      0x0061,
+      {
+        hitCount: 11,
+        missCount: 1,
+        timeToType: 111,
+        prevKeyId: "KeyA" as const,
+        currentKeyId: "KeyB" as const,
+      },
+    ],
+  ]);
+  const invalidBigrams = new Map([
+    [
+      0x0062,
+      {
+        hitCount: 1,
+        missCount: 0,
+        timeToType: 1,
+        prevKeyId: "KeyB" as const,
+        currentKeyId: "KeyX" as const,
+      },
+    ],
+  ]);
+
+  const result = faker.nextResult({
+    histogram: new Histogram([
+      { codePoint: 0x0062, hitCount: 22, missCount: 2, timeToType: 222, bigrams },
+      { codePoint: 0x0063, hitCount: 33, missCount: 3, timeToType: 333 },
+      { codePoint: 0x0064, hitCount: 44, missCount: 4, timeToType: 444 },
+      {
+        codePoint: 0x0078,
+        hitCount: 11,
+        missCount: 1,
+        timeToType: 1,
+        bigrams: invalidBigrams,
+      },
+    ]),
+  });
+
+  isFalse(result.validate());
+
+  const [recovered] = recoverResults([result]);
+
+  isTrue(recovered.validate());
+  deepEqual(recovered.histogram.get(0x0062)!.bigrams, bigrams);
+  deepEqual(recovered.histogram.get(0x0078), null);
+});

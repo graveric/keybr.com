@@ -11,6 +11,7 @@ export type ResultJson = {
   readonly t: number;
   readonly e: number;
   readonly h: HistogramtJson;
+  readonly b?: BigramsJson;
 };
 
 export type HistogramtJson = {
@@ -18,8 +19,21 @@ export type HistogramtJson = {
     readonly h: number;
     readonly m: number;
     readonly t: number;
+    readonly b?: BigramsJsonMap;
   };
 };
+
+export type BigramsJsonMap = {
+  readonly [prevCodePoint: number]: {
+    readonly h: number;
+    readonly m: number;
+    readonly t: number;
+    readonly pk: string;
+    readonly ck: string;
+  };
+};
+
+export type BigramsJson = BigramsJsonMap;
 
 export function resultToJson(result: Result): ResultJson {
   return {
@@ -34,19 +48,28 @@ export function resultToJson(result: Result): ResultJson {
 }
 
 export function histogramToJson(histogram: Histogram): HistogramtJson {
-  const json: {
-    [codePoint: number]: {
-      h: number;
-      m: number;
-      t: number;
-    };
-  } = {};
-  for (const { codePoint, hitCount, missCount, timeToType } of histogram) {
-    json[codePoint] = {
+  const json: any = {};
+  for (const sample of histogram) {
+    const { codePoint, hitCount, missCount, timeToType, bigrams } = sample;
+    const obj: any = {
       h: hitCount,
       m: missCount,
       t: timeToType,
     };
+    if (bigrams != null && bigrams.size > 0) {
+      const b: any = {};
+      for (const [prev, bs] of bigrams) {
+        b[prev] = {
+          h: bs.hitCount,
+          m: bs.missCount,
+          t: bs.timeToType,
+          pk: bs.prevKeyId,
+          ck: bs.currentKeyId,
+        };
+      }
+      obj.b = b;
+    }
+    json[codePoint] = obj;
   }
   return json;
 }
@@ -114,11 +137,8 @@ export function histogramFromJson(json: HistogramtJson): Histogram | null {
       h: hitCount,
       m: missCount,
       t: timeToType,
-    } = sample as {
-      readonly h: number;
-      readonly m: number;
-      readonly t: number;
-    };
+      b: bigramsJson,
+    } = sample as any;
     if (
       !(
         Number.isSafeInteger(hitCount) &&
@@ -128,12 +148,64 @@ export function histogramFromJson(json: HistogramtJson): Histogram | null {
     ) {
       return null;
     }
-    samples.push({
+    let bigrams: ReadonlyMap<number, any> | undefined;
+    if (bigramsJson != null) {
+      if (!isPlainObject(bigramsJson)) {
+        return null;
+      }
+      const map = new Map();
+      for (const [pkey, bsample] of Object.entries(bigramsJson)) {
+        const prevCodePoint = Number(pkey);
+        if (
+          !(
+            Number.isSafeInteger(prevCodePoint) &&
+            prevCodePoint > 0 &&
+            prevCodePoint <= 65535
+          )
+        ) {
+          return null;
+        }
+        if (!isPlainObject(bsample)) {
+          return null;
+        }
+        const {
+          h: bh,
+          m: bm,
+          t: bt,
+          pk,
+          ck,
+        } = bsample as any;
+        if (
+          !(
+            Number.isSafeInteger(bh) &&
+            Number.isSafeInteger(bm) &&
+            Number.isFinite(bt) &&
+            isString(pk) &&
+            isString(ck)
+          )
+        ) {
+          return null;
+        }
+        map.set(prevCodePoint, {
+          hitCount: bh,
+          missCount: bm,
+          timeToType: Math.round(bt),
+          prevKeyId: pk,
+          currentKeyId: ck,
+        });
+      }
+      bigrams = map;
+    }
+    const sampleObj: any = {
       codePoint,
       hitCount,
       missCount,
       timeToType: Math.round(timeToType),
-    });
+    };
+    if (bigrams != null && bigrams.size > 0) {
+      sampleObj.bigrams = bigrams;
+    }
+    samples.push(sampleObj);
   }
   return new Histogram(samples);
 }

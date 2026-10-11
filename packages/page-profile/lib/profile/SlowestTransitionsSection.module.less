@@ -1,0 +1,44 @@
+.root {
+  max-block-size: 40rem;
+  padding-inline-end: 1rem;
+  overflow-inline: auto;
+  overflow-block: scroll;
+  overscroll-behavior: contain;
+}
+
+.table {
+  table-layout: fixed;
+  inline-size: 100%;
+  border: var(--separator-border);
+  border-collapse: collapse;
+}
+
+.table thead {
+  position: sticky;
+  inset-block-start: 0;
+  background-color: var(--primary);
+}
+
+.row {
+  border-block-end: var(--separator-border);
+}
+
+.cell {
+  padding-inline: 1rem;
+  padding-block: 0.25rem;
+  text-align: start;
+}
+
+.numeric {
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.mono {
+  font-family: var(--value-font-family);
+}
+
+.empty {
+  padding-block: 1rem;
+  text-align: center;
+}

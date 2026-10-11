@@ -15,7 +15,7 @@ test("format and parse results", () => {
 
   const buffer = formatMessage([result]);
 
-  equal(buffer.byteLength, 78);
+  equal(buffer.byteLength, 88);
 
   const iter = parseMessage(buffer);
 

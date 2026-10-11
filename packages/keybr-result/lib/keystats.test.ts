@@ -47,6 +47,7 @@ test("compute key stats", () => {
     samples: [],
     timeToType: null,
     bestTimeToType: null,
+    bigrams: [],
   });
 
   keyStatsMap.append(r1);
@@ -65,6 +66,7 @@ test("compute key stats", () => {
     ],
     timeToType: 500,
     bestTimeToType: 500,
+    bigrams: [],
   });
 
   keyStatsMap.append(r2);
@@ -92,6 +94,7 @@ test("compute key stats", () => {
     ],
     timeToType: 460,
     bestTimeToType: 460,
+    bigrams: [],
   });
 
   deepEqual(keyStatsMap.copy().get(l2), {
@@ -108,5 +111,6 @@ test("compute key stats", () => {
     ],
     timeToType: 200,
     bestTimeToType: 200,
+    bigrams: [],
   });
 });

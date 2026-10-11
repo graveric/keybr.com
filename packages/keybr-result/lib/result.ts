@@ -1,5 +1,6 @@
 import { type Layout } from "@keybr/keyboard";
-import { type Histogram, type Stats } from "@keybr/textinput";
+import { Histogram, makeStats, type Step } from "@keybr/textinput";
+import { makeBigrams } from "./bigrams.ts";
 import { type TextType } from "./texttype.ts";
 
 export type Filter = {
@@ -23,8 +24,21 @@ export class Result {
     layout: Layout,
     textType: TextType,
     timeStamp: number,
-    stats: Stats,
+    steps: readonly Step[],
   ): Result {
+    const stats = makeStats(steps);
+    let { histogram } = stats;
+    if (histogram.complexity > 0) {
+      const bigrams = makeBigrams(layout, steps);
+      if (bigrams.size > 0) {
+        histogram = new Histogram(
+          [...stats.histogram].map((sample) => {
+            const pairs = bigrams.get(sample.codePoint);
+            return pairs != null ? { ...sample, bigrams: pairs } : sample;
+          }),
+        );
+      }
+    }
     return new Result(
       layout,
       textType,
@@ -32,7 +46,7 @@ export class Result {
       stats.length,
       stats.time,
       stats.errors,
-      stats.histogram,
+      histogram,
     );
   }
 
@@ -93,7 +107,23 @@ export class Result {
       time: this.time,
       errors: this.errors,
       speed: this.speed,
-      histogram: [...this.histogram],
+      histogram: [...this.histogram].map((sample) => {
+        const { bigrams, ...rest } = sample;
+        if (bigrams == null || bigrams.size === 0) {
+          return rest;
+        }
+        return {
+          ...rest,
+          bigrams: [...bigrams].map(([prevCodePoint, bigram]) => ({
+            prevCodePoint,
+            hitCount: bigram.hitCount,
+            missCount: bigram.missCount,
+            timeToType: bigram.timeToType,
+            prevKeyId: bigram.prevKeyId,
+            currentKeyId: bigram.currentKeyId,
+          })),
+        };
+      }),
     };
   }
 }

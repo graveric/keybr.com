@@ -1,8 +1,16 @@
 import { createHash } from "node:crypto";
 import { type Context } from "@fastr/core";
+import { Reader } from "@keybr/binary";
 import { type PublicId } from "@keybr/publicid";
 import { type Result } from "@keybr/result";
-import { fileChunk, fileHeader, parseFile } from "@keybr/result-io";
+import {
+  fileChunk,
+  fileHeader,
+  formatFile,
+  getHeaderVersion,
+  HEADER_VERSION,
+  parseFile,
+} from "@keybr/result-io";
 import { rename, type Stats } from "@sosimple/fsx";
 import { File } from "@sosimple/fsx-file";
 
@@ -55,11 +63,27 @@ export class UserData {
 
   async append(results: readonly Result[]): Promise<void> {
     if (results.length > 0) {
+      if (await this.#needsUpgrade()) {
+        await this.#upgrade();
+      }
       await this.file.append(fileHeader(), { flag: "ax" });
       for (const chunk of partition(results)) {
         await this.file.append(fileChunk(chunk), { flag: "a" });
       }
     }
+  }
+
+  async #needsUpgrade(): Promise<boolean> {
+    if (!(await this.file.exists())) {
+      return false;
+    }
+    const version = getHeaderVersion(new Reader(await this.file.read()));
+    return version !== HEADER_VERSION;
+  }
+
+  async #upgrade(): Promise<void> {
+    const buffer = await this.file.read();
+    await this.file.write(formatFile(parseFile(buffer)));
   }
 
   async delete(): Promise<void> {

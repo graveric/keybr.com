@@ -15,4 +15,5 @@ export * from "./RollingSpeedChart.tsx";
 export * from "./SpeedChart.tsx";
 export * from "./SpeedHistogram.tsx";
 export * from "./TimeToTypeHistogram.tsx";
+export * from "./transitions.tsx";
 export * from "./types.ts";

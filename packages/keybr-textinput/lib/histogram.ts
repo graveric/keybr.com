@@ -1,3 +1,4 @@
+import { type KeyId } from "@keybr/keyboard";
 import { type CodePoint } from "@keybr/unicode";
 import { type Step } from "./textinput.ts";
 
@@ -6,6 +7,17 @@ export type Sample = {
   readonly hitCount: number;
   readonly missCount: number;
   readonly timeToType: number;
+  readonly bigrams?: ReadonlyMap<CodePoint, BigramSample>;
+};
+
+export type BigramSample = {
+  readonly hitCount: number;
+  readonly missCount: number;
+  readonly timeToType: number;
+  /** The identifier of the previous physical key. */
+  readonly prevKeyId: KeyId;
+  /** The identifier of the current physical key. */
+  readonly currentKeyId: KeyId;
 };
 
 export class Histogram implements Iterable<Sample> {
@@ -93,7 +105,11 @@ export class Histogram implements Iterable<Sample> {
   }
 }
 
-export function validateSample({ timeToType }: Sample): boolean {
+export function validateSample({
+  timeToType,
+}: {
+  readonly timeToType: number;
+}): boolean {
   if (timeToType > 0) {
     if (timeToType < /* 300WPM/1500CPM */ 40) {
       return false; // Too fast.

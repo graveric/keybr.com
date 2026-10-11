@@ -93,7 +93,7 @@ export class LessonState {
       this.settings.get(keyboardProps.layout),
       this.settings.get(lessonProps.type).textType,
       timeStamp,
-      makeStats(this.textInput.steps),
+      this.textInput.steps,
     );
   }
 }

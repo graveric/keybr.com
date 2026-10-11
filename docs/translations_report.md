@@ -1,6 +1,6 @@
 # English
 
-Translated: 350 messages, 4802 words
+Translated: 366 messages, 4883 words
 
 Untranslated: 0 messages, 0 words
 
@@ -8,77 +8,132 @@ Untranslated: 0 messages, 0 words
 
 Translated: 339 messages, 4744 words
 
-Untranslated: 11 messages, 58 words
+Untranslated: 27 messages, 139 words
 
+* *All*
+* *Keys*
+* *Type*
+* *Pairs:*
 * *Letters*
+* *Presses*
 * *Volume:*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Slowest Transitions*
+* *Export Transition Statistics*
 * *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
+* ...
 
 # Arabic
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 9 messages, 56 words
+Untranslated: 25 messages, 137 words
 
+* *All*
+* *Keys*
+* *Type*
+* *Pairs:*
+* *Presses*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Slowest Transitions*
+* *Export Transition Statistics*
 * *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
+* *Download the transition statistics.*
+* *Not enough data yet. Keep practicing to collect transition s...*
+* ...
 
 # Bulgarian
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 9 messages, 56 words
+Untranslated: 25 messages, 137 words
 
+* *All*
+* *Keys*
+* *Type*
+* *Pairs:*
+* *Presses*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Slowest Transitions*
+* *Export Transition Statistics*
 * *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
+* *Download the transition statistics.*
+* *Not enough data yet. Keep practicing to collect transition s...*
+* ...
 
 # Bangla
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 9 messages, 56 words
+Untranslated: 25 messages, 137 words
 
+* *All*
+* *Keys*
+* *Type*
+* *Pairs:*
+* *Presses*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Slowest Transitions*
+* *Export Transition Statistics*
 * *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
+* *Download the transition statistics.*
+* *Not enough data yet. Keep practicing to collect transition s...*
+* ...
 
 # Catalan
 
 Translated: 310 messages, 3556 words
 
-Untranslated: 38 messages, 1224 words
+Untranslated: 54 messages, 1305 words
 
+* *All*
+* *Keys*
+* *Type*
 * *Errors*
+* *Pairs:*
 * *Zones:*
+* *Presses*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Sound theme:*
@@ -87,106 +142,135 @@ Untranslated: 38 messages, 1224 words
 * *Key sounds only*
 * *Key Effort Matrix*
 * *Relative Accuracy*
-* *Repeat each word:*
-* *Download the key effort matrix.*
-* *The previous keys are also above the target speed*
-* *Generate lessons that resemble the specified programming lan...*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Practice punctuation characters that are specific to a progr...*
-* *This is a histogram of the accuracies of all users, and your...*
-* *Show color coding of the keyboard zones. Use this option to ...*
-* *Generate typing lessons from the text of a book. All keys ar...*
 * ...
 
 # Czech
 
 Translated: 338 messages, 4742 words
 
-Untranslated: 12 messages, 60 words
+Untranslated: 28 messages, 141 words
 
+* *All*
+* *Keys*
+* *Type*
 * *Font:*
+* *Pairs:*
+* *Presses*
 * *Syntax:*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Sound theme:*
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
-* *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
+* *Slowest Transitions*
+* *Export Transition Statistics*
+* ...
 
 # Danish
 
 Translated: 331 messages, 4689 words
 
-Untranslated: 17 messages, 91 words
+Untranslated: 33 messages, 172 words
 
+* *All*
+* *Keys*
+* *Type*
 * *Score*
 * *Layout*
+* *Pairs:*
 * *Layout:*
 * *Layouts*
+* *Presses*
 * *Download*
 * *Position*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Multiplayer*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
 * *Download data*
-* *Key sounds only*
-* *Key Effort Matrix*
-* *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
-* *Repeat each word a number of times. Type a word for the firs...*
+* ...
 
 # German
 
 Translated: 339 messages, 4744 words
 
-Untranslated: 11 messages, 58 words
+Untranslated: 27 messages, 139 words
 
+* *All*
+* *Keys*
+* *Type*
+* *Pairs:*
+* *Presses*
 * *Download*
 * *Position*
 * *Alphabet:*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Slowest Transitions*
+* *Export Transition Statistics*
 * *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
+* ...
 
 # Greek
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 9 messages, 56 words
+Untranslated: 25 messages, 137 words
 
+* *All*
+* *Keys*
+* *Type*
+* *Pairs:*
+* *Presses*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Slowest Transitions*
+* *Export Transition Statistics*
 * *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
+* *Download the transition statistics.*
+* *Not enough data yet. Keep practicing to collect transition s...*
+* ...
 
 # Esperanto
 
 Translated: 77 messages, 1126 words
 
-Untranslated: 266 messages, 3618 words
+Untranslated: 282 messages, 3699 words
 
+* *All*
 * *GO!*
 * *Copy*
 * *Done*
 * *Help*
+* *Keys*
 * *Next*
 * *Time*
+* *Type*
 * *Books*
 * *Close*
 * *Font:*
@@ -194,60 +278,87 @@ Untranslated: 266 messages, 3618 words
 * *Speed*
 * *Visit*
 * *Errors*
+* *Pairs:*
 * *Typing*
 * *Zones:*
 * *Layouts*
-* *Lessons*
-* *Lessons*
-* *Not set*
-* *Numbers*
 * ...
 
 # Spanish
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 9 messages, 56 words
+Untranslated: 25 messages, 137 words
 
+* *All*
+* *Keys*
+* *Type*
+* *Pairs:*
+* *Presses*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Slowest Transitions*
+* *Export Transition Statistics*
 * *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
+* *Download the transition statistics.*
+* *Not enough data yet. Keep practicing to collect transition s...*
+* ...
 
 # Estonian
 
 Translated: 338 messages, 4743 words
 
-Untranslated: 12 messages, 59 words
+Untranslated: 28 messages, 140 words
 
+* *All*
 * *GO!*
+* *Keys*
+* *Type*
 * *Font:*
+* *Pairs:*
+* *Presses*
 * *Download*
 * *Progress*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
-* *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
+* *Slowest Transitions*
+* *Export Transition Statistics*
+* ...
 
 # Persian
 
 Translated: 295 messages, 2959 words
 
-Untranslated: 53 messages, 1821 words
+Untranslated: 69 messages, 1902 words
 
+* *All*
+* *Keys*
+* *Type*
 * *Books*
+* *Pairs:*
 * *Zones:*
+* *Presses*
 * *Syntax:*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Sound theme:*
@@ -255,57 +366,51 @@ Untranslated: 53 messages, 1821 words
 * *Top accuracy*
 * *Explain charts*
 * *Key sounds only*
-* *Key Effort Matrix*
-* *Repeat each word:*
-* *Download the key effort matrix.*
-* *Keyboard hardware emulates layout*
-* *Circle color: {label1} – hit count, {label2} – miss count.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Practice punctuation characters that are specific to a progr...*
-* *Show color coding of the keyboard zones. Use this option to ...*
-* *Bar color: {label1} – hit count, {label2} – miss count, {lab...*
 * ...
 
 # Finnish
 
 Translated: 208 messages, 2284 words
 
-Untranslated: 136 messages, 2462 words
+Untranslated: 152 messages, 2543 words
 
+* *All*
 * *GO!*
+* *Keys*
 * *Time*
+* *Type*
+* *Pairs:*
 * *Layouts*
 * *Metrics*
 * *Not set*
+* *Presses*
 * *Syntax:*
 * *Download*
 * *Position*
 * *Practice*
 * *Settings*
+* *Mean time*
+* *Same hand*
 * *Top speed*
 * *Uncertain*
 * *Characters*
-* *Top speed!*
-* *High Scores*
-* *Multiplayer*
-* *Smoothness:*
-* *Min presses:*
-* *Miss weight:*
-* *Play sounds:*
 * ...
 
 # Faroese
 
 Translated: 44 messages, 583 words
 
-Untranslated: 298 messages, 4150 words
+Untranslated: 314 messages, 4231 words
 
+* *All*
 * *GO!*
 * *Copy*
 * *Done*
 * *Help*
+* *Keys*
 * *Next*
 * *Time*
+* *Type*
 * *Books*
 * *Close*
 * *Font:*
@@ -315,45 +420,55 @@ Untranslated: 298 messages, 4150 words
 * *Visit*
 * *Errors*
 * *Layout*
+* *Pairs:*
 * *Typing*
-* *Zones:*
-* *Account*
-* *Layout:*
-* *Layouts*
 * ...
 
 # French
 
 Translated: 333 messages, 4544 words
 
-Untranslated: 17 messages, 258 words
+Untranslated: 33 messages, 339 words
 
+* *All*
+* *Keys*
+* *Type*
+* *Pairs:*
 * *Zones:*
 * *Options*
+* *Presses*
 * *Volume:*
 * *Download*
 * *Position*
 * *Alphabet:*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
-* *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
-* *Above are listed the longest continuous sequences of lessons...*
-* *When you focus on a new key, it is very likely that the spee...*
-* *The target speed is used to measure the confidence level and...*
+* ...
 
 # Irish
 
 Translated: 337 messages, 4735 words
 
-Untranslated: 13 messages, 67 words
+Untranslated: 29 messages, 148 words
 
+* *All*
+* *Keys*
+* *Type*
+* *Pairs:*
 * *Zones:*
+* *Presses*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Smoothness:*
 * *Min presses:*
 * *Miss weight:*
@@ -362,92 +477,136 @@ Untranslated: 13 messages, 67 words
 * *M|T|W|T|F|S|S*
 * *Key sounds only*
 * *Key Effort Matrix*
-* *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
+* *Slowest Transitions*
+* ...
 
 # Hebrew
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 9 messages, 56 words
+Untranslated: 25 messages, 137 words
 
+* *All*
+* *Keys*
+* *Type*
+* *Pairs:*
+* *Presses*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Slowest Transitions*
+* *Export Transition Statistics*
 * *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
+* *Download the transition statistics.*
+* *Not enough data yet. Keep practicing to collect transition s...*
+* ...
 
 # Croatian
 
 Translated: 337 messages, 4740 words
 
-Untranslated: 13 messages, 62 words
+Untranslated: 29 messages, 143 words
 
+* *All*
+* *Keys*
+* *Type*
 * *Font:*
 * *Reset*
+* *Pairs:*
+* *Presses*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Multiplayer*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Slowest Transitions*
 * *Premium account price:*
-* *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
+* ...
 
 # Hungarian
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 9 messages, 56 words
+Untranslated: 25 messages, 137 words
 
+* *All*
+* *Keys*
+* *Type*
+* *Pairs:*
+* *Presses*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Slowest Transitions*
+* *Export Transition Statistics*
 * *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
+* *Download the transition statistics.*
+* *Not enough data yet. Keep practicing to collect transition s...*
+* ...
 
 # Indonesian
 
 Translated: 339 messages, 4744 words
 
-Untranslated: 11 messages, 58 words
+Untranslated: 27 messages, 139 words
 
+* *All*
 * *GO!*
+* *Keys*
+* *Type*
+* *Pairs:*
+* *Presses*
 * *Volume:*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Slowest Transitions*
+* *Export Transition Statistics*
 * *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
+* ...
 
 # Icelandic
 
 Translated: 95 messages, 1742 words
 
-Untranslated: 248 messages, 3002 words
+Untranslated: 264 messages, 3083 words
 
+* *All*
 * *GO!*
 * *Copy*
 * *Done*
 * *Help*
+* *Keys*
 * *Next*
 * *Time*
+* *Type*
 * *Books*
 * *Close*
 * *Font:*
@@ -456,87 +615,111 @@ Untranslated: 248 messages, 3002 words
 * *Speed*
 * *Visit*
 * *Errors*
+* *Pairs:*
 * *Typing*
 * *Zones:*
-* *Account*
-* *Layouts*
-* *Lessons*
-* *Metrics*
 * ...
 
 # Italian
 
 Translated: 334 messages, 4738 words
 
-Untranslated: 15 messages, 62 words
+Untranslated: 31 messages, 143 words
 
+* *All*
+* *Keys*
+* *Type*
 * *Font:*
 * *Layout*
+* *Pairs:*
 * *Account*
 * *Layout:*
 * *Layouts*
+* *Presses*
 * *Volume:*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
 * *Key sounds only*
-* *Key Effort Matrix*
-* *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
+* ...
 
 # Japanese
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 9 messages, 56 words
+Untranslated: 25 messages, 137 words
 
+* *All*
+* *Keys*
+* *Type*
+* *Pairs:*
+* *Presses*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Slowest Transitions*
+* *Export Transition Statistics*
 * *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
+* *Download the transition statistics.*
+* *Not enough data yet. Keep practicing to collect transition s...*
+* ...
 
 # Korean
 
 Translated: 145 messages, 1297 words
 
-Untranslated: 203 messages, 3483 words
+Untranslated: 219 messages, 3564 words
 
+* *All*
 * *Copy*
 * *Done*
+* *Keys*
 * *Next*
+* *Type*
 * *Books*
 * *Close*
 * *Font:*
 * *Reset*
 * *Visit*
+* *Pairs:*
 * *Typing*
 * *Zones:*
 * *Lessons*
 * *Not set*
 * *Options*
+* *Presses*
 * *Preview*
 * *Syntax:*
-* *Volume:*
-* *All keys*
-* *Chapters*
-* *Download*
-* *Keyboard*
 * ...
 
 # Lithuanian
 
 Translated: 305 messages, 3388 words
 
-Untranslated: 42 messages, 1383 words
+Untranslated: 58 messages, 1464 words
 
+* *All*
+* *Keys*
+* *Type*
+* *Pairs:*
+* *Presses*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
@@ -544,32 +727,26 @@ Untranslated: 42 messages, 1383 words
 * *Accuracy Streaks*
 * *Key Effort Matrix*
 * *Relative Accuracy*
+* *Slowest Transitions*
 * *No accuracy streaks.*
 * *Practice numbers only.*
-* *Download the key effort matrix.*
-* *The difference from the average value.*
-* *Download all your typing data in JSON format.*
-* *The detailed statistics regarding your learning progress.*
-* *Permanently delete all of your typing data and reset statist...*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *This is a histogram of the accuracies of all users, and your...*
-* *Adjust the number of words in the lesson text. Making lesson...*
-* *Show color coding of the keyboard zones. Use this option to ...*
-* *Are you sure you want to delete all data and reset your prof...*
 * ...
 
 # Mongolian
 
 Translated: 16 messages, 378 words
 
-Untranslated: 324 messages, 4326 words
+Untranslated: 340 messages, 4407 words
 
+* *All*
 * *GO!*
 * *Copy*
 * *Done*
 * *Help*
+* *Keys*
 * *Next*
 * *Time*
+* *Type*
 * *User*
 * *Books*
 * *Close*
@@ -581,262 +758,361 @@ Untranslated: 324 messages, 4326 words
 * *Speed*
 * *Visit*
 * *Digits*
-* *Errors*
-* *Layout*
-* *Resend*
 * ...
 
 # Norwegian Bokmål
 
 Translated: 211 messages, 2446 words
 
-Untranslated: 134 messages, 2303 words
+Untranslated: 150 messages, 2384 words
 
+* *All*
 * *Done*
 * *Help*
+* *Keys*
+* *Type*
 * *Books*
 * *Font:*
 * *Speed*
+* *Pairs:*
 * *Account*
+* *Presses*
 * *Accuracy*
 * *Download*
 * *Settings*
 * *Alphabet:*
 * *Examples:*
+* *Mean time*
+* *Same hand*
 * *All sounds*
-* *Daily goal*
-* *Last speed*
-* *Custom text*
-* *Daily goal:*
-* *Smoothness:*
-* *Whitespace:*
-* *Min presses:*
-* *Miss weight:*
+* *Cross hand*
 * ...
 
 # Nepali
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 9 messages, 56 words
+Untranslated: 25 messages, 137 words
 
+* *All*
+* *Keys*
+* *Type*
+* *Pairs:*
+* *Presses*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Slowest Transitions*
+* *Export Transition Statistics*
 * *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
+* *Download the transition statistics.*
+* *Not enough data yet. Keep practicing to collect transition s...*
+* ...
 
 # Dutch
 
 Translated: 333 messages, 4736 words
 
-Untranslated: 16 messages, 64 words
+Untranslated: 32 messages, 145 words
 
+* *All*
+* *Keys*
+* *Type*
 * *Score*
+* *Pairs:*
 * *Zones:*
 * *Account*
 * *Letters*
+* *Presses*
 * *Volume:*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Multiplayer*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
 * *Key sounds only*
-* *Premium account*
-* *Key Effort Matrix*
-* *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
+* ...
 
 # Polish
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 9 messages, 56 words
+Untranslated: 25 messages, 137 words
 
+* *All*
+* *Keys*
+* *Type*
+* *Pairs:*
+* *Presses*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Slowest Transitions*
+* *Export Transition Statistics*
 * *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
+* *Download the transition statistics.*
+* *Not enough data yet. Keep practicing to collect transition s...*
+* ...
 
 # Brazilian Portuguese
 
 Translated: 338 messages, 4743 words
 
-Untranslated: 12 messages, 59 words
+Untranslated: 28 messages, 140 words
 
+* *All*
+* *Keys*
+* *Type*
 * *Layout*
+* *Pairs:*
 * *Layout:*
 * *Layouts*
+* *Presses*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
-* *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
+* *Slowest Transitions*
+* *Export Transition Statistics*
+* ...
 
 # European Portuguese
 
 Translated: 319 messages, 4618 words
 
-Untranslated: 29 messages, 162 words
+Untranslated: 45 messages, 243 words
 
+* *All*
+* *Keys*
+* *Type*
 * *Books*
 * *Layout*
+* *Pairs:*
 * *Zones:*
 * *Layout:*
 * *Layouts*
+* *Presses*
 * *Volume:*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
 * *Top score!*
 * *Top speed!*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
-* *Sound theme:*
-* *Time weight:*
-* *Top accuracy*
-* *Explain charts*
-* *Key sounds only*
-* *Average accuracy*
-* *Key Effort Matrix*
-* *Relative Accuracy*
-* *Repeat each word:*
 * ...
 
 # Romanian
 
 Translated: 298 messages, 3587 words
 
-Untranslated: 45 messages, 1171 words
+Untranslated: 61 messages, 1252 words
 
+* *All*
+* *Keys*
+* *Type*
 * *Font:*
 * *Layout*
+* *Pairs:*
 * *Zones:*
 * *Account*
 * *Layout:*
 * *Layouts*
+* *Presses*
 * *Download*
+* *Mean time*
+* *Same hand*
 * *Translate*
+* *Cross hand*
+* *Transition*
 * *Multiplayer*
 * *Min presses:*
 * *Miss weight:*
-* *Sound theme:*
-* *Time weight:*
-* *Top accuracy*
-* *Forgive errors*
-* *Key sounds only*
-* *Average accuracy*
-* *Key Effort Matrix*
-* *Relative Accuracy*
-* *Repeat each word:*
 * ...
 
 # Russian
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 9 messages, 56 words
+Untranslated: 25 messages, 137 words
 
+* *All*
+* *Keys*
+* *Type*
+* *Pairs:*
+* *Presses*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Slowest Transitions*
+* *Export Transition Statistics*
 * *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
+* *Download the transition statistics.*
+* *Not enough data yet. Keep practicing to collect transition s...*
+* ...
 
 # Slovak
 
 Translated: 340 messages, 4745 words
 
-Untranslated: 10 messages, 57 words
+Untranslated: 26 messages, 138 words
 
+* *All*
+* *Keys*
+* *Type*
+* *Pairs:*
+* *Presses*
 * *Syntax:*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Slowest Transitions*
+* *Export Transition Statistics*
 * *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
+* *Download the transition statistics.*
+* ...
 
 # Slovenian
 
 Translated: 340 messages, 4745 words
 
-Untranslated: 10 messages, 57 words
+Untranslated: 26 messages, 138 words
 
+* *All*
+* *Keys*
+* *Type*
 * *Font:*
+* *Pairs:*
+* *Presses*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Slowest Transitions*
+* *Export Transition Statistics*
 * *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
+* *Download the transition statistics.*
+* ...
 
 # Albanian
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 9 messages, 56 words
+Untranslated: 25 messages, 137 words
 
+* *All*
+* *Keys*
+* *Type*
+* *Pairs:*
+* *Presses*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Slowest Transitions*
+* *Export Transition Statistics*
 * *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
+* *Download the transition statistics.*
+* *Not enough data yet. Keep practicing to collect transition s...*
+* ...
 
 # Swedish
 
 Translated: 338 messages, 4743 words
 
-Untranslated: 12 messages, 59 words
+Untranslated: 28 messages, 140 words
 
+* *All*
+* *Keys*
+* *Type*
 * *Layout*
+* *Pairs:*
 * *Layout:*
+* *Presses*
 * *Syntax:*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
-* *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
+* *Slowest Transitions*
+* *Export Transition Statistics*
+* ...
 
 # Thai
 
 Translated: 329 messages, 4635 words
 
-Untranslated: 19 messages, 145 words
+Untranslated: 35 messages, 226 words
 
+* *All*
+* *Keys*
+* *Type*
+* *Pairs:*
 * *Zones:*
+* *Presses*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Sound theme:*
@@ -846,121 +1122,172 @@ Untranslated: 19 messages, 145 words
 * *Average accuracy*
 * *Key Effort Matrix*
 * *Relative Accuracy*
-* *Repeat each word:*
-* *Premium account price:*
-* *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *This is a histogram of the accuracies of all users, and your...*
-* *Per-key effort as a combination of the average time-to-type ...*
-* *Repeat each word a number of times. Type a word for the firs...*
-* *See how accurate you type relative to other users. The highe...*
+* ...
 
 # Turkish
 
 Translated: 227 messages, 2126 words
 
-Untranslated: 118 messages, 2621 words
+Untranslated: 134 messages, 2702 words
 
+* *All*
+* *Keys*
+* *Type*
 * *Books*
 * *Font:*
+* *Pairs:*
 * *Zones:*
 * *Metrics*
+* *Presses*
 * *Preview*
 * *Sign-In*
 * *Syntax:*
 * *Download*
 * *Alphabet:*
+* *Mean time*
+* *Same hand*
 * *Box cursor*
+* *Cross hand*
+* *Transition*
 * *Line cursor*
-* *Source code*
-* *Whitespace:*
-* *Block cursor*
-* *Min presses:*
-* *Miss weight:*
-* *Time weight:*
-* *Top accuracy*
-* *No whitespace*
-* *Smooth cursor*
 * ...
 
 # Ukrainian
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 9 messages, 56 words
+Untranslated: 25 messages, 137 words
 
+* *All*
+* *Keys*
+* *Type*
+* *Pairs:*
+* *Presses*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Slowest Transitions*
+* *Export Transition Statistics*
 * *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
+* *Download the transition statistics.*
+* *Not enough data yet. Keep practicing to collect transition s...*
+* ...
 
 # Vietnamese
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 9 messages, 56 words
+Untranslated: 25 messages, 137 words
 
+* *All*
+* *Keys*
+* *Type*
+* *Pairs:*
+* *Presses*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Slowest Transitions*
+* *Export Transition Statistics*
 * *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
+* *Download the transition statistics.*
+* *Not enough data yet. Keep practicing to collect transition s...*
+* ...
 
 # Simplified Chinese
 
 Translated: 340 messages, 4739 words
 
-Untranslated: 10 messages, 63 words
+Untranslated: 26 messages, 144 words
 
+* *All*
+* *Keys*
+* *Type*
+* *Pairs:*
+* *Presses*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
 * *M|T|W|T|F|S|S*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Slowest Transitions*
+* *Export Transition Statistics*
 * *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
+* *Download the transition statistics.*
+* ...
 
 # Traditional Chinese
 
 Translated: 341 messages, 4746 words
 
-Untranslated: 9 messages, 56 words
+Untranslated: 25 messages, 137 words
 
+* *All*
+* *Keys*
+* *Type*
+* *Pairs:*
+* *Presses*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Slowest Transitions*
+* *Export Transition Statistics*
 * *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
+* *Download the transition statistics.*
+* *Not enough data yet. Keep practicing to collect transition s...*
+* ...
 
 # Chinese (Taiwan)
 
 Translated: 340 messages, 4745 words
 
-Untranslated: 10 messages, 57 words
+Untranslated: 26 messages, 138 words
 
+* *All*
 * *GO!*
+* *Keys*
+* *Type*
+* *Pairs:*
+* *Presses*
 * *Download*
+* *Mean time*
+* *Same hand*
+* *Cross hand*
+* *Transition*
 * *Min presses:*
 * *Miss weight:*
 * *Time weight:*
 * *Key sounds only*
 * *Key Effort Matrix*
+* *Slowest Transitions*
+* *Export Transition Statistics*
 * *Download the key effort matrix.*
-* *Key color: green for low effort, red for high effort, gray f...*
-* *Per-key effort as a combination of the average time-to-type ...*
+* *Download the transition statistics.*
+* ...

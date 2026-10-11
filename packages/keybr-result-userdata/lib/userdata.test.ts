@@ -3,9 +3,11 @@ import { after, test } from "node:test";
 import { request } from "@fastr/client";
 import { start } from "@fastr/client-testlib";
 import { Application } from "@fastr/core";
+import { Reader, Writer } from "@keybr/binary";
 import { DataDir } from "@keybr/config";
 import { PublicId } from "@keybr/publicid";
-import { ResultFaker } from "@keybr/result";
+import { type Result, ResultFaker } from "@keybr/result";
+import { getHeaderVersion, HEADER_SIGNATURE } from "@keybr/result-io";
 import { exists, removeDir, touch } from "@sosimple/fsx";
 import {
   deepEqual,
@@ -205,7 +207,7 @@ test("serve", async () => {
 
     equal(status, 200);
     equal(headers.get("Content-Type"), "application/octet-stream");
-    equal(headers.get("Content-Length"), "70");
+    equal(headers.get("Content-Length"), "80");
     equal(headers.get("Content-Encoding"), null);
     equal(
       headers.get("Content-Disposition"),
@@ -213,7 +215,7 @@ test("serve", async () => {
     );
     equal(headers.get("Cache-Control"), "private, no-cache");
     equal(headers.get("Last-Modified"), null);
-    equal((await body.buffer()).length, 70);
+    equal((await body.buffer()).length, 80);
     etag2 = headers.get("ETag")!;
   }
 
@@ -222,12 +224,57 @@ test("serve", async () => {
   notEqual(etag1, etag2);
 });
 
+test("append to an existing v2 file upgrades it to v3", async () => {
+  // Arrange.
+
+  const id = new PublicId(1);
+  const factory = new UserDataFactory(new DataDir(tmp));
+  const file = factory.getFile(id);
+  const userData = factory.load(id);
+  const faker = new ResultFaker();
+  const oldResults = [faker.nextResult(), faker.nextResult()];
+  await file.write(formatV2File(oldResults));
+  const newResults = [faker.nextResult()];
+
+  // Act.
+
+  await userData.append(newResults);
+
+  // Assert.
+
+  deepEqual(await readAll(userData), [...oldResults, ...newResults]);
+  equal(getHeaderVersion(new Reader(await file.read())), 3);
+});
+
 async function readAll(userData: UserData) {
   const results = [];
   for await (const result of userData.read()) {
     results.push(result);
   }
   return results;
+}
+
+function formatV2File(results: readonly Result[]): Uint8Array {
+  const writer = new Writer();
+  writer.putUint32(HEADER_SIGNATURE);
+  writer.putUint32(2);
+  for (const result of results) {
+    writer.putUint8(result.layout.xid);
+    writer.putUint8(result.textType.xid);
+    writer.putUint32(Math.round(result.timeStamp / 1000));
+    writer.putUintVlq(result.time);
+    writer.putUintVlq(result.length);
+    writer.putUintVlq(result.errors);
+    const samples = [...result.histogram];
+    writer.putUintVlq(samples.length);
+    for (const sample of samples) {
+      writer.putUintVlq(sample.codePoint);
+      writer.putUintVlq(sample.hitCount);
+      writer.putUintVlq(sample.missCount);
+      writer.putUintVlq(sample.timeToType);
+    }
+  }
+  return writer.buffer();
 }
 
 function createTestServer(callback: any) {

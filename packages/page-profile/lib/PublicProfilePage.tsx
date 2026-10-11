@@ -16,6 +16,7 @@ import { KeySpeedChartSection } from "./profile/KeySpeedChartSection.tsx";
 import { KeySpeedHistogramSection } from "./profile/KeySpeedHistogramSection.tsx";
 import { ProgressOverviewSection } from "./profile/ProgressOverviewSection.tsx";
 import { ResultGrouper } from "./profile/ResultGrouper.tsx";
+import { SlowestTransitionsSection } from "./profile/SlowestTransitionsSection.tsx";
 import { SpeedChartSection } from "./profile/SpeedChartSection.tsx";
 import { AllTimeSummary, TodaySummary } from "./profile/Summary.tsx";
 
@@ -63,6 +64,8 @@ function Content({ keyStatsMap }: { keyStatsMap: KeyStatsMap }) {
       <KeyFrequencyHistogramSection keyStatsMap={keyStatsMap} />
 
       <KeyFrequencyHeatmapSection keyStatsMap={keyStatsMap} />
+
+      <SlowestTransitionsSection keyStatsMap={keyStatsMap} />
 
       <CalendarSection dailyStatsMap={dailyStatsMap} />
     </>

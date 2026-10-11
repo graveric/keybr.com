@@ -1,5 +1,7 @@
 import { type Filter, makeFilter } from "@keybr/math";
 import { type Letter } from "@keybr/phonetic-model";
+import { type BigramSample } from "@keybr/textinput";
+import { type CodePoint } from "@keybr/unicode";
 import { type Result } from "./result.ts";
 
 export function makeKeyStatsMap(
@@ -24,6 +26,16 @@ export type KeyStats = {
   readonly samples: readonly KeySample[];
   readonly timeToType: number | null;
   readonly bestTimeToType: number | null;
+  readonly bigrams?: readonly BigramStats[];
+};
+
+export type BigramStats = {
+  readonly prevCodePoint: CodePoint;
+  readonly prevKeyId: string;
+  readonly currentKeyId: string;
+  readonly hitCount: number;
+  readonly missCount: number;
+  readonly timeToType: number;
 };
 
 export type KeySample = {
@@ -102,6 +114,7 @@ export class MutableKeyStats implements KeyStats {
   #index: number;
   #timeToType: number | null;
   #bestTimeToType: number | null;
+  readonly #bigrams: BigramStats[];
 
   constructor(letter: Letter) {
     this.#letter = letter;
@@ -110,6 +123,7 @@ export class MutableKeyStats implements KeyStats {
     this.#index = 0;
     this.#timeToType = null;
     this.#bestTimeToType = null;
+    this.#bigrams = [];
   }
 
   get letter(): Letter {
@@ -128,11 +142,15 @@ export class MutableKeyStats implements KeyStats {
     return this.#bestTimeToType;
   }
 
+  get bigrams(): readonly BigramStats[] {
+    return this.#bigrams;
+  }
+
   append(result: Result) {
     const { timeStamp, histogram } = result;
     const sample = histogram.get(this.#letter.codePoint);
     if (sample != null) {
-      const { hitCount, missCount, timeToType } = sample;
+      const { hitCount, missCount, timeToType, bigrams } = sample;
       if (timeToType > 0) {
         const filteredTimeToType = this.#filter.add(timeToType);
         this.#samples.push({
@@ -149,6 +167,21 @@ export class MutableKeyStats implements KeyStats {
           filteredTimeToType,
         );
       }
+      if (bigrams != null) {
+        for (const [
+          prevCodePoint,
+          bigramSample,
+        ] of bigrams.entries()) {
+          this.#bigrams.push({
+            prevCodePoint,
+            prevKeyId: bigramSample.prevKeyId,
+            currentKeyId: bigramSample.currentKeyId,
+            hitCount: bigramSample.hitCount,
+            missCount: bigramSample.missCount,
+            timeToType: bigramSample.timeToType,
+          });
+        }
+      }
     }
     this.#index += 1;
     return this;
@@ -160,6 +193,7 @@ export class MutableKeyStats implements KeyStats {
       samples: [...this.#samples],
       timeToType: this.#timeToType,
       bestTimeToType: this.#bestTimeToType,
+      bigrams: [...this.#bigrams],
     };
   }
 }

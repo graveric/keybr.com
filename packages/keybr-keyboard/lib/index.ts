@@ -6,6 +6,7 @@ export * from "./keyboard.ts";
 export * from "./keycharacters.ts";
 export * from "./keycombo.ts";
 export * from "./keymodifier.ts";
+export * from "./keys.ts";
 export * from "./keyshape.ts";
 export * from "./language.ts";
 export * from "./layout.ts";

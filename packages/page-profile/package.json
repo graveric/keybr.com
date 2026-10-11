@@ -17,6 +17,7 @@
     "@keybr/phonetic-model-loader": "*",
     "@keybr/result": "*",
     "@keybr/settings": "*",
+    "@keybr/textinput": "*",
     "@keybr/widget": "*"
   },
   "devDependencies": {},

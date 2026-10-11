@@ -6,6 +6,7 @@ import {
 } from "@keybr/result";
 import { ExplainerBoundary } from "@keybr/widget";
 import { AccuracyStreaksSection } from "./profile/AccuracyStreaksSection.tsx";
+import { BigramExportSection } from "./profile/BigramExportSection.tsx";
 import { CalendarSection } from "./profile/CalendarSection.tsx";
 import { DataScript } from "./profile/DataScript.tsx";
 import { ExplainProfile } from "./profile/ExplainProfile.tsx";
@@ -19,6 +20,7 @@ import { KeySpeedHistogramSection } from "./profile/KeySpeedHistogramSection.tsx
 import { ProgressOverviewSection } from "./profile/ProgressOverviewSection.tsx";
 import { ResultGrouper } from "./profile/ResultGrouper.tsx";
 import { ShareProfileLink } from "./profile/ShareProfileLink.tsx";
+import { SlowestTransitionsSection } from "./profile/SlowestTransitionsSection.tsx";
 import { SpeedChartSection } from "./profile/SpeedChartSection.tsx";
 import { AllTimeSummary, TodaySummary } from "./profile/Summary.tsx";
 
@@ -64,6 +66,10 @@ function Content({ keyStatsMap }: { keyStatsMap: KeyStatsMap }) {
       <KeyFrequencyHistogramSection keyStatsMap={keyStatsMap} />
 
       <KeyFrequencyHeatmapSection keyStatsMap={keyStatsMap} />
+
+      <SlowestTransitionsSection keyStatsMap={keyStatsMap} />
+
+      <BigramExportSection keyStatsMap={keyStatsMap} />
 
       <KeyEffortExportSection />
 

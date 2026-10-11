@@ -112,11 +112,11 @@ test("get existing user data", async (ctx) => {
 
   equal(response.status, 200);
   equal(response.headers.get("Content-Type"), "application/octet-stream");
-  equal(response.headers.get("Content-Length"), "70");
+  equal(response.headers.get("Content-Length"), "80");
   equal(response.headers.get("Content-Encoding"), null);
   equal(response.headers.get("Cache-Control"), "private, no-cache");
   match(response.headers.get("ETag")!, /"[a-z0-9]+"/);
-  equal((await response.body.buffer()).length, 70);
+  equal((await response.body.buffer()).length, 80);
 });
 
 test("validate content type on post", async (ctx) => {

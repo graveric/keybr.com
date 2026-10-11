@@ -1,9 +1,13 @@
 import { type Reader, type Writer } from "@keybr/binary";
-import { Layout } from "@keybr/keyboard";
+import { keyIdFromIndex, keyIdToIndex, Layout } from "@keybr/keyboard";
 import { Result, TextType } from "@keybr/result";
-import { Histogram, type Sample } from "@keybr/textinput";
+import {
+  type BigramSample,
+  Histogram,
+  type Sample,
+} from "@keybr/textinput";
 import { InvalidFormatError } from "./errors.ts";
-import { validateHeader } from "./header.ts";
+import { getHeaderVersion, HEADER_VERSION } from "./header.ts";
 
 export function writeResult(writer: Writer, result: Result): void {
   const samples = [...result.histogram];
@@ -19,6 +23,21 @@ export function writeResult(writer: Writer, result: Result): void {
     writer.putUintVlq(sample.hitCount);
     writer.putUintVlq(sample.missCount);
     writer.putUintVlq(sample.timeToType);
+    const bigrams = sample.bigrams;
+    if (bigrams == null || bigrams.size === 0) {
+      writer.putUintVlq(0);
+    } else {
+      const entries = [...bigrams.entries()];
+      writer.putUintVlq(entries.length);
+      for (const [prevCodePoint, bigram] of entries) {
+        writer.putUintVlq(prevCodePoint);
+        writer.putUintVlq(keyIdToIndex(bigram.prevKeyId));
+        writer.putUintVlq(keyIdToIndex(bigram.currentKeyId));
+        writer.putUintVlq(bigram.hitCount);
+        writer.putUintVlq(bigram.missCount);
+        writer.putUintVlq(bigram.timeToType);
+      }
+    }
   }
 }
 
@@ -28,7 +47,10 @@ export function writeResults(writer: Writer, results: Iterable<Result>): void {
   }
 }
 
-export function readResult(reader: Reader): Result {
+export function readResult(
+  reader: Reader,
+  version: number = HEADER_VERSION,
+): Result {
   const layoutXId = reader.getUint8();
   const textTypeXId = reader.getUint8();
   const timestamp = reader.getUint32() * 1000;
@@ -42,11 +64,40 @@ export function readResult(reader: Reader): Result {
     const hitCount = reader.getUintVlq();
     const missCount = reader.getUintVlq();
     const timeToType = reader.getUintVlq();
+    let bigrams: ReadonlyMap<number, BigramSample> | undefined;
+    if (version >= 3) {
+      const bigramCount = reader.getUintVlq();
+      if (bigramCount > 0) {
+        const map = new Map<number, BigramSample>();
+        for (let j = 0; j < bigramCount; j++) {
+          const prevCodePoint = reader.getUintVlq();
+          const prevKeyIdIndex = reader.getUintVlq();
+          const currentKeyIdIndex = reader.getUintVlq();
+          const bigramHitCount = reader.getUintVlq();
+          const bigramMissCount = reader.getUintVlq();
+          const bigramTimeToType = reader.getUintVlq();
+          const prevKeyId = keyIdFromIndex(prevKeyIdIndex);
+          const currentKeyId = keyIdFromIndex(currentKeyIdIndex);
+          if (prevKeyId == null || currentKeyId == null) {
+            throw new InvalidFormatError("Invalid key id");
+          }
+          map.set(prevCodePoint, {
+            hitCount: bigramHitCount,
+            missCount: bigramMissCount,
+            timeToType: bigramTimeToType,
+            prevKeyId,
+            currentKeyId,
+          });
+        }
+        bigrams = map;
+      }
+    }
     samples.push({
       codePoint,
       hitCount,
       missCount,
       timeToType,
+      ...(bigrams != null ? { bigrams } : {}),
     });
   }
   return new Result(
@@ -60,19 +111,23 @@ export function readResult(reader: Reader): Result {
   );
 }
 
-export function* readResults(reader: Reader): Iterable<Result> {
+export function* readResults(
+  reader: Reader,
+  version: number = HEADER_VERSION,
+): Iterable<Result> {
   while (reader.remaining() > 0) {
-    yield readResult(reader);
+    yield readResult(reader, version);
   }
 }
 
 export function* readStructuredContent(reader: Reader): Iterable<Result> {
   if (reader.remaining() > 0) {
-    if (!validateHeader(reader)) {
+    const version = getHeaderVersion(reader);
+    if (version == null) {
       throw new InvalidFormatError("Invalid header");
     }
     try {
-      yield* readResults(reader);
+      yield* readResults(reader, version);
     } catch (err: any) {
       throw new InvalidFormatError("Invalid data format", { cause: err });
     }

@@ -11,7 +11,8 @@
     "@keybr/math": "*",
     "@keybr/phonetic-model": "*",
     "@keybr/settings": "*",
-    "@keybr/textinput": "*"
+    "@keybr/textinput": "*",
+    "@keybr/unicode": "*"
   },
   "devDependencies": {},
   "scripts": {

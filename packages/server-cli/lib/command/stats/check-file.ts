@@ -1,6 +1,6 @@
 import { Reader } from "@keybr/binary";
 import { type Filter, type Result } from "@keybr/result";
-import { readResult, validateHeader } from "@keybr/result-io";
+import { getHeaderVersion, readResult } from "@keybr/result-io";
 
 export type FileStatus =
   | {
@@ -23,13 +23,14 @@ export function checkFile(
   const reader = new Reader(buffer);
   const results: Result[] = [];
   const invalid: Result[] = [];
-  if (!validateHeader(reader)) {
+  const version = getHeaderVersion(reader);
+  if (version == null) {
     return { type: "bad", results, invalid };
   }
   while (reader.remaining() > 0) {
     let result;
     try {
-      result = readResult(reader);
+      result = readResult(reader, version);
     } catch {
       return { type: "bad", results, invalid };
     }

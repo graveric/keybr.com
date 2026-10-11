@@ -1,4 +1,5 @@
 export * from "./accuracy.ts";
+export * from "./bigrams.ts";
 export * from "./context.ts";
 export * from "./dailystats.ts";
 export * from "./errors.ts";

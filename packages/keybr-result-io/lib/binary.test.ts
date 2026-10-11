@@ -45,17 +45,17 @@ test("write and read", () => {
 
   const buffer = writer.buffer();
 
-  equal(buffer.byteLength, 75);
+  equal(buffer.byteLength, 84);
 
   // Read.
 
   const reader = new Reader(buffer);
 
-  equal(reader.remaining(), 75);
+  equal(reader.remaining(), 84);
   deepEqual(readResult(reader), expected);
-  equal(reader.remaining(), 50);
+  equal(reader.remaining(), 56);
   deepEqual(readResult(reader), expected);
-  equal(reader.remaining(), 25);
+  equal(reader.remaining(), 28);
   deepEqual(readResult(reader), expected);
   equal(reader.remaining(), 0);
 });

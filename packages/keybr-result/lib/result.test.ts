@@ -124,6 +124,96 @@ test("serialize as JSON", () => {
   });
 });
 
+test("serialize bigrams as JSON", () => {
+  const result = new Result(
+    /* layout= */ Layout.EN_US,
+    /* textType= */ TextType.GENERATED,
+    /* timeStamp= */ Date.parse("2001-02-03T03:05:06Z"),
+    /* length= */ 100,
+    /* time= */ 10000,
+    /* errors= */ 3,
+    /* histogram= */ new Histogram([
+      {
+        codePoint: 0x0062,
+        hitCount: 22,
+        missCount: 2,
+        timeToType: 222,
+        bigrams: new Map([
+          [
+            0x0061,
+            {
+              hitCount: 22,
+              missCount: 2,
+              timeToType: 222,
+              prevKeyId: "KeyA",
+              currentKeyId: "KeyB",
+            },
+          ],
+        ]),
+      },
+    ]),
+  );
+
+  deepEqual(JSON.parse(JSON.stringify(result)), {
+    layout: "en-us",
+    textType: "generated",
+    timeStamp: "2001-02-03T03:05:06.000Z",
+    length: 100,
+    time: 10000,
+    errors: 3,
+    speed: 600,
+    histogram: [
+      {
+        codePoint: 0x0062,
+        hitCount: 22,
+        missCount: 2,
+        timeToType: 222,
+        bigrams: [
+          {
+            prevCodePoint: 0x0061,
+            hitCount: 22,
+            missCount: 2,
+            timeToType: 222,
+            prevKeyId: "KeyA",
+            currentKeyId: "KeyB",
+          },
+        ],
+      },
+    ],
+  });
+});
+
+test("build bigrams from steps", () => {
+  const steps = [
+    { timeStamp: 0, codePoint: 0x0058, timeToType: 0, typo: false },
+    { timeStamp: 0, codePoint: 0x0061, timeToType: 100, typo: false },
+    { timeStamp: 0, codePoint: 0x0073, timeToType: 200, typo: false },
+  ];
+
+  const result = Result.fromStats(
+    Layout.EN_US,
+    TextType.GENERATED,
+    Date.parse("2001-02-03T03:05:06Z"),
+    steps,
+  );
+
+  // The first char is not in the histogram, but is the prev of the first pair.
+  equal(result.histogram.has(0x0058), false);
+  equal(result.histogram.get(0x0061)!.bigrams!.get(0x0058)!.timeToType, 100);
+  equal(result.histogram.get(0x0073)!.bigrams!.get(0x0061)!.timeToType, 200);
+});
+
+test("no bigrams for a single step", () => {
+  const result = Result.fromStats(
+    Layout.EN_US,
+    TextType.GENERATED,
+    Date.parse("2001-02-03T03:05:06Z"),
+    [{ timeStamp: 0, codePoint: 0x0061, timeToType: 100, typo: false }],
+  );
+
+  equal(result.histogram.complexity, 0);
+});
+
 test("convert units", () => {
   throws(() => timeToSpeed(Infinity));
   throws(() => timeToSpeed(NaN));

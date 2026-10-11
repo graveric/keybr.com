@@ -15,7 +15,7 @@ test("format and parse results", () => {
 
   const buffer = Buffer.concat([fileHeader(), fileChunk([result])]);
 
-  equal(buffer.byteLength, 70);
+  equal(buffer.byteLength, 80);
 
   const iter = parseFile(buffer);
 
