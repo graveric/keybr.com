@@ -11,26 +11,11 @@ import { FakeSettingsContext } from "@keybr/settings";
 import { Histogram } from "@keybr/textinput";
 import { render, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
-import { equal, isNotNull, isNull } from "rich-assert";
+import { isNotNull, isNull } from "rich-assert";
 import { ResultGrouper } from "./ResultGrouper.tsx";
-import {
-  formatChar,
-  SlowestTransitionsSection,
-} from "./SlowestTransitionsSection.tsx";
+import { SlowestTransitionsSection } from "./SlowestTransitionsSection.tsx";
 
 const faker = new ResultFaker();
-
-test("format characters", () => {
-  // ASCII letters and symbols are shown as-is.
-  equal(formatChar("a".codePointAt(0)!), "a");
-  equal(formatChar(" ".codePointAt(0)!), " ");
-  // Cyrillic letters are shown literally, not as U+XXXX.
-  equal(formatChar("а".codePointAt(0)!), "а");
-  equal(formatChar("ё".codePointAt(0)!), "ё");
-  // Control characters fall back to U+XXXX.
-  equal(formatChar("\u0000".codePointAt(0)!), "U+0");
-  equal(formatChar("\u000a".codePointAt(0)!), "U+A");
-});
 
 function makeResult() {
   return faker.nextResult({

@@ -318,6 +318,18 @@ function clamp01(v: number): number {
   return v < 0 ? 0 : v > 1 ? 1 : v;
 }
 
+/**
+ * Formats a code point for display: printable characters such as latin or
+ * cyrillic letters are shown literally, control characters fall back to the
+ * "U+XXXX" escape.
+ */
+export function formatChar(codePoint: CodePoint): string {
+  const char = String.fromCodePoint(codePoint);
+  return /[\p{Cc}]/u.test(char)
+    ? `U+${codePoint.toString(16).toUpperCase()}`
+    : char;
+}
+
 export function TransitionsKeyboard({
   keyboard,
   transitions,

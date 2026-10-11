@@ -1,6 +1,7 @@
 import {
   barWidth,
   buildBigramTransitionsFromResult,
+  formatChar,
   transitionColor,
 } from "@keybr/chart";
 import { useKeyboard } from "@keybr/keyboard";
@@ -85,11 +86,4 @@ export function LastSessionTransitionsPanel({
       </ul>
     </div>
   );
-}
-
-function formatChar(codePoint: number): string {
-  const char = String.fromCodePoint(codePoint);
-  return /^[\u0020-\u007e]$/.test(char)
-    ? char
-    : `U+${codePoint.toString(16).toUpperCase()}`;
 }

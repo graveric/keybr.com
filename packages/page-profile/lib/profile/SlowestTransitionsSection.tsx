@@ -2,6 +2,7 @@ import {
   barWidth,
   type BigramTransition,
   buildBigramTransitions,
+  formatChar,
   type PairType,
   type PairTypeFilter,
   transitionColor,
@@ -544,11 +545,4 @@ function pairTypeMessage(pairType: PairType): {
         defaultMessage: "Unknown",
       };
   }
-}
-
-export function formatChar(codePoint: number): string {
-  const char = String.fromCodePoint(codePoint);
-  return /[\p{Cc}]/u.test(char)
-    ? `U+${codePoint.toString(16).toUpperCase()}`
-    : char;
 }

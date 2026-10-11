@@ -8,6 +8,7 @@ import {
   barWidth,
   buildBigramTransitions,
   buildBigramTransitionsFromResult,
+  formatChar,
   transitionColor,
   transitionColorMax,
   transitionColorMin,
@@ -213,6 +214,18 @@ test("bar width", () => {
   equal(barWidth(300, 0, 300), 100);
   equal(barWidth(150, 0, 300), 50);
   equal(barWidth(200, 0, 0), 100);
+});
+
+test("format characters", () => {
+  // ASCII letters and symbols are shown as-is.
+  equal(formatChar("a".codePointAt(0)!), "a");
+  equal(formatChar(" ".codePointAt(0)!), " ");
+  // Cyrillic letters are shown literally, not as U+XXXX.
+  equal(formatChar("а".codePointAt(0)!), "а");
+  equal(formatChar("ё".codePointAt(0)!), "ё");
+  // Control characters fall back to U+XXXX.
+  equal(formatChar("\u0000".codePointAt(0)!), "U+0");
+  equal(formatChar("\u000a".codePointAt(0)!), "U+A");
 });
 
 test("export to SVG", () => {

@@ -84,3 +84,38 @@ test("render the slowest transitions of the last result", () => {
   isTrue(r.container.textContent?.includes("a \u2192 b"));
   r.unmount();
 });
+
+test("render cyrillic letters literally, not as U+XXXX", () => {
+  const result = new Result(
+    Layout.RU_RU,
+    TextType.GENERATED,
+    Date.now(),
+    10,
+    1000,
+    0,
+    new Histogram([
+      {
+        codePoint: 0x043f,
+        hitCount: 10,
+        missCount: 1,
+        timeToType: 300,
+        bigrams: new Map([
+          [
+            0x0430,
+            {
+              hitCount: 10,
+              missCount: 1,
+              timeToType: 300,
+              prevKeyId: "KeyF",
+              currentKeyId: "KeyH",
+            },
+          ],
+        ]),
+      },
+    ]),
+  );
+  const r = renderPanel(result);
+  isNotNull(r.getByText("Last session transitions"));
+  isTrue(r.container.textContent?.includes("\u0430 \u2192 \u043f"));
+  r.unmount();
+});
