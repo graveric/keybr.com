@@ -23,6 +23,7 @@ export const lessonProps = {
       max: 1,
     }),
     recoverKeys: booleanProp("lesson.guided.recoverKeys", false),
+    freeMode: booleanProp("lesson.guided.freeMode", false),
   } as const,
   wordList: {
     wordListSize: numberProp("lesson.wordList.wordListSize", 1000, {

@@ -1,4 +1,5 @@
 import { type KeyId } from "@keybr/keyboard";
+import { type LessonKey } from "@keybr/lesson";
 import { names } from "@keybr/lesson-ui";
 import { Screen } from "@keybr/pages-shared";
 import { type Result } from "@keybr/result";
@@ -11,7 +12,12 @@ import {
 } from "@keybr/textinput-events";
 import { TextArea } from "@keybr/textinput-ui";
 import { type Focusable, Zoomer } from "@keybr/widget";
-import { createRef, PureComponent, type ReactNode } from "react";
+import {
+  createRef,
+  type MouseEvent,
+  PureComponent,
+  type ReactNode,
+} from "react";
 import { Controls } from "./Controls.tsx";
 import { Indicators } from "./Indicators.tsx";
 import { DeferredKeyboardPresenter } from "./KeyboardPresenter.tsx";
@@ -27,6 +33,10 @@ type Props = {
   readonly lastResult: Result | null;
   readonly onResetLesson: () => void;
   readonly onSkipLesson: () => void;
+  readonly onKeyClick:
+    ((key: LessonKey, elem: Element, event: MouseEvent) => void) | null;
+  readonly onKeyContextMenu:
+    ((key: LessonKey, elem: Element, event: MouseEvent) => void) | null;
   readonly onKeyDown: (ev: IKeyboardEvent) => void;
   readonly onKeyUp: (ev: IKeyboardEvent) => void;
   readonly onInput: (ev: IInputEvent) => void;
@@ -77,7 +87,14 @@ export class Presenter extends PureComponent<Props, State> {
 
   override render() {
     const {
-      props: { state, lines, depressedKeys, lastResult },
+      props: {
+        state,
+        lines,
+        depressedKeys,
+        lastResult,
+        onKeyClick,
+        onKeyContextMenu,
+      },
       state: { view, tour, focus },
       handleResetLesson,
       handleSkipLesson,
@@ -103,6 +120,8 @@ export class Presenter extends PureComponent<Props, State> {
             depressedKeys={depressedKeys}
             lastSession={lastSession}
             toggledKeys={ModifierState.modifiers}
+            onKeyClick={onKeyClick}
+            onKeyContextMenu={onKeyContextMenu}
             controls={
               <Controls
                 onChangeView={handleChangeView}
@@ -135,6 +154,8 @@ export class Presenter extends PureComponent<Props, State> {
           <CompactLayout
             state={state}
             lastSession={lastSession}
+            onKeyClick={onKeyClick}
+            onKeyContextMenu={onKeyContextMenu}
             controls={
               <Controls
                 onChangeView={handleChangeView}
@@ -292,6 +313,8 @@ function NormalLayout({
   depressedKeys,
   lastSession,
   toggledKeys,
+  onKeyClick,
+  onKeyContextMenu,
   controls,
   textInput,
   tour,
@@ -301,13 +324,21 @@ function NormalLayout({
   readonly depressedKeys: readonly string[];
   readonly lastSession: ReactNode;
   readonly toggledKeys: readonly string[];
+  readonly onKeyClick:
+    ((key: LessonKey, elem: Element, event: MouseEvent) => void) | null;
+  readonly onKeyContextMenu:
+    ((key: LessonKey, elem: Element, event: MouseEvent) => void) | null;
   readonly controls: ReactNode;
   readonly textInput: ReactNode;
   readonly tour: ReactNode;
 }) {
   return (
     <Screen>
-      <Indicators state={state} />
+      <Indicators
+        state={state}
+        onKeyClick={onKeyClick}
+        onKeyContextMenu={onKeyContextMenu}
+      />
       <div id={names.textInput} className={styles.textInput_normal}>
         {textInput}
         {lastSession}
@@ -332,17 +363,27 @@ function NormalLayout({
 function CompactLayout({
   state,
   lastSession,
+  onKeyClick,
+  onKeyContextMenu,
   controls,
   textInput,
 }: {
   readonly state: LessonState;
   readonly lastSession: ReactNode;
+  readonly onKeyClick:
+    ((key: LessonKey, elem: Element, event: MouseEvent) => void) | null;
+  readonly onKeyContextMenu:
+    ((key: LessonKey, elem: Element, event: MouseEvent) => void) | null;
   readonly controls: ReactNode;
   readonly textInput: ReactNode;
 }) {
   return (
     <Screen>
-      <Indicators state={state} />
+      <Indicators
+        state={state}
+        onKeyClick={onKeyClick}
+        onKeyContextMenu={onKeyContextMenu}
+      />
       <div id={names.textInput} className={styles.textInput_compact}>
         {textInput}
         {lastSession}

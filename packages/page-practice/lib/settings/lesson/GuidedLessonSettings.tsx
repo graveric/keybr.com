@@ -3,6 +3,7 @@ import { Description, Explainer, FieldSet } from "@keybr/widget";
 import { type ReactNode } from "react";
 import { FormattedMessage, useIntl } from "react-intl";
 import { AlphabetSizeProp } from "./AlphabetSizeProp.tsx";
+import { FreeModeProp } from "./FreeModeProp.tsx";
 import { KeyboardOrderProp } from "./KeyboardOrderProp.tsx";
 import { LessonLengthProp } from "./LessonLengthProp.tsx";
 import { NaturalWordsProp } from "./NaturalWordsProp.tsx";
@@ -35,6 +36,7 @@ export function GuidedLessonSettings({
       >
         <TargetSpeedProp />
         <RecoverKeysProp />
+        <FreeModeProp lesson={lesson} />
         <KeyboardOrderProp />
         <NaturalWordsProp />
         <RepeatWordsProp />

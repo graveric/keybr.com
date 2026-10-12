@@ -1,12 +1,12 @@
 import { catchError } from "@keybr/debug";
 import { KeyboardProvider } from "@keybr/keyboard";
 import { schedule } from "@keybr/lang";
-import { type Lesson } from "@keybr/lesson";
+import { type Lesson, strippedSettingsSignature } from "@keybr/lesson";
 import { LessonLoader } from "@keybr/lesson-loader";
 import { LoadingProgress } from "@keybr/pages-shared";
 import { type Result, useResults } from "@keybr/result";
-import { useSettings } from "@keybr/settings";
-import { useEffect, useMemo, useState } from "react";
+import { type Settings, useSettings } from "@keybr/settings";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Controller } from "./Controller.tsx";
 import { displayEvent, Progress } from "./state/index.ts";
 
@@ -44,9 +44,10 @@ function useProgress(lesson: Lesson, results: readonly Result[]) {
   const { settings } = useSettings();
   const [done, setDone] = useState(false);
   const [loading, setLoading] = useState({ total: 0, current: 0 });
+  const stableSettings = useStableSettings(settings);
   const progress = useMemo(
-    () => new Progress(settings, lesson),
-    [settings, lesson],
+    () => new Progress(stableSettings, lesson),
+    [stableSettings, lesson],
   );
   useEffect(() => {
     // Populating the progress object can take a long time, so we do this
@@ -62,4 +63,22 @@ function useProgress(lesson: Lesson, results: readonly Result[]) {
     };
   }, [progress, lesson, results]);
   return [done ? progress : null, loading] as const;
+}
+
+/**
+ * Returns the latest settings object, keeping the previous identity
+ * while only manual free-mode letter choices change. Those persist
+ * through the global settings on every click, but must not reseed
+ * the progress: the lesson picks them up from the session store.
+ * See LessonLoader for the same treatment.
+ */
+function useStableSettings(settings: Settings): Settings {
+  const ref = useRef(settings);
+  if (
+    strippedSettingsSignature(ref.current) !==
+    strippedSettingsSignature(settings)
+  ) {
+    ref.current = settings;
+  }
+  return ref.current;
 }

@@ -7,6 +7,8 @@ import { useKeyStyles } from "./styles.ts";
 export const Key = ({
   lessonKey,
   isSelectable = false,
+  isAdded = false,
+  isManualExcluded = false,
   isCurrent = false,
   size = "normal",
   title,
@@ -14,6 +16,8 @@ export const Key = ({
 }: {
   lessonKey: LessonKey;
   isSelectable?: boolean;
+  isAdded?: boolean;
+  isManualExcluded?: boolean;
   isCurrent?: boolean;
   size?: "normal" | "large" | "announcement";
   title?: string;
@@ -48,9 +52,11 @@ export const Key = ({
       data-code-point={codePoint}
     >
       {label}
+      {isAdded && <span className={styles.manualBadge}>+</span>}
       {isIncluded || (
         <svg viewBox="0 0 100 100" className={styles.cross}>
           <path d="M 0 100 L 100 0" />
+          {isManualExcluded && <path d="M 0 0 L 100 100" />}
         </svg>
       )}
     </span>

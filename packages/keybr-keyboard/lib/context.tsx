@@ -24,9 +24,25 @@ export function KeyboardProvider({
   readonly children: ReactNode;
 }): ReactNode {
   const { settings } = useSettings();
+  // The keyboard instance must stay stable when unrelated settings change.
+  // In particular, manual free-mode letter choices persist through the
+  // global settings on every click, but must not reload the keyboard
+  // (which would cascade into reloading the lesson and reseeding
+  // the progress with an empty statistics).
+  // The memo key is the keyboard options by identity: enum items are
+  // canonical instances, so the keyboard rebuilds only when a real
+  // keyboard setting changes.
+  const { language, layout, geometry, zones } = KeyboardOptions.from(settings);
   const keyboard = useMemo(
-    () => loadKeyboard(KeyboardOptions.from(settings)),
-    [settings],
+    () =>
+      loadKeyboard(
+        KeyboardOptions.default()
+          .withLanguage(language)
+          .withLayout(layout)
+          .withGeometry(geometry)
+          .withZones(zones),
+      ),
+    [language, layout, geometry, zones],
   );
   return (
     <KeyboardContext.Provider value={keyboard}>

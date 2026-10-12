@@ -2,6 +2,7 @@ export * from "./books.ts";
 export * from "./code.ts";
 export * from "./customtext.ts";
 export * from "./dailygoal.ts";
+export * from "./free-mode.ts";
 export * from "./guided.ts";
 export * from "./key.ts";
 export * from "./learningrate.ts";

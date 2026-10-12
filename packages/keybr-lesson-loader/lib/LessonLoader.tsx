@@ -11,13 +11,14 @@ import {
   lessonProps,
   LessonType,
   NumbersLesson,
+  strippedSettingsSignature,
   WordListLesson,
 } from "@keybr/lesson";
 import { LoadingProgress } from "@keybr/pages-shared";
 import { type PhoneticModel } from "@keybr/phonetic-model";
 import { PhoneticModelLoader } from "@keybr/phonetic-model-loader";
 import { useSettings } from "@keybr/settings";
-import { type ReactNode, useEffect, useState } from "react";
+import { type ReactNode, useEffect, useRef, useState } from "react";
 
 export function LessonLoader({
   children,
@@ -61,9 +62,16 @@ function useLoader(model: PhoneticModel): Lesson | null {
   const { settings } = useSettings();
   const keyboard = useKeyboard();
   const [result, setResult] = useState<Lesson | null>(null);
+  // Manual free-mode letter choices persist through the global settings,
+  // but must not reload the lesson: the fresh values reach the lesson
+  // through the free-mode session store instead.
+  const signature = strippedSettingsSignature(settings);
+  const settingsRef = useRef(settings);
+  settingsRef.current = settings;
 
   useEffect(() => {
     let didCancel = false;
+    const settings = settingsRef.current;
 
     const load = async (): Promise<void> => {
       switch (settings.get(lessonProps.type)) {
@@ -121,7 +129,7 @@ function useLoader(model: PhoneticModel): Lesson | null {
     return () => {
       didCancel = true;
     };
-  }, [settings, keyboard, model]);
+  }, [signature, keyboard, model]);
 
   return result;
 }

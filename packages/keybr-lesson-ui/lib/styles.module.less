@@ -63,6 +63,20 @@
   cursor: pointer;
 }
 
+.manualBadge {
+  position: absolute;
+  inset-inline-end: -0.4rem;
+  inset-block-start: -0.4rem;
+  inline-size: 0.85rem;
+  block-size: 0.85rem;
+  border-radius: 50%;
+  color: var(--LessonKey--included__color);
+  background-color: var(--LessonKey--included__background-color);
+  outline: 1px solid var(--LessonKey--focused__outline-color);
+  font-size: 0.7rem;
+  line-height: calc(0.85rem - 2px);
+}
+
 .lessonKey_current {
   z-index: 1;
   outline: 3px solid var(--LessonKey--current__outline-color);

@@ -9,12 +9,13 @@ import {
 } from "@keybr/result";
 import { Name } from "@keybr/widget";
 import { memo } from "react";
+import { type MouseEvent } from "react";
 import { useIntl } from "react-intl";
 import { CurrentKey } from "./CurrentKey.tsx";
 import { DailyGoal } from "./DailyGoal.tsx";
 import { GaugeList } from "./gauges.tsx";
 import * as styles from "./indicators.module.less";
-import { KeySet } from "./KeySet.tsx";
+import { type KeyExtra, KeySet } from "./KeySet.tsx";
 import { type Names } from "./names.ts";
 import { StreakList } from "./StreakList.tsx";
 
@@ -43,15 +44,19 @@ export const GaugeRow = memo(function GaugeRow({
 export const KeySetRow = memo(function KeySetRow({
   lessonKeys,
   names,
+  resolveKey,
   onKeyHoverIn,
   onKeyHoverOut,
   onKeyClick,
+  onKeyContextMenu,
 }: {
   lessonKeys: LessonKeys;
   names?: Names;
+  resolveKey?: (key: LessonKey) => KeyExtra;
   onKeyHoverIn?: (key: LessonKey, elem: Element) => void;
   onKeyHoverOut?: (key: LessonKey, elem: Element) => void;
-  onKeyClick?: (key: LessonKey, elem: Element) => void;
+  onKeyClick?: (key: LessonKey, elem: Element, event: MouseEvent) => void;
+  onKeyContextMenu?: (key: LessonKey, elem: Element, event: MouseEvent) => void;
 }) {
   const { formatMessage } = useIntl();
   return (
@@ -67,9 +72,11 @@ export const KeySetRow = memo(function KeySetRow({
         id={names?.keySet}
         className={styles.value}
         lessonKeys={lessonKeys}
+        resolveKey={resolveKey}
         onKeyHoverIn={onKeyHoverIn}
         onKeyHoverOut={onKeyHoverOut}
         onKeyClick={onKeyClick}
+        onKeyContextMenu={onKeyContextMenu}
       />
     </div>
   );

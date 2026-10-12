@@ -1,10 +1,19 @@
-import { describe, it, test } from "node:test";
+import { beforeEach, describe, it, test } from "node:test";
 import { Layout, loadKeyboard } from "@keybr/keyboard";
 import { FakePhoneticModel } from "@keybr/phonetic-model";
 import { makeKeyStatsMap } from "@keybr/result";
 import { Settings } from "@keybr/settings";
 import { deepEqual, equal } from "rich-assert";
 import { fakeKeyStatsMap, printLessonKeys } from "./fakes.ts";
+import {
+  applyFreeFocus,
+  applyFreeOverride,
+  freeScope,
+  hydrateFreeScope,
+  resetFreeModeSession,
+  withFreeFocus,
+  withFreeOverride,
+} from "./free-mode.ts";
 import { GuidedLesson } from "./guided.ts";
 import { LessonKey } from "./key.ts";
 import { lessonProps } from "./settings.ts";
@@ -683,5 +692,207 @@ describe("unlock keys", () => {
         );
       });
     });
+  });
+});
+
+describe("free mode", () => {
+  const letter1 = FakePhoneticModel.letter1;
+  const letter2 = FakePhoneticModel.letter2;
+  const letter3 = FakePhoneticModel.letter3;
+  const letter4 = FakePhoneticModel.letter4;
+  const letter5 = FakePhoneticModel.letter5;
+  const letter6 = FakePhoneticModel.letter6;
+  const letter7 = FakePhoneticModel.letter7;
+  const letter8 = FakePhoneticModel.letter8;
+  const letter9 = FakePhoneticModel.letter9;
+  const letter10 = FakePhoneticModel.letter10;
+
+  const keyboard = loadKeyboard(Layout.EN_US);
+  const model = new FakePhoneticModel();
+
+  beforeEach(() => {
+    resetFreeModeSession();
+  });
+
+  function freeMode(settings = new Settings()) {
+    settings = settings
+      .set(lessonProps.guided.freeMode, true)
+      .set(lessonProps.guided.recoverKeys, true);
+    const probe = new GuidedLesson(settings, keyboard, model, []);
+    const scope = freeScope(probe);
+    const update = (
+      updated: Settings,
+      stats: [typeof letter1, number | null, number | null][],
+    ) => {
+      // A fresh lesson reads the persisted choices from the settings.
+      return new GuidedLesson(updated, keyboard, model, []).update(
+        fakeKeyStatsMap(updated, stats),
+      );
+    };
+    return { settings, scope, update };
+  }
+
+  function allNull() {
+    return [
+      [letter1, null, null], // A
+      [letter2, null, null], // B
+      [letter3, null, null], // C
+      [letter4, null, null], // D
+      [letter5, null, null], // E
+      [letter6, null, null], // F
+      [letter7, null, null], // G
+      [letter8, null, null], // H
+      [letter9, null, null], // I
+      [letter10, null, null], // J
+    ] as [typeof letter1, null, null][];
+  }
+
+  it("should focus a manually selected open letter", () => {
+    const { settings, scope, update } = freeMode();
+    const focused = withFreeFocus(settings, scope, letter3.codePoint);
+    equal(printLessonKeys(update(focused, allNull())), "AB[C]DEF");
+  });
+
+  it("should read choices from the session store", () => {
+    const { settings, scope } = freeMode();
+    // A stale lesson instance picks up clicks through the session store.
+    const stale = new GuidedLesson(settings, keyboard, model, []);
+    hydrateFreeScope(settings, scope);
+    applyFreeFocus(scope, letter3.codePoint);
+    applyFreeOverride(scope, letter10.codePoint, "added");
+    equal(
+      printLessonKeys(stale.update(fakeKeyStatsMap(settings, allNull()))),
+      "AB[C]DEFJ",
+    );
+  });
+
+  it("should fall back to automatic focus for a locked letter", () => {
+    const { settings, scope, update } = freeMode();
+    const focused = withFreeFocus(settings, scope, letter7.codePoint);
+    equal(printLessonKeys(update(focused, allNull())), "[A]BCDEF");
+  });
+
+  it("should open a new letter when only the tail is above the target", () => {
+    const { settings, update } = freeMode();
+    equal(
+      printLessonKeys(
+        update(settings, [
+          [letter1, 1, 1], // A
+          [letter2, 0.5, 1], // B, weak now, was confident
+          [letter3, 1, 1], // C
+          [letter4, 1, 1], // D
+          [letter5, 1, 1], // E
+          [letter6, 1, 1], // F, the tail
+          [letter7, null, null], // G
+          [letter8, null, null], // H
+          [letter9, null, null], // I
+          [letter10, null, null], // J
+        ]),
+      ),
+      "ABCDEF[G]",
+    );
+  });
+
+  it("should not open a new letter when the tail is weak", () => {
+    const { settings, update } = freeMode();
+    equal(
+      printLessonKeys(
+        update(settings, [
+          [letter1, 1, 1], // A
+          [letter2, 1, 1], // B
+          [letter3, 1, 1], // C
+          [letter4, 1, 1], // D
+          [letter5, 1, 1], // E
+          [letter6, 0.5, 0.5], // F, the tail
+          [letter7, null, null], // G
+          [letter8, null, null], // H
+          [letter9, null, null], // I
+          [letter10, null, null], // J
+        ]),
+      ),
+      "ABCDE[F]",
+    );
+  });
+
+  it("should skip an excluded letter", () => {
+    const { settings, scope, update } = freeMode();
+    const updated = withFreeOverride(
+      settings,
+      scope,
+      letter7.codePoint,
+      "excluded",
+    );
+    const lessonKeys = update(updated, allNull());
+    equal(printLessonKeys(lessonKeys), "[A]BCDEF");
+    deepEqual(
+      lessonKeys.findExcludedKeys().map((key) => key.letter),
+      [letter7, letter8, letter9, letter10],
+    );
+  });
+
+  it("should open past an excluded letter once the tail is confident", () => {
+    const { settings, scope, update } = freeMode();
+    const updated = withFreeOverride(
+      settings,
+      scope,
+      letter7.codePoint,
+      "excluded",
+    );
+    equal(
+      printLessonKeys(
+        update(updated, [
+          [letter1, 1, 1], // A
+          [letter2, 1, 1], // B
+          [letter3, 1, 1], // C
+          [letter4, 1, 1], // D
+          [letter5, 1, 1], // E
+          [letter6, 1, 1], // F, the tail
+          [letter7, 1, 1], // G, excluded
+          [letter8, null, null], // H
+          [letter9, null, null], // I
+          [letter10, null, null], // J
+        ]),
+      ),
+      "ABCDEF[H]",
+    );
+  });
+
+  it("should include a manually added letter ahead of time", () => {
+    const { settings, scope, update } = freeMode();
+    const updated = withFreeOverride(
+      settings,
+      scope,
+      letter10.codePoint,
+      "added",
+    );
+    equal(printLessonKeys(update(updated, allNull())), "[A]BCDEFJ");
+  });
+
+  it("should ignore overrides inside the initial key set", () => {
+    const { settings, scope, update } = freeMode();
+    const updated = withFreeOverride(
+      settings,
+      scope,
+      letter2.codePoint,
+      "excluded",
+    );
+    equal(printLessonKeys(update(updated, allNull())), "[A]BCDEF");
+  });
+
+  it("should not force an excluded letter", () => {
+    const { settings, scope, update } = freeMode();
+    const forced = settings.set(lessonProps.guided.alphabetSize, 1);
+    const updated = withFreeOverride(
+      forced,
+      scope,
+      letter8.codePoint,
+      "excluded",
+    );
+    const lessonKeys = update(updated, allNull());
+    equal(printLessonKeys(lessonKeys), "[A]BCDEF!G!I!J");
+    deepEqual(
+      lessonKeys.findExcludedKeys().map((key) => key.letter),
+      [letter8],
+    );
   });
 });
