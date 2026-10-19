@@ -2,7 +2,7 @@ import { type Filter, makeFilter } from "@keybr/math";
 import { type Letter } from "@keybr/phonetic-model";
 import { type BigramSample } from "@keybr/textinput";
 import { type CodePoint } from "@keybr/unicode";
-import { type Result } from "./result.ts";
+import { type Result, timeToSpeed } from "./result.ts";
 
 export function makeKeyStatsMap(
   letters: readonly Letter[],
@@ -46,6 +46,23 @@ export type KeySample = {
   readonly timeToType: number;
   readonly filteredTimeToType: number;
 };
+
+export function averageKeySpeed(
+  samples: readonly KeySample[],
+  range?: { includes(timeStamp: number): boolean },
+): number {
+  let sum = 0;
+  let count = 0;
+  for (const { timeStamp, timeToType } of samples) {
+    if (range == null || range.includes(timeStamp)) {
+      if (timeToType > 0) {
+        sum += timeToSpeed(timeToType);
+        count += 1;
+      }
+    }
+  }
+  return count > 0 ? sum / count : 0;
+}
 
 export class MutableKeyStatsMap implements KeyStatsMap<MutableKeyStats> {
   readonly #letters: Letter[];
@@ -168,10 +185,7 @@ export class MutableKeyStats implements KeyStats {
         );
       }
       if (bigrams != null) {
-        for (const [
-          prevCodePoint,
-          bigramSample,
-        ] of bigrams.entries()) {
+        for (const [prevCodePoint, bigramSample] of bigrams.entries()) {
           this.#bigrams.push({
             prevCodePoint,
             prevKeyId: bigramSample.prevKeyId,

@@ -5,8 +5,11 @@ import {
   type LessonKeys,
 } from "@keybr/lesson";
 import {
+  averageKeySpeed,
+  type KeyStatsMap,
   type StreakList as StreakListType,
   type SummaryStats,
+  Today,
 } from "@keybr/result";
 import { Name, NameValue } from "@keybr/widget";
 import { memo } from "react";
@@ -106,6 +109,45 @@ export const CurrentKeyRow = memo(function CurrentKeyRow({
         className={styles.value}
         lessonKeys={lessonKeys}
       />
+    </div>
+  );
+});
+
+export const CurrentKeySpeedRow = memo(function CurrentKeySpeedRow({
+  lessonKeys,
+  keyStatsMap,
+}: {
+  lessonKeys: LessonKeys;
+  keyStatsMap: KeyStatsMap;
+}) {
+  const { formatMessage } = useIntl();
+  const { formatSpeed } = useFormatter();
+  const focusedKey = lessonKeys.findFocusedKey();
+  if (focusedKey == null) {
+    return null;
+  }
+  const { samples } = keyStatsMap.get(focusedKey.letter);
+  const todaySpeed = averageKeySpeed(samples, new Today());
+  const allTimeSpeed = averageKeySpeed(samples);
+  return (
+    <div className={styles.row}>
+      <span className={styles.name} />
+      <div className={styles.value}>
+        <NameValue
+          name={formatMessage({
+            id: "t_Statistics_for_Today",
+            defaultMessage: "Statistics for Today",
+          })}
+          value={todaySpeed > 0 ? formatSpeed(todaySpeed) : "N/A"}
+        />
+        <NameValue
+          name={formatMessage({
+            id: "t_All_Time_Statistics",
+            defaultMessage: "All Time Statistics",
+          })}
+          value={allTimeSpeed > 0 ? formatSpeed(allTimeSpeed) : "N/A"}
+        />
+      </div>
     </div>
   );
 });

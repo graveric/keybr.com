@@ -7,6 +7,7 @@ import {
 } from "@keybr/lesson";
 import {
   CurrentKeyRow,
+  CurrentKeySpeedRow,
   DailyGoalRow,
   GaugeRow,
   type KeyExtra,
@@ -190,6 +191,7 @@ export const Indicators = memo(function Indicators({
         onKeyContextMenu={onKeyContextMenu ?? undefined}
       />
       <CurrentKeyRow lessonKeys={lessonKeys} names={names} />
+      <CurrentKeySpeedRow lessonKeys={lessonKeys} keyStatsMap={keyStatsMap} />
       <StreakListRow streakList={streakList} names={names} />
       <TodayStatsRow summaryStats={todayStats} />
       {dailyGoal.goal > 0 && (

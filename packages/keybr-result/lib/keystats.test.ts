@@ -1,9 +1,13 @@
 import { test } from "node:test";
 import { Letter } from "@keybr/phonetic-model";
 import { Histogram } from "@keybr/textinput";
-import { deepEqual } from "rich-assert";
+import { deepEqual, equal } from "rich-assert";
 import { ResultFaker } from "./fake.tsx";
-import { MutableKeyStatsMap } from "./keystats.ts";
+import {
+  averageKeySpeed,
+  type KeySample,
+  MutableKeyStatsMap,
+} from "./keystats.ts";
 
 test("compute key stats", () => {
   const faker = new ResultFaker();
@@ -113,4 +117,32 @@ test("compute key stats", () => {
     bestTimeToType: 200,
     bigrams: [],
   });
+});
+
+test("compute average key speed", () => {
+  const samples: readonly KeySample[] = [
+    {
+      index: 0,
+      timeStamp: 1,
+      hitCount: 1,
+      missCount: 0,
+      timeToType: 500,
+      filteredTimeToType: 500,
+    },
+    {
+      index: 1,
+      timeStamp: 2,
+      hitCount: 1,
+      missCount: 0,
+      timeToType: 100,
+      filteredTimeToType: 460,
+    },
+  ];
+
+  equal(averageKeySpeed(samples), (120 + 600) / 2);
+  equal(
+    averageKeySpeed(samples, { includes: (timeStamp) => timeStamp === 2 }),
+    600,
+  );
+  equal(averageKeySpeed([]), 0);
 });
