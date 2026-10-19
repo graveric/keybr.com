@@ -5,6 +5,7 @@ import {
   MutableStreakList,
   MutableSummaryStats,
   type Result,
+  Today,
 } from "@keybr/result";
 import { type Settings } from "@keybr/settings";
 import { DailyGoalEvents } from "./event-source-daily-goal.ts";
@@ -22,6 +23,8 @@ export class Progress {
   readonly #results: Result[];
   readonly #keyStatsMap: MutableKeyStatsMap;
   readonly #summaryStats: MutableSummaryStats;
+  readonly #todayStats: MutableSummaryStats;
+  readonly #today = new Today();
   readonly #streakList: MutableStreakList;
   readonly #dailyGoal: MutableDailyGoal;
   readonly #events: LessonEventSource;
@@ -32,6 +35,7 @@ export class Progress {
     this.#results = [];
     this.#keyStatsMap = new MutableKeyStatsMap(this.#lesson.letters);
     this.#summaryStats = new MutableSummaryStats();
+    this.#todayStats = new MutableSummaryStats();
     this.#streakList = new MutableStreakList();
     this.#dailyGoal = new MutableDailyGoal(
       this.#settings,
@@ -93,6 +97,12 @@ export class Progress {
     this.#results.push(result);
     this.#keyStatsMap.append(result);
     this.#summaryStats.append(result);
+    if (
+      result.layout.id === this.#lesson.keyboard.layout.id &&
+      this.#today.includes(result.timeStamp)
+    ) {
+      this.#todayStats.append(result);
+    }
     this.#streakList.append(result);
     this.#dailyGoal.append(result);
     this.#events.append(result, listener);
@@ -112,6 +122,10 @@ export class Progress {
 
   get summaryStats() {
     return this.#summaryStats;
+  }
+
+  get todayStats() {
+    return this.#todayStats;
   }
 
   get streakList() {

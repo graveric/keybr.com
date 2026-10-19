@@ -36,6 +36,7 @@ export class LessonState {
   readonly textDisplaySettings: TextDisplaySettings;
   readonly keyStatsMap: KeyStatsMap;
   readonly summaryStats: SummaryStats;
+  readonly todayStats: SummaryStats;
   readonly streakList: StreakList;
   readonly dailyGoal: DailyGoal;
   readonly lessonKeys: LessonKeys;
@@ -58,6 +59,7 @@ export class LessonState {
     this.textDisplaySettings = toTextDisplaySettings(this.settings);
     this.keyStatsMap = progress.keyStatsMap.copy();
     this.summaryStats = progress.summaryStats.copy();
+    this.todayStats = progress.todayStats.copy();
     this.streakList = progress.streakList.copy();
     this.dailyGoal = progress.dailyGoal.copy();
     this.lessonKeys = this.lesson.update(this.keyStatsMap);

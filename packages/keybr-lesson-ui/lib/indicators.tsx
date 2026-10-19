@@ -1,3 +1,4 @@
+import { useIntlNumbers } from "@keybr/intl";
 import {
   type DailyGoal as DailyGoalType,
   type LessonKey,
@@ -7,12 +8,13 @@ import {
   type StreakList as StreakListType,
   type SummaryStats,
 } from "@keybr/result";
-import { Name } from "@keybr/widget";
+import { Name, NameValue } from "@keybr/widget";
 import { memo } from "react";
 import { type MouseEvent } from "react";
 import { useIntl } from "react-intl";
 import { CurrentKey } from "./CurrentKey.tsx";
 import { DailyGoal } from "./DailyGoal.tsx";
+import { useFormatter } from "./format.ts";
 import { GaugeList } from "./gauges.tsx";
 import * as styles from "./indicators.module.less";
 import { type KeyExtra, KeySet } from "./KeySet.tsx";
@@ -130,6 +132,57 @@ export const StreakListRow = memo(function StreakListRow({
         className={styles.value}
         streakList={streakList}
       />
+    </div>
+  );
+});
+
+export const TodayStatsRow = memo(function TodayStatsRow({
+  summaryStats: { speed, accuracy },
+}: {
+  summaryStats: SummaryStats;
+}) {
+  const { formatMessage } = useIntl();
+  const { formatPercents } = useIntlNumbers();
+  const { formatSpeed } = useFormatter();
+  return (
+    <div className={styles.row}>
+      <Name
+        className={styles.name}
+        name={formatMessage({
+          id: "t_Statistics_for_Today",
+          defaultMessage: "Statistics for Today",
+        })}
+      />
+      <div className={styles.value}>
+        <NameValue
+          name={formatMessage({
+            id: "t_Average_speed",
+            defaultMessage: "Average speed",
+          })}
+          value={speed.avg > 0 ? formatSpeed(speed.avg) : "N/A"}
+        />
+        <NameValue
+          name={formatMessage({
+            id: "t_Top_speed",
+            defaultMessage: "Top speed",
+          })}
+          value={speed.max > 0 ? formatSpeed(speed.max) : "N/A"}
+        />
+        <NameValue
+          name={formatMessage({
+            id: "t_Average_accuracy",
+            defaultMessage: "Average accuracy",
+          })}
+          value={accuracy.avg > 0 ? formatPercents(accuracy.avg) : "N/A"}
+        />
+        <NameValue
+          name={formatMessage({
+            id: "t_Top_accuracy",
+            defaultMessage: "Top accuracy",
+          })}
+          value={accuracy.max > 0 ? formatPercents(accuracy.max) : "N/A"}
+        />
+      </div>
     </div>
   );
 });

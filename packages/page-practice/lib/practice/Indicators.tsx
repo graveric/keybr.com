@@ -13,6 +13,7 @@ import {
   KeySetRow,
   names,
   StreakListRow,
+  TodayStatsRow,
 } from "@keybr/lesson-ui";
 import { useSettings } from "@keybr/settings";
 import { Popup, Portal } from "@keybr/widget";
@@ -35,6 +36,7 @@ export const Indicators = memo(function Indicators({
     lesson,
     keyStatsMap,
     summaryStats,
+    todayStats,
     lessonKeys,
     streakList,
     dailyGoal,
@@ -189,6 +191,7 @@ export const Indicators = memo(function Indicators({
       />
       <CurrentKeyRow lessonKeys={lessonKeys} names={names} />
       <StreakListRow streakList={streakList} names={names} />
+      <TodayStatsRow summaryStats={todayStats} />
       {dailyGoal.goal > 0 && (
         <DailyGoalRow dailyGoal={dailyGoal} names={names} />
       )}
