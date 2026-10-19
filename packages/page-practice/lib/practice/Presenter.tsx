@@ -22,6 +22,7 @@ import { Controls } from "./Controls.tsx";
 import { Indicators } from "./Indicators.tsx";
 import { DeferredKeyboardPresenter } from "./KeyboardPresenter.tsx";
 import { LastSessionTransitionsPanel } from "./LastSessionTransitionsPanel.tsx";
+import { LayoutSwitcher } from "./LayoutSwitcher.tsx";
 import { PracticeTour } from "./PracticeTour.tsx";
 import * as styles from "./Presenter.module.less";
 import { type LessonState } from "./state/index.ts";
@@ -334,6 +335,7 @@ function NormalLayout({
 }) {
   return (
     <Screen>
+      <LayoutSwitcher />
       <Indicators
         state={state}
         onKeyClick={onKeyClick}
@@ -379,6 +381,7 @@ function CompactLayout({
 }) {
   return (
     <Screen>
+      <LayoutSwitcher />
       <Indicators
         state={state}
         onKeyClick={onKeyClick}
