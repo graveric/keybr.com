@@ -6,6 +6,8 @@ import { ResultFaker } from "./fake.tsx";
 import {
   averageKeySpeed,
   type KeySample,
+  lastKeySpeed,
+  maxKeySpeed,
   MutableKeyStatsMap,
 } from "./keystats.ts";
 
@@ -145,4 +147,16 @@ test("compute average key speed", () => {
     600,
   );
   equal(averageKeySpeed([]), 0);
+  equal(lastKeySpeed(samples), 600);
+  equal(
+    lastKeySpeed(samples, { includes: (timeStamp) => timeStamp === 1 }),
+    120,
+  );
+  equal(lastKeySpeed([]), 0);
+  equal(maxKeySpeed(samples), 600);
+  equal(
+    maxKeySpeed(samples, { includes: (timeStamp) => timeStamp === 1 }),
+    120,
+  );
+  equal(maxKeySpeed([]), 0);
 });

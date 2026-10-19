@@ -7,6 +7,8 @@ import {
 import {
   averageKeySpeed,
   type KeyStatsMap,
+  lastKeySpeed,
+  maxKeySpeed,
   type StreakList as StreakListType,
   type SummaryStats,
   Today,
@@ -129,23 +131,39 @@ export const CurrentKeySpeedRow = memo(function CurrentKeySpeedRow({
   const { samples } = keyStatsMap.get(focusedKey.letter);
   const todaySpeed = averageKeySpeed(samples, new Today());
   const allTimeSpeed = averageKeySpeed(samples);
+  const lastSpeed = lastKeySpeed(samples);
+  const maxSpeed = maxKeySpeed(samples);
   return (
     <div className={styles.row}>
       <span className={styles.name} />
       <div className={styles.value}>
         <NameValue
           name={formatMessage({
-            id: "t_Statistics_for_Today",
-            defaultMessage: "Statistics for Today",
+            id: "t_Today",
+            defaultMessage: "Today",
           })}
           value={todaySpeed > 0 ? formatSpeed(todaySpeed) : "N/A"}
         />
         <NameValue
           name={formatMessage({
-            id: "t_All_Time_Statistics",
-            defaultMessage: "All Time Statistics",
+            id: "t_All_time",
+            defaultMessage: "All time",
           })}
           value={allTimeSpeed > 0 ? formatSpeed(allTimeSpeed) : "N/A"}
+        />
+        <NameValue
+          name={formatMessage({
+            id: "t_Last_raw_speed",
+            defaultMessage: "Last raw",
+          })}
+          value={lastSpeed > 0 ? formatSpeed(lastSpeed) : "N/A"}
+        />
+        <NameValue
+          name={formatMessage({
+            id: "t_Max_raw_speed",
+            defaultMessage: "Max raw",
+          })}
+          value={maxSpeed > 0 ? formatSpeed(maxSpeed) : "N/A"}
         />
       </div>
     </div>

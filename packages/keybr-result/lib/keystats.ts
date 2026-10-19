@@ -64,6 +64,36 @@ export function averageKeySpeed(
   return count > 0 ? sum / count : 0;
 }
 
+export function lastKeySpeed(
+  samples: readonly KeySample[],
+  range?: { includes(timeStamp: number): boolean },
+): number {
+  for (let index = samples.length - 1; index >= 0; index--) {
+    const { timeStamp, timeToType } = samples[index];
+    if (range == null || range.includes(timeStamp)) {
+      if (timeToType > 0) {
+        return timeToSpeed(timeToType);
+      }
+    }
+  }
+  return 0;
+}
+
+export function maxKeySpeed(
+  samples: readonly KeySample[],
+  range?: { includes(timeStamp: number): boolean },
+): number {
+  let max = 0;
+  for (const { timeStamp, timeToType } of samples) {
+    if (range == null || range.includes(timeStamp)) {
+      if (timeToType > 0) {
+        max = Math.max(max, timeToSpeed(timeToType));
+      }
+    }
+  }
+  return max;
+}
+
 export class MutableKeyStatsMap implements KeyStatsMap<MutableKeyStats> {
   readonly #letters: Letter[];
   readonly #results: Result[];

@@ -1,6 +1,6 @@
 # English
 
-Translated: 396 messages, 5090 words
+Translated: 399 messages, 5096 words
 
 Untranslated: 0 messages, 0 words
 
@@ -8,7 +8,7 @@ Untranslated: 0 messages, 0 words
 
 Translated: 332 messages, 4614 words
 
-Untranslated: 59 messages, 436 words
+Untranslated: 62 messages, 442 words
 
 * *All*
 * *New*
@@ -22,21 +22,21 @@ Untranslated: 59 messages, 436 words
 * *Reload*
 * *Rename*
 * *Letters*
+* *Max raw*
 * *Presses*
 * *Volume:*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
 * *Mean time*
-* *New space*
-* *Same hand*
-* *Cross hand*
 * ...
 
 # Arabic
 
 Translated: 334 messages, 4616 words
 
-Untranslated: 57 messages, 434 words
+Untranslated: 60 messages, 440 words
 
 * *All*
 * *New*
@@ -49,22 +49,22 @@ Untranslated: 57 messages, 434 words
 * *Pairs:*
 * *Reload*
 * *Rename*
+* *Max raw*
 * *Presses*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
 * *Mean time*
 * *New space*
 * *Same hand*
-* *Cross hand*
-* *Transition*
-* *Make default*
 * ...
 
 # Bulgarian
 
 Translated: 334 messages, 4616 words
 
-Untranslated: 57 messages, 434 words
+Untranslated: 60 messages, 440 words
 
 * *All*
 * *New*
@@ -77,22 +77,22 @@ Untranslated: 57 messages, 434 words
 * *Pairs:*
 * *Reload*
 * *Rename*
+* *Max raw*
 * *Presses*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
 * *Mean time*
 * *New space*
 * *Same hand*
-* *Cross hand*
-* *Transition*
-* *Make default*
 * ...
 
 # Bangla
 
 Translated: 334 messages, 4616 words
 
-Untranslated: 57 messages, 434 words
+Untranslated: 60 messages, 440 words
 
 * *All*
 * *New*
@@ -105,22 +105,22 @@ Untranslated: 57 messages, 434 words
 * *Pairs:*
 * *Reload*
 * *Rename*
+* *Max raw*
 * *Presses*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
 * *Mean time*
 * *New space*
 * *Same hand*
-* *Cross hand*
-* *Transition*
-* *Make default*
 * ...
 
 # Catalan
 
 Translated: 303 messages, 3426 words
 
-Untranslated: 86 messages, 1602 words
+Untranslated: 89 messages, 1608 words
 
 * *All*
 * *New*
@@ -135,20 +135,20 @@ Untranslated: 86 messages, 1602 words
 * *Reload*
 * *Rename*
 * *Zones:*
+* *Max raw*
 * *Presses*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
 * *Mean time*
-* *New space*
-* *Same hand*
-* *Cross hand*
 * ...
 
 # Czech
 
 Translated: 331 messages, 4612 words
 
-Untranslated: 60 messages, 438 words
+Untranslated: 63 messages, 444 words
 
 * *All*
 * *New*
@@ -162,21 +162,21 @@ Untranslated: 60 messages, 438 words
 * *Pairs:*
 * *Reload*
 * *Rename*
+* *Max raw*
 * *Presses*
 * *Syntax:*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
 * *Mean time*
-* *New space*
-* *Same hand*
-* *Cross hand*
 * ...
 
 # Danish
 
 Translated: 324 messages, 4559 words
 
-Untranslated: 65 messages, 469 words
+Untranslated: 68 messages, 475 words
 
 * *All*
 * *New*
@@ -193,18 +193,18 @@ Untranslated: 65 messages, 469 words
 * *Rename*
 * *Layout:*
 * *Layouts*
+* *Max raw*
 * *Presses*
+* *All time*
 * *Download*
-* *No data.*
-* *Position*
-* *Mean time*
+* *Last raw*
 * ...
 
 # German
 
 Translated: 332 messages, 4614 words
 
-Untranslated: 59 messages, 436 words
+Untranslated: 62 messages, 442 words
 
 * *All*
 * *New*
@@ -217,22 +217,22 @@ Untranslated: 59 messages, 436 words
 * *Pairs:*
 * *Reload*
 * *Rename*
+* *Max raw*
 * *Presses*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
 * *Position*
 * *Alphabet:*
 * *Mean time*
-* *New space*
-* *Same hand*
-* *Cross hand*
 * ...
 
 # Greek
 
 Translated: 334 messages, 4616 words
 
-Untranslated: 57 messages, 434 words
+Untranslated: 60 messages, 440 words
 
 * *All*
 * *New*
@@ -245,22 +245,22 @@ Untranslated: 57 messages, 434 words
 * *Pairs:*
 * *Reload*
 * *Rename*
+* *Max raw*
 * *Presses*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
 * *Mean time*
 * *New space*
 * *Same hand*
-* *Cross hand*
-* *Transition*
-* *Make default*
 * ...
 
 # Esperanto
 
 Translated: 71 messages, 999 words
 
-Untranslated: 313 messages, 3993 words
+Untranslated: 316 messages, 3999 words
 
 * *All*
 * *GO!*
@@ -288,7 +288,7 @@ Untranslated: 313 messages, 3993 words
 
 Translated: 334 messages, 4616 words
 
-Untranslated: 57 messages, 434 words
+Untranslated: 60 messages, 440 words
 
 * *All*
 * *New*
@@ -301,22 +301,22 @@ Untranslated: 57 messages, 434 words
 * *Pairs:*
 * *Reload*
 * *Rename*
+* *Max raw*
 * *Presses*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
 * *Mean time*
 * *New space*
 * *Same hand*
-* *Cross hand*
-* *Transition*
-* *Make default*
 * ...
 
 # Estonian
 
 Translated: 331 messages, 4613 words
 
-Untranslated: 60 messages, 437 words
+Untranslated: 63 messages, 443 words
 
 * *All*
 * *GO!*
@@ -331,20 +331,20 @@ Untranslated: 60 messages, 437 words
 * *Pairs:*
 * *Reload*
 * *Rename*
+* *Max raw*
 * *Presses*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
 * *Progress*
-* *Mean time*
-* *New space*
-* *Same hand*
 * ...
 
 # Persian
 
 Translated: 288 messages, 2829 words
 
-Untranslated: 101 messages, 2199 words
+Untranslated: 104 messages, 2205 words
 
 * *All*
 * *New*
@@ -359,20 +359,20 @@ Untranslated: 101 messages, 2199 words
 * *Reload*
 * *Rename*
 * *Zones:*
+* *Max raw*
 * *Presses*
 * *Syntax:*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
-* *Mean time*
-* *New space*
-* *Same hand*
 * ...
 
 # Finnish
 
 Translated: 202 messages, 2157 words
 
-Untranslated: 183 messages, 2837 words
+Untranslated: 186 messages, 2843 words
 
 * *All*
 * *GO!*
@@ -388,19 +388,19 @@ Untranslated: 183 messages, 2837 words
 * *Reload*
 * *Rename*
 * *Layouts*
+* *Max raw*
 * *Metrics*
 * *Not set*
 * *Presses*
 * *Syntax:*
-* *Download*
-* *No data.*
+* *All time*
 * ...
 
 # Faroese
 
 Translated: 38 messages, 456 words
 
-Untranslated: 345 messages, 4525 words
+Untranslated: 348 messages, 4531 words
 
 * *All*
 * *GO!*
@@ -428,7 +428,7 @@ Untranslated: 345 messages, 4525 words
 
 Translated: 326 messages, 4414 words
 
-Untranslated: 65 messages, 636 words
+Untranslated: 68 messages, 642 words
 
 * *All*
 * *New*
@@ -442,21 +442,21 @@ Untranslated: 65 messages, 636 words
 * *Reload*
 * *Rename*
 * *Zones:*
+* *Max raw*
 * *Options*
 * *Presses*
 * *Volume:*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
-* *Position*
-* *Alphabet:*
-* *Mean time*
 * ...
 
 # Irish
 
 Translated: 330 messages, 4605 words
 
-Untranslated: 61 messages, 445 words
+Untranslated: 64 messages, 451 words
 
 * *All*
 * *New*
@@ -470,21 +470,21 @@ Untranslated: 61 messages, 445 words
 * *Reload*
 * *Rename*
 * *Zones:*
+* *Max raw*
 * *Presses*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
 * *Mean time*
 * *New space*
-* *Same hand*
-* *Cross hand*
-* *Transition*
 * ...
 
 # Hebrew
 
 Translated: 334 messages, 4616 words
 
-Untranslated: 57 messages, 434 words
+Untranslated: 60 messages, 440 words
 
 * *All*
 * *New*
@@ -497,22 +497,22 @@ Untranslated: 57 messages, 434 words
 * *Pairs:*
 * *Reload*
 * *Rename*
+* *Max raw*
 * *Presses*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
 * *Mean time*
 * *New space*
 * *Same hand*
-* *Cross hand*
-* *Transition*
-* *Make default*
 * ...
 
 # Croatian
 
 Translated: 331 messages, 4613 words
 
-Untranslated: 60 messages, 437 words
+Untranslated: 63 messages, 443 words
 
 * *All*
 * *New*
@@ -527,20 +527,20 @@ Untranslated: 60 messages, 437 words
 * *Pairs:*
 * *Reload*
 * *Rename*
+* *Max raw*
 * *Presses*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
 * *Mean time*
-* *New space*
-* *Same hand*
-* *Cross hand*
 * ...
 
 # Hungarian
 
 Translated: 334 messages, 4616 words
 
-Untranslated: 57 messages, 434 words
+Untranslated: 60 messages, 440 words
 
 * *All*
 * *New*
@@ -553,22 +553,22 @@ Untranslated: 57 messages, 434 words
 * *Pairs:*
 * *Reload*
 * *Rename*
+* *Max raw*
 * *Presses*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
 * *Mean time*
 * *New space*
 * *Same hand*
-* *Cross hand*
-* *Transition*
-* *Make default*
 * ...
 
 # Indonesian
 
 Translated: 332 messages, 4614 words
 
-Untranslated: 59 messages, 436 words
+Untranslated: 62 messages, 442 words
 
 * *All*
 * *GO!*
@@ -582,21 +582,21 @@ Untranslated: 59 messages, 436 words
 * *Pairs:*
 * *Reload*
 * *Rename*
+* *Max raw*
 * *Presses*
 * *Volume:*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
 * *Mean time*
-* *New space*
-* *Same hand*
-* *Cross hand*
 * ...
 
 # Icelandic
 
 Translated: 89 messages, 1615 words
 
-Untranslated: 295 messages, 3377 words
+Untranslated: 298 messages, 3383 words
 
 * *All*
 * *GO!*
@@ -624,7 +624,7 @@ Untranslated: 295 messages, 3377 words
 
 Translated: 327 messages, 4608 words
 
-Untranslated: 63 messages, 440 words
+Untranslated: 66 messages, 446 words
 
 * *All*
 * *New*
@@ -642,17 +642,17 @@ Untranslated: 63 messages, 440 words
 * *Account*
 * *Layout:*
 * *Layouts*
+* *Max raw*
 * *Presses*
 * *Volume:*
-* *Download*
-* *No data.*
+* *All time*
 * ...
 
 # Japanese
 
 Translated: 334 messages, 4616 words
 
-Untranslated: 57 messages, 434 words
+Untranslated: 60 messages, 440 words
 
 * *All*
 * *New*
@@ -665,22 +665,22 @@ Untranslated: 57 messages, 434 words
 * *Pairs:*
 * *Reload*
 * *Rename*
+* *Max raw*
 * *Presses*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
 * *Mean time*
 * *New space*
 * *Same hand*
-* *Cross hand*
-* *Transition*
-* *Make default*
 * ...
 
 # Korean
 
 Translated: 139 messages, 1170 words
 
-Untranslated: 250 messages, 3858 words
+Untranslated: 253 messages, 3864 words
 
 * *All*
 * *New*
@@ -708,7 +708,7 @@ Untranslated: 250 messages, 3858 words
 
 Translated: 298 messages, 3258 words
 
-Untranslated: 90 messages, 1761 words
+Untranslated: 93 messages, 1767 words
 
 * *All*
 * *New*
@@ -721,22 +721,22 @@ Untranslated: 90 messages, 1761 words
 * *Pairs:*
 * *Reload*
 * *Rename*
+* *Max raw*
 * *Presses*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
 * *Mean time*
 * *New space*
 * *Same hand*
-* *Cross hand*
-* *Transition*
-* *Make default*
 * ...
 
 # Mongolian
 
 Translated: 13 messages, 264 words
 
-Untranslated: 368 messages, 4688 words
+Untranslated: 371 messages, 4694 words
 
 * *All*
 * *GO!*
@@ -764,7 +764,7 @@ Untranslated: 368 messages, 4688 words
 
 Translated: 204 messages, 2316 words
 
-Untranslated: 182 messages, 2681 words
+Untranslated: 185 messages, 2687 words
 
 * *All*
 * *New*
@@ -783,16 +783,16 @@ Untranslated: 182 messages, 2681 words
 * *Reload*
 * *Rename*
 * *Account*
+* *Max raw*
 * *Presses*
 * *Accuracy*
-* *Download*
 * ...
 
 # Nepali
 
 Translated: 334 messages, 4616 words
 
-Untranslated: 57 messages, 434 words
+Untranslated: 60 messages, 440 words
 
 * *All*
 * *New*
@@ -805,22 +805,22 @@ Untranslated: 57 messages, 434 words
 * *Pairs:*
 * *Reload*
 * *Rename*
+* *Max raw*
 * *Presses*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
 * *Mean time*
 * *New space*
 * *Same hand*
-* *Cross hand*
-* *Transition*
-* *Make default*
 * ...
 
 # Dutch
 
 Translated: 327 messages, 4608 words
 
-Untranslated: 63 messages, 440 words
+Untranslated: 66 messages, 446 words
 
 * *All*
 * *New*
@@ -837,18 +837,18 @@ Untranslated: 63 messages, 440 words
 * *Zones:*
 * *Account*
 * *Letters*
+* *Max raw*
 * *Presses*
 * *Volume:*
+* *All time*
 * *Download*
-* *No data.*
-* *Mean time*
 * ...
 
 # Polish
 
 Translated: 334 messages, 4616 words
 
-Untranslated: 57 messages, 434 words
+Untranslated: 60 messages, 440 words
 
 * *All*
 * *New*
@@ -861,22 +861,22 @@ Untranslated: 57 messages, 434 words
 * *Pairs:*
 * *Reload*
 * *Rename*
+* *Max raw*
 * *Presses*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
 * *Mean time*
 * *New space*
 * *Same hand*
-* *Cross hand*
-* *Transition*
-* *Make default*
 * ...
 
 # Brazilian Portuguese
 
 Translated: 331 messages, 4613 words
 
-Untranslated: 60 messages, 437 words
+Untranslated: 63 messages, 443 words
 
 * *All*
 * *New*
@@ -892,19 +892,19 @@ Untranslated: 60 messages, 437 words
 * *Rename*
 * *Layout:*
 * *Layouts*
+* *Max raw*
 * *Presses*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
-* *Mean time*
-* *New space*
-* *Same hand*
 * ...
 
 # European Portuguese
 
 Translated: 313 messages, 4491 words
 
-Untranslated: 76 messages, 537 words
+Untranslated: 79 messages, 543 words
 
 * *All*
 * *New*
@@ -922,17 +922,17 @@ Untranslated: 76 messages, 537 words
 * *Zones:*
 * *Layout:*
 * *Layouts*
+* *Max raw*
 * *Presses*
 * *Volume:*
-* *Download*
-* *No data.*
+* *All time*
 * ...
 
 # Romanian
 
 Translated: 294 messages, 3572 words
 
-Untranslated: 90 messages, 1434 words
+Untranslated: 93 messages, 1440 words
 
 * *All*
 * *New*
@@ -951,14 +951,14 @@ Untranslated: 90 messages, 1434 words
 * *Account*
 * *Layout:*
 * *Layouts*
+* *Max raw*
 * *Presses*
-* *Download*
-* *No data.*
+* *All time*
 * ...
 
 # Russian
 
-Translated: 346 messages, 4786 words
+Translated: 349 messages, 4792 words
 
 Untranslated: 45 messages, 264 words
 
@@ -988,7 +988,7 @@ Untranslated: 45 messages, 264 words
 
 Translated: 333 messages, 4615 words
 
-Untranslated: 58 messages, 435 words
+Untranslated: 61 messages, 441 words
 
 * *All*
 * *New*
@@ -1001,22 +1001,22 @@ Untranslated: 58 messages, 435 words
 * *Pairs:*
 * *Reload*
 * *Rename*
+* *Max raw*
 * *Presses*
 * *Syntax:*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
 * *Mean time*
 * *New space*
-* *Same hand*
-* *Cross hand*
-* *Transition*
 * ...
 
 # Slovenian
 
 Translated: 333 messages, 4615 words
 
-Untranslated: 58 messages, 435 words
+Untranslated: 61 messages, 441 words
 
 * *All*
 * *New*
@@ -1030,21 +1030,21 @@ Untranslated: 58 messages, 435 words
 * *Pairs:*
 * *Reload*
 * *Rename*
+* *Max raw*
 * *Presses*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
 * *Mean time*
 * *New space*
-* *Same hand*
-* *Cross hand*
-* *Transition*
 * ...
 
 # Albanian
 
 Translated: 334 messages, 4616 words
 
-Untranslated: 57 messages, 434 words
+Untranslated: 60 messages, 440 words
 
 * *All*
 * *New*
@@ -1057,22 +1057,22 @@ Untranslated: 57 messages, 434 words
 * *Pairs:*
 * *Reload*
 * *Rename*
+* *Max raw*
 * *Presses*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
 * *Mean time*
 * *New space*
 * *Same hand*
-* *Cross hand*
-* *Transition*
-* *Make default*
 * ...
 
 # Swedish
 
 Translated: 331 messages, 4613 words
 
-Untranslated: 60 messages, 437 words
+Untranslated: 63 messages, 443 words
 
 * *All*
 * *New*
@@ -1087,20 +1087,20 @@ Untranslated: 60 messages, 437 words
 * *Reload*
 * *Rename*
 * *Layout:*
+* *Max raw*
 * *Presses*
 * *Syntax:*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
-* *Mean time*
-* *New space*
-* *Same hand*
 * ...
 
 # Thai
 
 Translated: 323 messages, 4508 words
 
-Untranslated: 66 messages, 520 words
+Untranslated: 69 messages, 526 words
 
 * *All*
 * *New*
@@ -1114,21 +1114,21 @@ Untranslated: 66 messages, 520 words
 * *Reload*
 * *Rename*
 * *Zones:*
+* *Max raw*
 * *Presses*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
 * *Mean time*
 * *New space*
-* *Same hand*
-* *Cross hand*
-* *Transition*
 * ...
 
 # Turkish
 
 Translated: 220 messages, 1996 words
 
-Untranslated: 166 messages, 2999 words
+Untranslated: 169 messages, 3005 words
 
 * *All*
 * *New*
@@ -1144,19 +1144,19 @@ Untranslated: 166 messages, 2999 words
 * *Reload*
 * *Rename*
 * *Zones:*
+* *Max raw*
 * *Metrics*
 * *Presses*
 * *Preview*
 * *Sign-In*
 * *Syntax:*
-* *Download*
 * ...
 
 # Ukrainian
 
 Translated: 334 messages, 4616 words
 
-Untranslated: 57 messages, 434 words
+Untranslated: 60 messages, 440 words
 
 * *All*
 * *New*
@@ -1169,22 +1169,22 @@ Untranslated: 57 messages, 434 words
 * *Pairs:*
 * *Reload*
 * *Rename*
+* *Max raw*
 * *Presses*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
 * *Mean time*
 * *New space*
 * *Same hand*
-* *Cross hand*
-* *Transition*
-* *Make default*
 * ...
 
 # Vietnamese
 
 Translated: 334 messages, 4616 words
 
-Untranslated: 57 messages, 434 words
+Untranslated: 60 messages, 440 words
 
 * *All*
 * *New*
@@ -1197,22 +1197,22 @@ Untranslated: 57 messages, 434 words
 * *Pairs:*
 * *Reload*
 * *Rename*
+* *Max raw*
 * *Presses*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
 * *Mean time*
 * *New space*
 * *Same hand*
-* *Cross hand*
-* *Transition*
-* *Make default*
 * ...
 
 # Simplified Chinese
 
 Translated: 333 messages, 4609 words
 
-Untranslated: 58 messages, 441 words
+Untranslated: 61 messages, 447 words
 
 * *All*
 * *New*
@@ -1225,22 +1225,22 @@ Untranslated: 58 messages, 441 words
 * *Pairs:*
 * *Reload*
 * *Rename*
+* *Max raw*
 * *Presses*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
 * *Mean time*
 * *New space*
 * *Same hand*
-* *Cross hand*
-* *Transition*
-* *Make default*
 * ...
 
 # Traditional Chinese
 
 Translated: 334 messages, 4616 words
 
-Untranslated: 57 messages, 434 words
+Untranslated: 60 messages, 440 words
 
 * *All*
 * *New*
@@ -1253,22 +1253,22 @@ Untranslated: 57 messages, 434 words
 * *Pairs:*
 * *Reload*
 * *Rename*
+* *Max raw*
 * *Presses*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
 * *Mean time*
 * *New space*
 * *Same hand*
-* *Cross hand*
-* *Transition*
-* *Make default*
 * ...
 
 # Chinese (Taiwan)
 
 Translated: 333 messages, 4615 words
 
-Untranslated: 58 messages, 435 words
+Untranslated: 61 messages, 441 words
 
 * *All*
 * *GO!*
@@ -1282,12 +1282,12 @@ Untranslated: 58 messages, 435 words
 * *Pairs:*
 * *Reload*
 * *Rename*
+* *Max raw*
 * *Presses*
+* *All time*
 * *Download*
+* *Last raw*
 * *No data.*
 * *Mean time*
 * *New space*
-* *Same hand*
-* *Cross hand*
-* *Transition*
 * ...

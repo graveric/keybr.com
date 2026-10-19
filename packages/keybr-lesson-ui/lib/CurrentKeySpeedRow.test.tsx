@@ -77,9 +77,11 @@ test("render today and all time speed", () => {
 
   // Assert.
 
-  isNotNull(r.queryByText("Statistics for Today:"));
-  isNotNull(r.queryByText("All Time Statistics:"));
-  equal(r.queryAllByText("24.0wpm").length, 2);
+  isNotNull(r.queryByText("Today:"));
+  isNotNull(r.queryByText("All time:"));
+  isNotNull(r.queryByText("Last raw:"));
+  isNotNull(r.queryByText("Max raw:"));
+  equal(r.queryAllByText("24.0wpm").length, 4);
   equal(r.queryAllByText("N/A").length, 0);
 
   r.unmount();
@@ -95,8 +97,28 @@ test("render N/A for today without today samples", () => {
 
   // Assert.
 
-  equal(r.queryAllByText("24.0wpm").length, 1);
+  equal(r.queryAllByText("24.0wpm").length, 3);
   equal(r.queryAllByText("N/A").length, 1);
+
+  r.unmount();
+});
+
+test("render last and max raw speed", () => {
+  // Arrange.
+
+  const now = Date.now();
+  const r = renderRow({
+    lessonKeys: makeLessonKeys(),
+    keyStatsMap: makeKeyStatsMap([
+      makeSample(now, 500),
+      makeSample(now + 1, 100),
+    ]),
+  });
+
+  // Assert.
+
+  equal(r.queryAllByText("72.0wpm").length, 2);
+  equal(r.queryAllByText("120.0wpm").length, 2);
 
   r.unmount();
 });
@@ -111,8 +133,8 @@ test("render nothing without a focused key", () => {
 
   // Assert.
 
-  isNull(r.queryByText("Statistics for Today:"));
-  isNull(r.queryByText("All Time Statistics:"));
+  isNull(r.queryByText("Today:"));
+  isNull(r.queryByText("Last raw:"));
 
   r.unmount();
 });
