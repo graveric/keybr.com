@@ -25,7 +25,7 @@ test("render without results", () => {
 
   // Assert.
 
-  isNotNull(r.queryByText("Statistics for Today:"));
+  isNotNull(r.queryByText("Today:"));
   isNotNull(r.queryByText("Average speed:"));
   isNotNull(r.queryByText("Top speed:"));
   isNotNull(r.queryByText("Average accuracy:"));
@@ -52,7 +52,7 @@ test("render with results", () => {
 
   // Assert.
 
-  isNotNull(r.queryByText("Statistics for Today:"));
+  isNotNull(r.queryByText("Today:"));
   equal(r.queryAllByText("N/A").length, 0);
 
   r.unmount();

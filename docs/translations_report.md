@@ -1,6 +1,6 @@
 # English
 
-Translated: 395 messages, 5089 words
+Translated: 396 messages, 5090 words
 
 Untranslated: 0 messages, 0 words
 
@@ -8,13 +8,14 @@ Untranslated: 0 messages, 0 words
 
 Translated: 332 messages, 4614 words
 
-Untranslated: 58 messages, 435 words
+Untranslated: 59 messages, 436 words
 
 * *All*
 * *New*
 * *Keys*
 * *Save*
 * *Type*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -29,20 +30,20 @@ Untranslated: 58 messages, 435 words
 * *New space*
 * *Same hand*
 * *Cross hand*
-* *Transition*
 * ...
 
 # Arabic
 
 Translated: 334 messages, 4616 words
 
-Untranslated: 56 messages, 433 words
+Untranslated: 57 messages, 434 words
 
 * *All*
 * *New*
 * *Keys*
 * *Save*
 * *Type*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -57,20 +58,20 @@ Untranslated: 56 messages, 433 words
 * *Cross hand*
 * *Transition*
 * *Make default*
-* *Min presses:*
 * ...
 
 # Bulgarian
 
 Translated: 334 messages, 4616 words
 
-Untranslated: 56 messages, 433 words
+Untranslated: 57 messages, 434 words
 
 * *All*
 * *New*
 * *Keys*
 * *Save*
 * *Type*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -85,20 +86,20 @@ Untranslated: 56 messages, 433 words
 * *Cross hand*
 * *Transition*
 * *Make default*
-* *Min presses:*
 * ...
 
 # Bangla
 
 Translated: 334 messages, 4616 words
 
-Untranslated: 56 messages, 433 words
+Untranslated: 57 messages, 434 words
 
 * *All*
 * *New*
 * *Keys*
 * *Save*
 * *Type*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -113,20 +114,20 @@ Untranslated: 56 messages, 433 words
 * *Cross hand*
 * *Transition*
 * *Make default*
-* *Min presses:*
 * ...
 
 # Catalan
 
 Translated: 303 messages, 3426 words
 
-Untranslated: 85 messages, 1601 words
+Untranslated: 86 messages, 1602 words
 
 * *All*
 * *New*
 * *Keys*
 * *Save*
 * *Type*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Errors*
@@ -141,14 +142,13 @@ Untranslated: 85 messages, 1601 words
 * *New space*
 * *Same hand*
 * *Cross hand*
-* *Transition*
 * ...
 
 # Czech
 
 Translated: 331 messages, 4612 words
 
-Untranslated: 59 messages, 437 words
+Untranslated: 60 messages, 438 words
 
 * *All*
 * *New*
@@ -156,6 +156,7 @@ Untranslated: 59 messages, 437 words
 * *Save*
 * *Type*
 * *Font:*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -169,14 +170,13 @@ Untranslated: 59 messages, 437 words
 * *New space*
 * *Same hand*
 * *Cross hand*
-* *Transition*
 * ...
 
 # Danish
 
 Translated: 324 messages, 4559 words
 
-Untranslated: 64 messages, 468 words
+Untranslated: 65 messages, 469 words
 
 * *All*
 * *New*
@@ -184,6 +184,7 @@ Untranslated: 64 messages, 468 words
 * *Save*
 * *Type*
 * *Score*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Layout*
@@ -197,20 +198,20 @@ Untranslated: 64 messages, 468 words
 * *No data.*
 * *Position*
 * *Mean time*
-* *New space*
 * ...
 
 # German
 
 Translated: 332 messages, 4614 words
 
-Untranslated: 58 messages, 435 words
+Untranslated: 59 messages, 436 words
 
 * *All*
 * *New*
 * *Keys*
 * *Save*
 * *Type*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -225,20 +226,20 @@ Untranslated: 58 messages, 435 words
 * *New space*
 * *Same hand*
 * *Cross hand*
-* *Transition*
 * ...
 
 # Greek
 
 Translated: 334 messages, 4616 words
 
-Untranslated: 56 messages, 433 words
+Untranslated: 57 messages, 434 words
 
 * *All*
 * *New*
 * *Keys*
 * *Save*
 * *Type*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -253,14 +254,13 @@ Untranslated: 56 messages, 433 words
 * *Cross hand*
 * *Transition*
 * *Make default*
-* *Min presses:*
 * ...
 
 # Esperanto
 
 Translated: 71 messages, 999 words
 
-Untranslated: 312 messages, 3992 words
+Untranslated: 313 messages, 3993 words
 
 * *All*
 * *GO!*
@@ -278,23 +278,24 @@ Untranslated: 312 messages, 3992 words
 * *Font:*
 * *Reset*
 * *Speed*
+* *Today*
 * *Visit*
 * *Cancel*
 * *Delete*
-* *Errors*
 * ...
 
 # Spanish
 
 Translated: 334 messages, 4616 words
 
-Untranslated: 56 messages, 433 words
+Untranslated: 57 messages, 434 words
 
 * *All*
 * *New*
 * *Keys*
 * *Save*
 * *Type*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -309,14 +310,13 @@ Untranslated: 56 messages, 433 words
 * *Cross hand*
 * *Transition*
 * *Make default*
-* *Min presses:*
 * ...
 
 # Estonian
 
 Translated: 331 messages, 4613 words
 
-Untranslated: 59 messages, 436 words
+Untranslated: 60 messages, 437 words
 
 * *All*
 * *GO!*
@@ -325,6 +325,7 @@ Untranslated: 59 messages, 436 words
 * *Save*
 * *Type*
 * *Font:*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -337,14 +338,13 @@ Untranslated: 59 messages, 436 words
 * *Mean time*
 * *New space*
 * *Same hand*
-* *Cross hand*
 * ...
 
 # Persian
 
 Translated: 288 messages, 2829 words
 
-Untranslated: 100 messages, 2198 words
+Untranslated: 101 messages, 2199 words
 
 * *All*
 * *New*
@@ -352,6 +352,7 @@ Untranslated: 100 messages, 2198 words
 * *Save*
 * *Type*
 * *Books*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -365,14 +366,13 @@ Untranslated: 100 messages, 2198 words
 * *Mean time*
 * *New space*
 * *Same hand*
-* *Cross hand*
 * ...
 
 # Finnish
 
 Translated: 202 messages, 2157 words
 
-Untranslated: 182 messages, 2836 words
+Untranslated: 183 messages, 2837 words
 
 * *All*
 * *GO!*
@@ -381,6 +381,7 @@ Untranslated: 182 messages, 2836 words
 * *Save*
 * *Time*
 * *Type*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -393,14 +394,13 @@ Untranslated: 182 messages, 2836 words
 * *Syntax:*
 * *Download*
 * *No data.*
-* *Position*
 * ...
 
 # Faroese
 
 Translated: 38 messages, 456 words
 
-Untranslated: 344 messages, 4524 words
+Untranslated: 345 messages, 4525 words
 
 * *All*
 * *GO!*
@@ -419,22 +419,23 @@ Untranslated: 344 messages, 4524 words
 * *Reset*
 * *Speed*
 * *Speed*
+* *Today*
 * *Visit*
 * *Cancel*
-* *Delete*
 * ...
 
 # French
 
 Translated: 326 messages, 4414 words
 
-Untranslated: 64 messages, 635 words
+Untranslated: 65 messages, 636 words
 
 * *All*
 * *New*
 * *Keys*
 * *Save*
 * *Type*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -449,20 +450,20 @@ Untranslated: 64 messages, 635 words
 * *Position*
 * *Alphabet:*
 * *Mean time*
-* *New space*
 * ...
 
 # Irish
 
 Translated: 330 messages, 4605 words
 
-Untranslated: 60 messages, 444 words
+Untranslated: 61 messages, 445 words
 
 * *All*
 * *New*
 * *Keys*
 * *Save*
 * *Type*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -477,20 +478,20 @@ Untranslated: 60 messages, 444 words
 * *Same hand*
 * *Cross hand*
 * *Transition*
-* *Smoothness:*
 * ...
 
 # Hebrew
 
 Translated: 334 messages, 4616 words
 
-Untranslated: 56 messages, 433 words
+Untranslated: 57 messages, 434 words
 
 * *All*
 * *New*
 * *Keys*
 * *Save*
 * *Type*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -505,14 +506,13 @@ Untranslated: 56 messages, 433 words
 * *Cross hand*
 * *Transition*
 * *Make default*
-* *Min presses:*
 * ...
 
 # Croatian
 
 Translated: 331 messages, 4613 words
 
-Untranslated: 59 messages, 436 words
+Untranslated: 60 messages, 437 words
 
 * *All*
 * *New*
@@ -521,6 +521,7 @@ Untranslated: 59 messages, 436 words
 * *Type*
 * *Font:*
 * *Reset*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -533,20 +534,20 @@ Untranslated: 59 messages, 436 words
 * *New space*
 * *Same hand*
 * *Cross hand*
-* *Transition*
 * ...
 
 # Hungarian
 
 Translated: 334 messages, 4616 words
 
-Untranslated: 56 messages, 433 words
+Untranslated: 57 messages, 434 words
 
 * *All*
 * *New*
 * *Keys*
 * *Save*
 * *Type*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -561,14 +562,13 @@ Untranslated: 56 messages, 433 words
 * *Cross hand*
 * *Transition*
 * *Make default*
-* *Min presses:*
 * ...
 
 # Indonesian
 
 Translated: 332 messages, 4614 words
 
-Untranslated: 58 messages, 435 words
+Untranslated: 59 messages, 436 words
 
 * *All*
 * *GO!*
@@ -576,6 +576,7 @@ Untranslated: 58 messages, 435 words
 * *Keys*
 * *Save*
 * *Type*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -589,14 +590,13 @@ Untranslated: 58 messages, 435 words
 * *New space*
 * *Same hand*
 * *Cross hand*
-* *Transition*
 * ...
 
 # Icelandic
 
 Translated: 89 messages, 1615 words
 
-Untranslated: 294 messages, 3376 words
+Untranslated: 295 messages, 3377 words
 
 * *All*
 * *GO!*
@@ -615,16 +615,16 @@ Untranslated: 294 messages, 3376 words
 * *Reset*
 * *Retry*
 * *Speed*
+* *Today*
 * *Visit*
 * *Cancel*
-* *Delete*
 * ...
 
 # Italian
 
 Translated: 327 messages, 4608 words
 
-Untranslated: 62 messages, 439 words
+Untranslated: 63 messages, 440 words
 
 * *All*
 * *New*
@@ -632,6 +632,7 @@ Untranslated: 62 messages, 439 words
 * *Save*
 * *Type*
 * *Font:*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Layout*
@@ -645,20 +646,20 @@ Untranslated: 62 messages, 439 words
 * *Volume:*
 * *Download*
 * *No data.*
-* *Mean time*
 * ...
 
 # Japanese
 
 Translated: 334 messages, 4616 words
 
-Untranslated: 56 messages, 433 words
+Untranslated: 57 messages, 434 words
 
 * *All*
 * *New*
 * *Keys*
 * *Save*
 * *Type*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -673,14 +674,13 @@ Untranslated: 56 messages, 433 words
 * *Cross hand*
 * *Transition*
 * *Make default*
-* *Min presses:*
 * ...
 
 # Korean
 
 Translated: 139 messages, 1170 words
 
-Untranslated: 249 messages, 3857 words
+Untranslated: 250 messages, 3858 words
 
 * *All*
 * *New*
@@ -694,6 +694,7 @@ Untranslated: 249 messages, 3857 words
 * *Close*
 * *Font:*
 * *Reset*
+* *Today*
 * *Visit*
 * *Cancel*
 * *Delete*
@@ -701,20 +702,20 @@ Untranslated: 249 messages, 3857 words
 * *Reload*
 * *Rename*
 * *Typing*
-* *Zones:*
 * ...
 
 # Lithuanian
 
 Translated: 298 messages, 3258 words
 
-Untranslated: 89 messages, 1760 words
+Untranslated: 90 messages, 1761 words
 
 * *All*
 * *New*
 * *Keys*
 * *Save*
 * *Type*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -729,14 +730,13 @@ Untranslated: 89 messages, 1760 words
 * *Cross hand*
 * *Transition*
 * *Make default*
-* *Min presses:*
 * ...
 
 # Mongolian
 
 Translated: 13 messages, 264 words
 
-Untranslated: 367 messages, 4687 words
+Untranslated: 368 messages, 4688 words
 
 * *All*
 * *GO!*
@@ -764,7 +764,7 @@ Untranslated: 367 messages, 4687 words
 
 Translated: 204 messages, 2316 words
 
-Untranslated: 181 messages, 2680 words
+Untranslated: 182 messages, 2681 words
 
 * *All*
 * *New*
@@ -776,6 +776,7 @@ Untranslated: 181 messages, 2680 words
 * *Books*
 * *Font:*
 * *Speed*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -785,20 +786,20 @@ Untranslated: 181 messages, 2680 words
 * *Presses*
 * *Accuracy*
 * *Download*
-* *No data.*
 * ...
 
 # Nepali
 
 Translated: 334 messages, 4616 words
 
-Untranslated: 56 messages, 433 words
+Untranslated: 57 messages, 434 words
 
 * *All*
 * *New*
 * *Keys*
 * *Save*
 * *Type*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -813,14 +814,13 @@ Untranslated: 56 messages, 433 words
 * *Cross hand*
 * *Transition*
 * *Make default*
-* *Min presses:*
 * ...
 
 # Dutch
 
 Translated: 327 messages, 4608 words
 
-Untranslated: 62 messages, 439 words
+Untranslated: 63 messages, 440 words
 
 * *All*
 * *New*
@@ -828,6 +828,7 @@ Untranslated: 62 messages, 439 words
 * *Save*
 * *Type*
 * *Score*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -841,20 +842,20 @@ Untranslated: 62 messages, 439 words
 * *Download*
 * *No data.*
 * *Mean time*
-* *New space*
 * ...
 
 # Polish
 
 Translated: 334 messages, 4616 words
 
-Untranslated: 56 messages, 433 words
+Untranslated: 57 messages, 434 words
 
 * *All*
 * *New*
 * *Keys*
 * *Save*
 * *Type*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -869,20 +870,20 @@ Untranslated: 56 messages, 433 words
 * *Cross hand*
 * *Transition*
 * *Make default*
-* *Min presses:*
 * ...
 
 # Brazilian Portuguese
 
 Translated: 331 messages, 4613 words
 
-Untranslated: 59 messages, 436 words
+Untranslated: 60 messages, 437 words
 
 * *All*
 * *New*
 * *Keys*
 * *Save*
 * *Type*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Layout*
@@ -897,14 +898,13 @@ Untranslated: 59 messages, 436 words
 * *Mean time*
 * *New space*
 * *Same hand*
-* *Cross hand*
 * ...
 
 # European Portuguese
 
 Translated: 313 messages, 4491 words
 
-Untranslated: 75 messages, 536 words
+Untranslated: 76 messages, 537 words
 
 * *All*
 * *New*
@@ -912,6 +912,7 @@ Untranslated: 75 messages, 536 words
 * *Save*
 * *Type*
 * *Books*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Layout*
@@ -925,14 +926,13 @@ Untranslated: 75 messages, 536 words
 * *Volume:*
 * *Download*
 * *No data.*
-* *Mean time*
 * ...
 
 # Romanian
 
 Translated: 294 messages, 3572 words
 
-Untranslated: 89 messages, 1433 words
+Untranslated: 90 messages, 1434 words
 
 * *All*
 * *New*
@@ -940,6 +940,7 @@ Untranslated: 89 messages, 1433 words
 * *Save*
 * *Type*
 * *Font:*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Layout*
@@ -953,12 +954,11 @@ Untranslated: 89 messages, 1433 words
 * *Presses*
 * *Download*
 * *No data.*
-* *Mean time*
 * ...
 
 # Russian
 
-Translated: 345 messages, 4785 words
+Translated: 346 messages, 4786 words
 
 Untranslated: 45 messages, 264 words
 
@@ -988,13 +988,14 @@ Untranslated: 45 messages, 264 words
 
 Translated: 333 messages, 4615 words
 
-Untranslated: 57 messages, 434 words
+Untranslated: 58 messages, 435 words
 
 * *All*
 * *New*
 * *Keys*
 * *Save*
 * *Type*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -1009,12 +1010,39 @@ Untranslated: 57 messages, 434 words
 * *Same hand*
 * *Cross hand*
 * *Transition*
-* *Make default*
 * ...
 
 # Slovenian
 
 Translated: 333 messages, 4615 words
+
+Untranslated: 58 messages, 435 words
+
+* *All*
+* *New*
+* *Keys*
+* *Save*
+* *Type*
+* *Font:*
+* *Today*
+* *Cancel*
+* *Delete*
+* *Pairs:*
+* *Reload*
+* *Rename*
+* *Presses*
+* *Download*
+* *No data.*
+* *Mean time*
+* *New space*
+* *Same hand*
+* *Cross hand*
+* *Transition*
+* ...
+
+# Albanian
+
+Translated: 334 messages, 4616 words
 
 Untranslated: 57 messages, 434 words
 
@@ -1023,7 +1051,7 @@ Untranslated: 57 messages, 434 words
 * *Keys*
 * *Save*
 * *Type*
-* *Font:*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -1038,47 +1066,20 @@ Untranslated: 57 messages, 434 words
 * *Cross hand*
 * *Transition*
 * *Make default*
-* ...
-
-# Albanian
-
-Translated: 334 messages, 4616 words
-
-Untranslated: 56 messages, 433 words
-
-* *All*
-* *New*
-* *Keys*
-* *Save*
-* *Type*
-* *Cancel*
-* *Delete*
-* *Pairs:*
-* *Reload*
-* *Rename*
-* *Presses*
-* *Download*
-* *No data.*
-* *Mean time*
-* *New space*
-* *Same hand*
-* *Cross hand*
-* *Transition*
-* *Make default*
-* *Min presses:*
 * ...
 
 # Swedish
 
 Translated: 331 messages, 4613 words
 
-Untranslated: 59 messages, 436 words
+Untranslated: 60 messages, 437 words
 
 * *All*
 * *New*
 * *Keys*
 * *Save*
 * *Type*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Layout*
@@ -1093,20 +1094,20 @@ Untranslated: 59 messages, 436 words
 * *Mean time*
 * *New space*
 * *Same hand*
-* *Cross hand*
 * ...
 
 # Thai
 
 Translated: 323 messages, 4508 words
 
-Untranslated: 65 messages, 519 words
+Untranslated: 66 messages, 520 words
 
 * *All*
 * *New*
 * *Keys*
 * *Save*
 * *Type*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -1121,14 +1122,13 @@ Untranslated: 65 messages, 519 words
 * *Same hand*
 * *Cross hand*
 * *Transition*
-* *Make default*
 * ...
 
 # Turkish
 
 Translated: 220 messages, 1996 words
 
-Untranslated: 165 messages, 2998 words
+Untranslated: 166 messages, 2999 words
 
 * *All*
 * *New*
@@ -1137,6 +1137,7 @@ Untranslated: 165 messages, 2998 words
 * *Type*
 * *Books*
 * *Font:*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -1149,20 +1150,20 @@ Untranslated: 165 messages, 2998 words
 * *Sign-In*
 * *Syntax:*
 * *Download*
-* *No data.*
 * ...
 
 # Ukrainian
 
 Translated: 334 messages, 4616 words
 
-Untranslated: 56 messages, 433 words
+Untranslated: 57 messages, 434 words
 
 * *All*
 * *New*
 * *Keys*
 * *Save*
 * *Type*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -1177,20 +1178,20 @@ Untranslated: 56 messages, 433 words
 * *Cross hand*
 * *Transition*
 * *Make default*
-* *Min presses:*
 * ...
 
 # Vietnamese
 
 Translated: 334 messages, 4616 words
 
-Untranslated: 56 messages, 433 words
+Untranslated: 57 messages, 434 words
 
 * *All*
 * *New*
 * *Keys*
 * *Save*
 * *Type*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -1205,20 +1206,20 @@ Untranslated: 56 messages, 433 words
 * *Cross hand*
 * *Transition*
 * *Make default*
-* *Min presses:*
 * ...
 
 # Simplified Chinese
 
 Translated: 333 messages, 4609 words
 
-Untranslated: 57 messages, 440 words
+Untranslated: 58 messages, 441 words
 
 * *All*
 * *New*
 * *Keys*
 * *Save*
 * *Type*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -1233,20 +1234,20 @@ Untranslated: 57 messages, 440 words
 * *Cross hand*
 * *Transition*
 * *Make default*
-* *Min presses:*
 * ...
 
 # Traditional Chinese
 
 Translated: 334 messages, 4616 words
 
-Untranslated: 56 messages, 433 words
+Untranslated: 57 messages, 434 words
 
 * *All*
 * *New*
 * *Keys*
 * *Save*
 * *Type*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -1261,14 +1262,13 @@ Untranslated: 56 messages, 433 words
 * *Cross hand*
 * *Transition*
 * *Make default*
-* *Min presses:*
 * ...
 
 # Chinese (Taiwan)
 
 Translated: 333 messages, 4615 words
 
-Untranslated: 57 messages, 434 words
+Untranslated: 58 messages, 435 words
 
 * *All*
 * *GO!*
@@ -1276,6 +1276,7 @@ Untranslated: 57 messages, 434 words
 * *Keys*
 * *Save*
 * *Type*
+* *Today*
 * *Cancel*
 * *Delete*
 * *Pairs:*
@@ -1289,5 +1290,4 @@ Untranslated: 57 messages, 434 words
 * *Same hand*
 * *Cross hand*
 * *Transition*
-* *Make default*
 * ...

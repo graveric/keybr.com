@@ -191,8 +191,8 @@ export const TodayStatsRow = memo(function TodayStatsRow({
       <Name
         className={styles.name}
         name={formatMessage({
-          id: "t_Statistics_for_Today",
-          defaultMessage: "Statistics for Today",
+          id: "t_Today",
+          defaultMessage: "Today",
         })}
       />
       <div className={styles.value}>
