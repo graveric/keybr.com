@@ -10,6 +10,7 @@ export * from "./Key.tsx";
 export * from "./KeyDetails.tsx";
 export * from "./KeyLegend.tsx";
 export * from "./KeyLegendList.tsx";
+export * from "./KeyRawDetails.tsx";
 export * from "./KeySelector.tsx";
 export * from "./KeySet.tsx";
 export * from "./names.ts";

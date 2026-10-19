@@ -1,6 +1,6 @@
 import { KeySpeedChart, Marker } from "@keybr/chart";
 import { LessonKey, Target } from "@keybr/lesson";
-import { KeyDetails, KeySelector } from "@keybr/lesson-ui";
+import { KeyDetails, KeyRawDetails, KeySelector } from "@keybr/lesson-ui";
 import { hasData } from "@keybr/math";
 import { type KeyStatsMap } from "@keybr/result";
 import { useSettings } from "@keybr/settings";
@@ -59,6 +59,7 @@ export function KeySpeedChartSection({
 
       <Para align="center">
         <KeyDetails lessonKey={LessonKey.from(keyStats, target)} />
+        <KeyRawDetails samples={samples} />
       </Para>
 
       <ChartWrapper>

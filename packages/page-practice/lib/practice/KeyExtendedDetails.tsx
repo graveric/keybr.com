@@ -1,9 +1,9 @@
 import { KeyDetailsChart } from "@keybr/chart";
 import { LearningRate, type LessonKey, Target } from "@keybr/lesson";
-import { Key, KeyDetails } from "@keybr/lesson-ui";
+import { Key, KeyDetails, KeyRawDetails } from "@keybr/lesson-ui";
 import { type KeyStats } from "@keybr/result";
 import { useSettings } from "@keybr/settings";
-import { Box } from "@keybr/widget";
+import { Box, Para } from "@keybr/widget";
 import { type ReactNode } from "react";
 import * as styles from "./KeyExtendedDetails.module.less";
 import { LearningRateDescription } from "./LearningRateDescription.tsx";
@@ -24,6 +24,9 @@ export function KeyExtendedDetails({
         <Key lessonKey={lessonKey} size="large" />
         <KeyDetails lessonKey={lessonKey} />
       </Box>
+      <Para align="center">
+        <KeyRawDetails samples={keyStats.samples} />
+      </Para>
       <LearningRateDescription
         lessonKey={lessonKey}
         learningRate={learningRate}
