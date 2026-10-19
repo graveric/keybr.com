@@ -8,12 +8,9 @@
   "dependencies": {
     "@keybr/debug": "*",
     "@keybr/intl": "*",
-    "@keybr/lang": "*",
     "@keybr/pages-shared": "*",
     "@keybr/request": "*",
-    "@keybr/thirdparties": "*",
-    "@keybr/widget": "*",
-    "@paddle/paddle-js": "^1.6.2"
+    "@keybr/widget": "*"
   },
   "devDependencies": {},
   "scripts": {

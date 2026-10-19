@@ -1,1 +1,2 @@
-export * from "./config.ts";
+// This package only provides build-time environment configuration.
+export {};

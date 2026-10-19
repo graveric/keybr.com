@@ -3,7 +3,7 @@ import { FakeIntlProvider, PreferredLocaleContext } from "@keybr/intl";
 import { PageDataContext } from "@keybr/pages-shared";
 import { render } from "@testing-library/react";
 import { MemoryRouter } from "react-router";
-import { isNotNull } from "rich-assert";
+import { isNotNull, isNull } from "rich-assert";
 import { SubMenu } from "./SubMenu.tsx";
 
 test("render", () => {
@@ -36,6 +36,7 @@ test("render", () => {
 
   isNotNull(r.queryByText("Polski"));
   isNotNull(r.queryByText("English"));
+  isNull(r.queryByText("Remove Ads"));
 
   r.unmount();
 });

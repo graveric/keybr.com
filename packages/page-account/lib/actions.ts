@@ -2,14 +2,12 @@ import { catchError } from "@keybr/debug";
 import { type AnyUser, type UserDetails } from "@keybr/pages-shared";
 import { useState } from "react";
 import { useIntl } from "react-intl";
-import { checkoutProduct } from "./checkout.ts";
 import { AccountService, type PatchAccountRequest } from "./service.ts";
 
 export type AccountActions = {
   readonly patchAccount: (request: PatchAccountRequest) => void;
   readonly deleteAccount: () => void;
   readonly logout: () => void;
-  readonly checkout: () => void;
 };
 
 export type SignInActions = {
@@ -52,10 +50,6 @@ export function useAccountActions(props: {
     reload("/auth/logout");
   };
 
-  const checkout = () => {
-    checkoutProduct(user).catch(catchError);
-  };
-
   return {
     user,
     publicUser,
@@ -63,7 +57,6 @@ export function useAccountActions(props: {
       patchAccount,
       deleteAccount,
       logout,
-      checkout,
     } as AccountActions,
   };
 }

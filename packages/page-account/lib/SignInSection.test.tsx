@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import { FakeIntlProvider } from "@keybr/intl";
 import { render } from "@testing-library/react";
-import { isNotNull } from "rich-assert";
+import { isNotNull, isNull } from "rich-assert";
 import { type SignInActions } from "./actions.ts";
 import { SignInSection } from "./SignInSection.tsx";
 
@@ -25,6 +25,8 @@ test("render", () => {
   isNotNull(r.queryByText("Google", { exact: false }));
   isNotNull(r.queryByText("Microsoft", { exact: false }));
   isNotNull(r.queryByText("Facebook", { exact: false }));
+  isNull(r.queryByText("Premium account", { exact: false }));
+  isNull(r.queryByText("Buy a premium account", { exact: false }));
 
   r.unmount();
 });

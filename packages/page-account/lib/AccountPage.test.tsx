@@ -31,6 +31,8 @@ test("render sign-in fragment", () => {
 
   isNotNull(r.queryByText("Anonymous User", { exact: false }));
   isNull(r.queryByText("You are using an account", { exact: false }));
+  isNull(r.queryByText("Premium account", { exact: false }));
+  isNull(r.queryByText("Buy a premium account", { exact: false }));
 
   r.unmount();
 });
@@ -78,6 +80,8 @@ test("render account fragment", () => {
 
   isNull(r.queryByText("Anonymous User", { exact: false }));
   isNotNull(r.queryByText("You are using an account", { exact: false }));
+  isNull(r.queryByText("Premium account", { exact: false }));
+  isNull(r.queryByText("Buy a premium account", { exact: false }));
 
   r.unmount();
 });

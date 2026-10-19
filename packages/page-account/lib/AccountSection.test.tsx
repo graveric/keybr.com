@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import { FakeIntlProvider } from "@keybr/intl";
 import { render } from "@testing-library/react";
-import { isNotNull } from "rich-assert";
+import { isNotNull, isNull } from "rich-assert";
 import { AccountSection } from "./AccountSection.tsx";
 import { type AccountActions } from "./actions.ts";
 
@@ -39,6 +39,8 @@ test("render", () => {
   );
 
   isNotNull(r.queryByText("unique user name"));
+  isNull(r.queryByText("Premium account", { exact: false }));
+  isNull(r.queryByText("Buy a premium account", { exact: false }));
 
   r.unmount();
 });
