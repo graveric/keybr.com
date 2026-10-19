@@ -64,6 +64,23 @@ export function averageKeySpeed(
   return count > 0 ? sum / count : 0;
 }
 
+export function averageFilteredKeySpeed(
+  samples: readonly KeySample[],
+  range?: { includes(timeStamp: number): boolean },
+): number {
+  let sum = 0;
+  let count = 0;
+  for (const { timeStamp, filteredTimeToType } of samples) {
+    if (range == null || range.includes(timeStamp)) {
+      if (filteredTimeToType > 0) {
+        sum += timeToSpeed(filteredTimeToType);
+        count += 1;
+      }
+    }
+  }
+  return count > 0 ? sum / count : 0;
+}
+
 export function lastKeySpeed(
   samples: readonly KeySample[],
   range?: { includes(timeStamp: number): boolean },

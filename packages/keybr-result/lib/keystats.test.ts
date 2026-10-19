@@ -4,6 +4,7 @@ import { Histogram } from "@keybr/textinput";
 import { deepEqual, equal } from "rich-assert";
 import { ResultFaker } from "./fake.tsx";
 import {
+  averageFilteredKeySpeed,
   averageKeySpeed,
   type KeySample,
   lastKeySpeed,
@@ -147,6 +148,14 @@ test("compute average key speed", () => {
     600,
   );
   equal(averageKeySpeed([]), 0);
+  equal(averageFilteredKeySpeed(samples), (120 + 60000 / 460) / 2);
+  equal(
+    averageFilteredKeySpeed(samples, {
+      includes: (timeStamp) => timeStamp === 2,
+    }),
+    60000 / 460,
+  );
+  equal(averageFilteredKeySpeed([]), 0);
   equal(lastKeySpeed(samples), 600);
   equal(
     lastKeySpeed(samples, { includes: (timeStamp) => timeStamp === 1 }),

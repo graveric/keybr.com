@@ -1,6 +1,6 @@
 import { KeyDetailsChart } from "@keybr/chart";
 import { LearningRate, type LessonKey, Target } from "@keybr/lesson";
-import { Key, KeyDetails, KeyRawDetails } from "@keybr/lesson-ui";
+import { Key, KeyDetails, KeySpeedDetails } from "@keybr/lesson-ui";
 import { type KeyStats } from "@keybr/result";
 import { useSettings } from "@keybr/settings";
 import { Box, Para } from "@keybr/widget";
@@ -25,7 +25,7 @@ export function KeyExtendedDetails({
         <KeyDetails lessonKey={lessonKey} />
       </Box>
       <Para align="center">
-        <KeyRawDetails samples={keyStats.samples} />
+        <KeySpeedDetails samples={keyStats.samples} />
       </Para>
       <LearningRateDescription
         lessonKey={lessonKey}

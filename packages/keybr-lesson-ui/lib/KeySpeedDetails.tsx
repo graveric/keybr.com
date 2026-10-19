@@ -1,5 +1,5 @@
 import {
-  averageKeySpeed,
+  averageFilteredKeySpeed,
   type KeySample,
   lastKeySpeed,
   maxKeySpeed,
@@ -10,19 +10,19 @@ import { useIntl } from "react-intl";
 import { useFormatter } from "./format.ts";
 import * as styles from "./styles.module.less";
 
-export const KeyRawDetails = ({
+export const KeySpeedDetails = ({
   samples,
 }: {
   samples: readonly KeySample[];
 }) => {
   const { formatMessage } = useIntl();
   const { formatSpeed } = useFormatter();
-  const todaySpeed = averageKeySpeed(samples, new Today());
-  const allTimeSpeed = averageKeySpeed(samples);
+  const todaySpeed = averageFilteredKeySpeed(samples, new Today());
+  const allTimeSpeed = averageFilteredKeySpeed(samples);
   const lastSpeed = lastKeySpeed(samples);
   const maxSpeed = maxKeySpeed(samples);
   return (
-    <span className={styles.keyRawDetails}>
+    <span className={styles.keySpeedDetails}>
       <NameValue
         name={formatMessage({
           id: "t_Today",

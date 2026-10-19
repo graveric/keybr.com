@@ -5,7 +5,7 @@ import {
   type LessonKeys,
 } from "@keybr/lesson";
 import {
-  averageKeySpeed,
+  averageFilteredKeySpeed,
   type KeyStatsMap,
   lastKeySpeed,
   maxKeySpeed,
@@ -129,8 +129,8 @@ export const CurrentKeySpeedRow = memo(function CurrentKeySpeedRow({
     return null;
   }
   const { samples } = keyStatsMap.get(focusedKey.letter);
-  const todaySpeed = averageKeySpeed(samples, new Today());
-  const allTimeSpeed = averageKeySpeed(samples);
+  const todaySpeed = averageFilteredKeySpeed(samples, new Today());
+  const allTimeSpeed = averageFilteredKeySpeed(samples);
   const lastSpeed = lastKeySpeed(samples);
   const maxSpeed = maxKeySpeed(samples);
   return (
